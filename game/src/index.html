@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    window.global = window;
+    window.process = window.process || { env: {}, nextTick: function(fn) { setTimeout(fn, 0); } };
+  </script>
+  <meta charset="utf-8">
+  <title>Rajpoker</title>
+  <base href="/">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+        user-scalable=no, viewport-fit=cover">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="assets/login_banners/login_banner.jpg">
+  <link rel="preload" as="image" href="assets/login_banners/register_banner.jpg">
+  <link rel="preload" as="image" href="assets/login_banners/log-in.jpg">
+   <!-- <link rel="preload" as="image" href="assets/giflogo.gif"> -->
+
+  <!-- Bootstrap CSS non-blocking -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        media="print" onload="this.media='all'">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 40%, #1e091a 0%, #090a0f 70%, #040507 100%);
+      z-index: 999999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.6s ease;
+      overflow: hidden;
+    }
+
+    #preloader::before {
+      content: '';
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, rgba(251, 191, 36, 0.15) 40%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      animation: pulseAura 2.2s ease-in-out infinite alternate;
+    }
+
+    .preloader-hidden {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    .preloader-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      animation: splashAppear 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .preloader-logo-wrap {
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .preloader-logo {
+      width: 140px;
+      max-width: 40vw;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(225, 29, 72, 0.6)) drop-shadow(0 0 10px rgba(251, 191, 36, 0.45));
+    }
+
+    .preloader-title {
+      font-size: 2.6rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      margin: 0;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .preloader-title .gold-part {
+      background: linear-gradient(135deg, #fef08a 0%, #fbbf24 50%, #d97706 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(251, 191, 36, 0.5));
+    }
+
+    .preloader-title .crimson-part {
+      background: linear-gradient(135deg, #fda4af 0%, #f43f5e 50%, #be123c 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 2px 8px rgba(244, 63, 94, 0.5));
+    }
+
+    .preloader-subtitle {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #cbd5e1;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+    }
+
+    .preloader-suits {
+      display: flex;
+      gap: 14px;
+      font-size: 1.25rem;
+      margin-top: 10px;
+    }
+
+    .preloader-suits span {
+      animation: suitBeat 1.2s ease-in-out infinite alternate;
+    }
+    .preloader-suits .suit-spade { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.7); }
+    .preloader-suits .suit-heart { color: #f43f5e; text-shadow: 0 0 10px rgba(244, 63, 94, 0.7); animation-delay: 0.15s; }
+    .preloader-suits .suit-club { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.7); animation-delay: 0.3s; }
+    .preloader-suits .suit-diamond { color: #f43f5e; text-shadow: 0 0 10px rgba(244, 63, 94, 0.7); animation-delay: 0.45s; }
+
+    .preloader-progress-wrap {
+      width: 200px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 18px;
+      position: relative;
+    }
+
+    .preloader-bar {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #e11d48 0%, #fbbf24 100%);
+      border-radius: 999px;
+      transform: translateX(-100%);
+      animation: loadBarProgress 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .preloader-status-text {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    @keyframes loadBarProgress {
+      0% { transform: translateX(-100%); }
+      60% { transform: translateX(-20%); }
+      100% { transform: translateX(0%); }
+    }
+
+    @keyframes pulseAura {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      100% { transform: scale(1.15); opacity: 1; }
+    }
+
+    @keyframes splashAppear {
+      0% { opacity: 0; transform: translateY(14px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes suitBeat {
+      0% { transform: scale(0.9); opacity: 0.7; }
+      100% { transform: scale(1.2); opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🔥 Branded RajPoker Splash Screen (Full Name, Logo & Suits) -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <img src="assets/logos/logo.png" class="preloader-logo" alt="RajPoker Logo" />
+      </div>
+      <h1 class="preloader-title">
+        <span class="gold-part">RAJ</span><span class="crimson-part">POKER</span>
+      </h1>
+      <p class="preloader-subtitle">INDIA'S PREMIER ONLINE POKER &amp; CASINO</p>
+      <div class="preloader-suits">
+        <span class="suit-spade">♠</span>
+        <span class="suit-heart">♥</span>
+        <span class="suit-club">♣</span>
+        <span class="suit-diamond">♦</span>
+      </div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+      <span class="preloader-status-text">INITIALIZING VIP TABLES...</span>
+    </div>
+  </div>
+  <script>
+    (function() {
+      try {
+        var s = localStorage.getItem('rajpoker_skin');
+        if (s) document.documentElement.setAttribute('data-skin', s);
+      } catch(e) {}
+    })();
+  </script>
+  <app-root></app-root>
+  <script>
+    const splashStartTime = Date.now();
+    function dismissPreloader() {
+      const elapsed = Date.now() - splashStartTime;
+      const minDuration = 1500; // 1.5 seconds minimum logo loading display
+      const delay = Math.max(0, minDuration - elapsed);
+      setTimeout(() => {
+        const p = document.getElementById('preloader');
+        if (p) {
+          p.classList.add('preloader-hidden');
+          setTimeout(() => { p.remove(); }, 500);
+        }
+      }, delay);
+    }
+    if (document.readyState === 'complete') {
+      dismissPreloader();
+    } else {
+      window.addEventListener('load', dismissPreloader);
+    }
+
+    try {
+      const url = new URL(window.location.href);
+      const referrerId = url.searchParams.get('ID');
+      if (referrerId) localStorage.setItem('Referrer', referrerId);
+      const type = url.searchParams.get('type');
+      const id = url.searchParams.get('ID');
+      if (type) {
+        localStorage.setItem('registerType', type);
+      }
+      if (id) {
+        localStorage.setItem('referrerId', id);
+      }
+    } catch(e) {}
+  </script>
+<script type="text/javascript" defer>
+
+    function getUsername(name) {
+      $crisp.push(["set", "user:nickname", [name]]);
+    };
+    if (window.location.pathname == '/logout.html') {
+      window.location.assign(window.location.origin);
+    }
+    var demoURL = window.location.href
+    let parts1 = demoURL.split("/");
+    var demo1 = parts1[parts1.length - 1];
+    if (demo1 !== "exchangeCurrencyPopup") {
+      window.$crisp = []; window.CRISP_WEBSITE_ID = "6e4451f1-c679-4c63-9521-02edd65d0829"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();
+    }
+    localStorage.setItem('providerStatus', JSON.stringify({ status: true, message: "Coming soon" }));
+    localStorage.setItem('whatsAppStatus', JSON.stringify({ status: false }));
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DW0W7JGJ5F"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-DW0W7JGJ5F');
+</script>
+
+
+ </body>
+</html>

@@ -1,0 +1,1021 @@
+body, html {
+    background: url("../i/bg.png") repeat-x #1e1e1e;
+    min-width: 100%;
+}
+
+/************************************
+        INDEX PAGE
+************************************/
+#root {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+}
+
+#top_container {
+    height: 132px;
+    float:left;
+    width:100%;
+    margin-bottom:5px;
+}
+
+.logo {
+    float: left;
+    padding: 30px 0 0 0px;
+}
+
+.logo a {
+    background: url(../i/logo.png) no-repeat;
+    display: block;
+    width: 330px;
+    height: 93px;
+    font-size: 0;
+    text-indent: -10000px;
+}
+
+.right_wrapper {
+    margin-right: 14px;
+    min-width: 350px;
+    float: right;
+}
+/************************************
+        Language
+************************************/
+
+.lang-wrapper {
+    height: 25px; margin-top: 10px;
+}
+
+#lang {
+    float: right;
+    width: 108px;
+}
+
+.lang-table td {
+    height: 21px;
+    width: 29px;
+    padding: 0 4px;
+}
+
+.lang-table a {
+    display: block;
+    font-size: 0;
+    width: 28px;
+    height: 26px;
+}
+
+.lang-table .active {
+    background-position: top;
+}
+
+.lang-table a:hover {
+    background-position: bottom;
+}
+
+#ref_lang_en {
+    background-image: url("../i/lang/lang_en.png");
+}
+
+#ref_lang_ru {
+    background-image: url("../i/lang/lang_ru.png");
+}
+#ref_lang_es {
+    background-image: url("../i/lang/lang_es.png");
+}
+#ref_lang_tr{
+    background-image: url("../i/lang/lang_tr.png");
+}
+
+#ref_lang_uk {
+    background-image: url("../i/lang/lang_uk.png");
+}
+
+
+#banner_container {
+    float: right;
+    width: 768px;
+    position: relative;
+}
+
+.banner_wrapper {
+    display: block;
+    height: 247px;
+    width: 100%;
+}
+
+#main_slides {
+    margin-top: -11px;
+}
+
+#main_slides .next, #main_slides .prev {
+    background: url("../i/button/arrows.png") right top;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 7px;
+    height: 12px;
+    text-decoration: none;
+    text-indent: -1000px;
+    z-index: 1000;
+}
+
+#main_slides .prev {
+    background-position: left top;
+    right: 14px;
+}
+
+#main_slides .next:hover {
+    background-position: right bottom;
+}
+
+#main_slides .prev:hover {
+    background-position: left bottom;
+}
+
+#button_container {
+    margin-top: 24px;
+}
+
+.button.button_play_poker, .button.button_play_casino, .button.button_download, .button.button_mobile_poker {
+    background: url("../i/button/button_play_poker.png") no-repeat;
+    width: 252px;
+    height: 106px;
+    padding: 0;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.button.button_mobile_poker {
+    background: url("../i/button/button_mobile_poker.png") no-repeat;
+}
+
+.button.button_download {
+    background: url("../i/button/button_download.png") no-repeat;
+}
+
+.button.button_play_casino {
+    background: url("../i/button/button_play_casino.png") no-repeat;
+    margin-right: 0;
+}
+
+.top_white_line, .bottom_white_line {
+    background: url("../i/line.png") repeat-x bottom;
+    display: block;
+    width: 100%;
+    height: 2px;
+}
+
+.top_white_line {
+    width: 740px;
+}
+
+.center_wrapper {
+    background: #000;
+    border: 1.5px solid #767676;
+    border-bottom: none;
+    margin-top: 15px;
+}
+
+
+
+.left_part {
+    float: left;
+}
+
+.register_banner {
+    /*background: url("../i/register_bg.png") no-repeat;*/
+    width: 188px; margin-right: 200px; margin-top: -50px;
+    height: 75px; float: left; margin-left: 122px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* .button.button_register {
+    background: url("../i/button/register-button.png") no-repeat left top;
+    width: 188px;
+    height: 75px;
+    padding: 0;
+    position: absolute;
+    top:-10px;
+    
+}
+ */
+#news_box {
+    width: 229px;  margin-top: 10px;
+    overflow: hidden;
+}
+
+hr.news_line {
+    background-color: #252525;
+    color: #252525;
+    clear: both;
+    height: 1px;
+    border: 0 none;
+    margin: 23px 0 25px;
+}
+
+#news_box .news_date, #news_box .news_link {
+    font-size: 14px;
+    color: #bf1d22;
+}
+
+#news_box .news_title {
+    margin-bottom: 12px;
+}
+
+.news_date {
+    position: relative;
+}
+
+#news_box span.hot_news {
+    position:  absolute;
+    margin-left:  74px;
+}
+
+.right_part {
+    float: right;
+}
+
+.tournaments_wrapper {
+    width: 334px;
+    margin-right: 24px;
+}
+
+.best_player {
+    width: 334px;
+    margin-right: 24px;
+}
+
+.best_player .header{width: 100%; float: left; margin-top: 11px;}
+
+div.header {
+    margin-bottom: 11px;
+}
+
+.block_title {
+    float: left;
+    font-size: 20px;
+    color: #920005;
+}
+
+.button.button_all_tournaments, .button.button_all_news, .button.button_all_casino {
+    background: none;
+    text-decoration: none;
+    float: right;
+    height: 22px;
+    width: auto;
+    padding-top: 2px;
+    color: #555555;
+}
+
+.button_all_tournaments:before, .button_all_news:before, .button_all_casino:before {
+    content: '';
+    background: url("../i/button/arrow.png") no-repeat top left;
+    display: block;
+    width: 7px;
+    height: 12px;
+    float: right;
+    margin-top: 6px;
+}
+
+
+.button.button_all_tournaments:hover .button_title, .button.button_all_news:hover .button_title, .button.button_all_casino:hover .button_title {
+    color: #000000;
+}
+
+#jackpot_id {
+    background: url("../i/jackpot_bg.png") no-repeat;
+    width: 331px;
+    height: 82px;
+    position: relative;
+    margin-bottom: 11px;
+}
+
+#jackpot_id embed, #jackpot_id object {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.casino_games_container {
+    margin-top: 20px;
+}
+
+.casino_games_wrapper {
+    background: #555555;
+    height: 128px;
+    margin: 0 9px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.casino_games_wrapper:after {
+    background: url("../i/games_lr_bg.png") no-repeat right center;
+    content: '';
+    display: block;
+    width: 9px;
+    height: 148px;
+    float: right;
+    margin: -10px -9px 0 0;
+}
+
+.casino_games_wrapper:before {
+    background: url("../i/games_lr_bg.png") no-repeat left center;
+    content: '';
+    display: block;
+    width: 9px;
+    height: 148px;
+    float: left;
+    margin: -10px 0 0 -9px;
+}
+
+/* .button.button_table_games, .button.button_slot_machines, .button.button_video_pokers, .button.button_card_games {
+    background: url("../i/button/games_button.png") no-repeat right -138px !important;
+    width: 162px;
+    height: 127px;
+    display: inline-block;
+    position: absolute;
+    left: 168px;
+} */
+
+.button.button_table_games .button_title, .button.button_slot_machines .button_title, .button.button_video_pokers .button_title, .button.button_card_games .button_title {
+    display: none;
+}
+
+.button.button_card_games {
+    background-position: right top !important;
+    width: 178px;
+    left: -18px;
+}
+
+.button.button_video_pokers {
+    background-position: right bottom !important;
+    width: 163px;
+    left: 508px;
+}
+
+.button.button_slot_machines {
+    background-position: right -275px !important;
+    width: 167px;
+    left: 334px;
+}
+
+.center_wrapper_bottom_bg {
+    background: url("../i/content_bottom_bg.png") no-repeat -14px 0;
+    height: 51px;
+}
+
+#footer {
+    width: 1026px;
+    margin: -45px auto 0; padding-bottom: 10px;
+    /*min-height: 165px;*/
+    position: relative;
+    z-index: 900;
+}
+
+.footer_icon {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.footer_icon a {
+    text-decoration: none;
+    text-indent: -1000px;
+}
+
+.footer_icon img {
+    vertical-align: middle;
+}
+
+#copy {
+    margin: 10px auto;
+    text-align: center;
+}
+
+#copy, #copy a {
+    color: #e3b81e;
+    font-size: 11px;
+}
+
+#copy a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#copy a:hover {
+    text-decoration: none; color: #ffdb58;
+    text-transform: uppercase;
+}
+
+#footer .diposit_methods_info {
+    font-size: 11px;
+    color: #a5a5a5;
+    text-align: center;
+}
+
+#footer .domain_name {
+    text-transform: capitalize;
+}
+
+ 
+
+
+/************************************
+        XXXXXXXX
+************************************/
+
+.news_link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.news_link a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dep_payment b {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.cms_content_container ul li {
+    list-style: circle;
+	color: #303030;
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: 3px; 
+}
+
+.content ul li {
+    padding: 0 0 .3em;
+    margin-left: 2em;
+    background-image: none;
+    list-style-type: disc;
+}
+
+.content ol li {
+    padding: 0 0 .3em;
+    margin-left: 2em;
+    background-image: none;
+    list-style-type: decimal;
+}
+
+#deposit_submit_tab td, #deposit_submit_tab span {
+    vertical-align: middle;
+}
+
+.terms-layout {
+    text-align: justify;
+	width:85%;
+	margin:0px auto;
+	padding-top:1%;
+}
+
+.terms-layout ol li {
+    background-image: none;
+    list-style-type: decimal;
+    margin-left: 2em;
+    padding: 0 0 0.3em; 
+}
+#banner_carusel li{float: left;}
+#banner_carusel img{height: 140px; width: 160px; margin: 6px;}
+
+.payments {
+    /* background: url("../i/footer_bg.png") repeat-x; */
+    height: 44px;
+    margin: 0 2px;
+    margin-top: 15px;
+}
+
+.payment_icons {
+    position: relative;
+    padding: 5px 25px 0;
+    height: 44px;
+    overflow: hidden;
+}
+
+.payment_icons > div > p img {
+    vertical-align: middle;
+}
+
+.payment_icons  a {
+    text-decoration: none;
+}
+
+.newsheight{min-height: 812px;}
+
+
+
+
+/************************************
+        Quick login
+************************************/
+
+
+
+
+
+
+.qlogin_table td {
+    
+   
+    height: 30px;
+	line-height:30px;
+}
+
+.qlogin_form_title {
+    font-size: 13px;
+    color: #fff;
+    text-align: right;
+}
+
+.qlogin_form_value a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.qlogin_register {
+    font-size: 11px;
+    text-decoration: underline;
+    color: #e3b81e;
+    padding-right: 5px;
+}
+
+.qlogin_register:hover {
+    color: #ffdb58;
+    text-decoration: underline;
+}
+
+
+
+
+
+#quick_login .button_title {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: normal;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    top: -2px;
+    right:8px;
+}
+
+
+.qlogin_links {
+    margin-bottom: 2px;
+	text-align: left;
+    /* margin-right: 70px;*/
+}
+
+.qlogin_links a {
+    color: #ffffff;
+    font-family: "Muli",sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    display: block;
+    margin: 5px; text-decoration: none;
+}
+.qlogin_links a:hover {
+    color: #999999; text-decoration: underline;}
+
+#enter_login {
+    /* background: url("../i/button_enter_site.png") no-repeat scroll 0 0 transparent; */
+   
+    position: relative;    
+  
+}
+
+#enter_login li {
+     float: left;  
+    text-transform: uppercase;
+    width: 107px;
+}
+#enter_login li a{
+    padding:10px 5px; 
+ 
+}
+
+#enter_login_1{
+   /*  background: url("../i/logged_profile.png") no-repeat scroll 0 0 transparent; */
+    float: right;
+    height: 40px;
+    position: relative;
+    width: 172px;
+}
+
+
+#quick_login a#loggedin_profile {
+    display: block;
+    font-size: 0;
+    height: 40px;
+    /* text-indent: -10000px; */
+    width: 172px;
+    z-index: 100;
+}
+
+#quick_login a#enter_login_link {
+    /* display: block;   */
+    width: 100px;
+    z-index: 100;
+	font-size: 13px;
+ 
+}
+
+/* #quick_login a#enter_login_link_1 {
+    display: block;   
+    height: 40px;   
+    width: 172px;
+    z-index: 100;
+} */
+
+.quick_login {
+    margin-top: 10px;
+    margin-left: 5px;
+    float: right;
+}
+
+
+
+.qlogin_input_login_wrapper {
+   /*  background: url("../i/qlogin_input_login.jpg") no-repeat scroll 0 0 transparent; */
+    height: 28px;
+    margin-right: 5px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 139px;
+}
+
+
+
+
+
+#loggedin_popup {
+    position: absolute;
+    right: 0;
+    z-index: 9999;
+    width: 229px;
+}
+
+
+
+
+
+
+
+
+.button_qclose_tr {
+    height: 32px;
+}
+
+
+#button_qclose_1{
+    background: url("../i/button_close.png") no-repeat scroll center top transparent;
+    color: #E7AE00;
+    display: block;
+    float: right;
+    font-family: "MyriadProRegular";
+    font-size: 12px;
+    height: 18px;
+    margin-top: 6px;
+    padding-top: 1px;
+    text-align: center;
+    margin-left:158px;
+    width: 57px;
+}
+.loggedin_bg {
+    min-height: 10px;
+    z-index: 20;
+}
+
+
+
+
+.input_holder td {
+    height: 25px;
+}
+
+
+
+.input_quick_login, .input_quick_password {
+    background: #000000 none repeat scroll 0 0;
+    border: 1px solid #464646;
+    border-radius: 2px;
+    box-shadow: 1px 0 8px #606060 inset;
+    color: #e1e1e1; 
+    font-size: 14px;
+    height: 25px;
+    margin-top: 1px;
+    padding-left: 5px;
+    width: 120px; 
+}
+
+.button_quick_submit { 
+    margin: 2px 0;
+    padding: 3px 0;
+
+}
+
+
+.button_logout:hover {
+    background-position: bottom;
+    text-decoration: underline;
+}
+
+
+.qlogin_input_pass_wrapper {
+    /* background: url("../i/qlogin_input_login.jpg") no-repeat scroll 0 0 transparent; */
+    height: 28px;
+    padding-left: 5px;
+    padding-top: 3px;
+    width: 120px;
+}
+
+ .qlogin_input_wrapper input {
+    /*background: none repeat scroll 0 0 transparent;*/
+    border: medium none;
+    color: #999999;
+    font-size: 14px;
+    margin:8px 0px;
+    padding: 0px 8px;
+    width: 190px;
+	border-radius: 1px;
+} 
+
+
+
+.button_quick_login_submit .button_title {
+    /* display: none; */
+	color:#ffffff;
+}
+
+
+
+#quick_login {
+    float: left;
+    position: relative;
+    z-index: 100;
+	margin-top:15px;
+}
+
+#login_popup {
+    position: absolute;
+    right: 117px; 
+	top:27px;
+    z-index: 9999;
+	background:#111111 ;
+	padding:20px;
+	border:2px solid #333333;
+} 
+#login_popup a{
+	color:#fdc819;
+}
+
+
+
+
+
+.loggedin_popup_gradient {
+    background: url("../i/logged_in_slide.html") no-repeat scroll left top transparent;
+    min-height: 86px;
+}
+
+.login_popup_gradient table {
+    width: 220px;
+}
+
+
+
+#qlogin_table_1 {
+    width:100%;
+	background:#333333;
+	padding:5px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	margin-top:4px;
+	
+}
+
+#qlogin_table_1 tr{ width:50%;}
+#qlogin_table_1 .button_logout {
+    /* background: url("../i/button_logout.png") no-repeat; */ 
+    display: block;
+    height: 30px;
+    width: 80px;
+    text-align: center; text-indent:99999px;
+    margin:5px 5px 5px 15px;
+	color:#ffffff;
+}
+.qlogin_form_value a span{color:#F00;}
+
+.button_qclose_tr {
+    height: 40px;
+}
+
+#button_qclose {
+    background: url("../i/button_close.html") no-repeat scroll center top transparent;
+    color: #ff0000;
+    display: block;
+    float: right;
+    
+    font-size: 14px;
+    height: 18px;
+    margin-right: 12px;
+    margin-top: 6px;
+    padding-top: 1px;
+    text-align: center;
+    width: 57px;
+}
+#button_qclose_1{
+    background: url("../i/button_close.html") no-repeat scroll center top transparent;
+    color: #E7AE00;
+    display: block;
+    float: right;
+    
+    font-size: 14px;
+    height: 18px;
+    margin-top: 6px;
+    padding-top: 1px;
+    text-align: center;
+    margin-left:158px;
+    width: 57px;
+}
+
+
+
+
+
+
+p.buttonRed, input.buttonRed, p.buttonGrey, input.buttonGrey, input.contentButton, p.contentButton, p.contentButton2, input.contentButtonGrey, button.contentButton {
+    font-family: 'Muli', Arial, Helvetica, sans-serif;
+}
+p.buttonRed a, input.buttonRed {
+    /* background:  url(../i/spriteHeaderFooter.png) no-repeat -70px -649px; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    border: 0
+}
+p.buttonRed a:hover, input.buttonRed:hover {
+  /*   background:  url(../i/spriteHeaderFooter.png) no-repeat -255px -649px; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none
+}
+p.buttonGrey a, input.buttonGrey {
+    /* background: url(../i/bkgButtonGreyA.png) repeat-x 0 0; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
+    border: 0
+}
+p.buttonGrey a:hover, input.buttonGrey:hover {
+    /* background: url(../i/bkgButtonGreyB.png) repeat-x 0 0; */
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff
+}
+p.contentButton, p.contentButton2, input.contentButton {
+    margin-bottom: 12px
+}
+p.contentButton a, input.contentButton, button.contentButton {
+    /* background: url(../i/bkgRedButtonA.png) 0 0 repeat-x; */
+    background-size: 100% 100%;
+    border-top: 2px solid #fe5959;
+    border-bottom: 2px solid #700;
+    border-radius: 5px;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 black
+}
+body.twoColumnsContentType p.contentButton a, .promoBoxItem p.contentButton a, .promoBoxCta p.contentButton a, .creditCardContent p.contentButton a, #faxEmailWrap p.contentButton a {
+    padding: 5px 15px 5px 15px
+}
+p.contentButton a {
+    text-transform: uppercase;
+    font-size: .8em
+}
+.game p.contentButton a, .game p.contentButton a:hover {
+    border-top: 1px solid #fe5959;
+    border-bottom: 1px solid #700
+}
+input.contentButton {
+    border: 0;
+    cursor: pointer
+}
+p.contentButton a:hover, input.contentButton:hover, button.contentButton:hover {
+    /* background: url(../i/bkgRedButtonB.png) 0 0 repeat-x; */
+    background-size: 100% 100%;
+    border-top: 2px solid #fe5959;
+    border-bottom: 2px solid #700;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff
+}
+input.contentButton:hover {
+    border: 0
+}
+p.contentButton2 a {
+    /* background: url(../i/bkgBlueButtonA.png) 0 0 repeat-x; */ 
+    background-size: 100% 100%;
+    border-top: 2px solid #95cbe5;
+    border-bottom: 2px solid #104152;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 black;
+    font-size: .8em
+}
+p.contentButton2 a:hover {
+    /* background: url(../i/bkgBlueButtonB.png) 0 0 repeat-x; */ 
+    background-size: 100% 100%;
+    border-top: 2px solid #95cbe5;
+    border-bottom: 2px solid #104152;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: .8em
+}
+p.contentLink, input.contentLink {
+    color: #0d92d1;
+    border: 0;
+    padding: 0; float:right;
+
+    padding-left: 0px;
+    cursor: pointer
+}
+input.contentLink:hover {
+    text-decoration: underline
+}
+#innerWrap .messageB p.contentButton a {
+    background: #2a2a2a;
+    border-top: 1px solid #5a636a;
+    border-color: #5a636a
+}
+#innerWrap .messageB p.contentButton a:hover {
+    background: #5a636a;
+    border-top: 1px solid #8f9ba6
+}
+input.contentButtonGrey, p.contentBlackButton a, input.contentBlackButton {
+    /* background: url(../i/bkgGreyButtonA.png) 0 0 repeat-x; */
+    background-size: 100% 100%;
+    text-transform: uppercase;
+    text-shadow: 0 -1px 0 black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #3d3d3d;
+    border-top: 1px solid #ccc
+}
+input.contentButtonGrey:hover, p.contentBlackButton a:hover, input.contentBlackButton:hover {
+    /* background: url(../i/bkgGreyButtonB.png) 0 0 repeat-x; */
+    background-size: 100% 100%;
+    border-bottom: 1px solid #3d3d3d;
+    border-top: 1px solid #ccc
+}
+
+.channelPanel p.contentButton {
+font-size: 1.8em;
+position: relative;
+top: -28px;
+left: -50%;
+}
+
+.channelPanel p.contentButton a {
+right: -50%;
+position: relative;
+}
+
+
+
+
+.button_save {
+    /* background: url("../i/log_out.png") no-repeat; */
+    display: block;
+    height: 30px;
+    width: 69px;
+    text-align: center;
+ 
+
+}
+
+
+
+
+/**/

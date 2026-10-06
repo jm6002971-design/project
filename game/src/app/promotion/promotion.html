@@ -1,0 +1,48 @@
+<div class="fd">
+  <ng-template appPlaceholder></ng-template>
+</div>
+<div class="container">
+  <nav class="redirectline" aria-label="Breadcrumb"><span routerLink="/home">Home</span> <img
+      src="assets/home_icons/arrow_right.png" alt="" aria-hidden="true" width="15"> <span>Promotions
+    </span> </nav>
+  <div class="promo-container" *ngIf="!bannersShow">
+    <div *ngFor="let img of banners ; let i = index" class="image-card">
+      <div class="skeleton" *ngIf="!img.loaded"></div>
+      <img [src]="'https://cms.rajpoker.com' +img.media" (load)="onImageLoad(img)" (click)="selectPromotion(img,i)" />
+      <div class="title">{{img.promotionName
+        }}</div>
+    </div>
+  </div>
+
+  <div class="layout" *ngIf="bannersShow">
+    <!-- 🔽 MOBILE DROPDOWN -->
+    <div class="mobile-dropdown">
+      <select (change)="onSelectChange($event)">
+        <option *ngFor="let item of banners; let i = index" [value]="i" [selected]="selectedPromotion === item">
+          {{ item.promotionName }}
+        </option>
+      </select>
+    </div>
+    <!-- 🖥️ DESKTOP SIDE MENU -->
+    <div class="side-menu">
+      <div *ngFor="let item of banners; let i = index" (click)="selectPromotion(item,i)"
+        [class.active]="selectedPromotion === item">
+        {{ item.promotionName }}
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content" *ngIf="bannersgamecontent && selectedPromotion" #contentSection>
+      <div class="banner-wrapper">
+        <!-- Skeleton -->
+        <div class="skeleton" *ngIf="!bannerLoaded"></div>
+        <!-- Image -->
+        <img [src]="'https://cms.rajpoker.com' + selectedPromotion?.media" class="main-banner"
+          (load)="bannerLoaded = true" [class.hide]="!bannerLoaded" />
+        <button class="close" (click)="closepopup()">✕</button>
+      </div>
+      <div *ngIf="selectedPromotionContent">
+        <div class="promotion-content" [innerHTML]="selectedPromotionContent.termsAndConditions"></div>
+      </div>
+    </div>
+  </div>
+</div>

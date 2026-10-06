@@ -1,0 +1,186 @@
+<div class="loader-wrapper" *ngIf="responseLoader"   role="status"
+aria-live="polite"
+aria-label="Loading tournaments">
+    <img
+    src="'../../../assets/giflogo.gif?' + loaderKey"
+      width="280"
+      alt="loading" loading="lazy"
+    />
+  </div>
+  <!-- <img src="assets/giflogo.gif" alt="lodergif"> -->
+<div class="redirectline " aria-label="Breadcrumb"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15" height="15"
+    loading="lazy"   aria-hidden="true"> <span aria-current="page">Tournaments </span>  </div>
+<h2 class="main_heading live_casino_title ">Tournaments</h2>
+        <div class="mt-4 mb-4">
+            <h4 class="main_heading">Participate in the biggest online poker tournaments with special prizes</h4>
+            <p class="main_para">At Raj Poker, there are poker tournaments with big prizes that provide an exceptional
+                opportunity for all players to try their luck at winning. In these tournaments, you can participate in
+                exciting competitions, win valuable cash prizes and test your skills against other professional players.
+                These tournaments are held with a guarantee of big prizes and an opportunity to experience poker games
+                at the highest level.</p>
+        </div> 
+
+    <div *ngIf="Tournaments?.length>0">
+        <article  class="main_tourn row dis_flex_mobile" *ngFor="let tourn of Tournaments | paginate: {itemsPerPage:selectnum, currentPage:p}">
+            <div class="main_icon_div col-12 col-xl-4 ">
+                <img class="icon_width " src="assets/logos/miniLogo.webp" alt="logo site" loading="lazy">
+            </div>
+            <div class="col-12 col-xl-8">
+                <h4 class="marg_tb dis_flex_mobile">{{tourn.name}}</h4>
+                <div class="row ">
+                    <div class="col-12 col-lg-6">
+                        <div class="tourn_Div"  > 
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path opacity="0.4"
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    fill="url(#paint0_linear_312_1798)" />
+                                <path
+                                    d="M15.7101 15.93C15.5801 15.93 15.4501 15.9 15.3301 15.82L12.2301 13.97C11.4601 13.51 10.8901 12.5 10.8901 11.61V7.51001C10.8901 7.10001 11.2301 6.76001 11.6401 6.76001C12.0501 6.76001 12.3901 7.10001 12.3901 7.51001V11.61C12.3901 11.97 12.6901 12.5 13.0001 12.68L16.1001 14.53C16.4601 14.74 16.5701 15.2 16.3601 15.56C16.2101 15.8 15.9601 15.93 15.7101 15.93Z"
+                                    fill="url(#paint1_linear_312_1798)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_312_1798" x1="2" y1="12" x2="29.5884" y2="14.6169"
+                                        gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_312_1798" x1="10.8901" y1="11.345" x2="18.6252"
+                                        y2="11.7912" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p>Date and time :   {{ cleanDate(tourn.startDate) | date:'medium':'local' }}</p>
+                        </div>
+                        <div class="tourn_Div"  >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path opacity="0.4"
+                                    d="M19.24 5.58H18.84L15.46 2.2C15.19 1.93 14.75 1.93 14.47 2.2C14.2 2.47 14.2 2.91 14.47 3.19L16.86 5.58H7.14L9.53 3.19C9.8 2.92 9.8 2.48 9.53 2.2C9.26 1.93 8.82 1.93 8.54 2.2L5.17 5.58H4.77C3.87 5.58 2 5.58 2 8.14C2 9.11 2.2 9.75 2.62 10.17C2.86 10.42 3.15 10.55 3.46 10.62C3.75 10.69 4.06 10.7 4.36 10.7H19.64C19.95 10.7 20.24 10.68 20.52 10.62C21.36 10.42 22 9.82 22 8.14C22 5.58 20.13 5.58 19.24 5.58Z"
+                                    fill="url(#paint0_linear_312_1809)" />
+                                <path
+                                    d="M19.65 10.7H4.35996C4.06996 10.7 3.74996 10.69 3.45996 10.61L4.71996 18.3C4.99996 20.02 5.74996 22 9.07996 22H14.69C18.06 22 18.66 20.31 19.02 18.42L20.53 10.61C20.25 10.68 19.95 10.7 19.65 10.7ZM12 18.5C9.65996 18.5 7.74996 16.59 7.74996 14.25C7.74996 13.84 8.08996 13.5 8.49996 13.5C8.90996 13.5 9.24996 13.84 9.24996 14.25C9.24996 15.77 10.48 17 12 17C13.52 17 14.75 15.77 14.75 14.25C14.75 13.84 15.09 13.5 15.5 13.5C15.91 13.5 16.25 13.84 16.25 14.25C16.25 16.59 14.34 18.5 12 18.5Z"
+                                    fill="url(#paint1_linear_312_1809)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_312_1809" x1="2" y1="6.34875" x2="28.5737"
+                                        y2="12.1418" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_312_1809" x1="3.45996" y1="16.305" x2="26.7479"
+                                        y2="19.6156" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p>Buy in : {{tourn.buyIn.value}}</p>
+                        </div>
+                        <div class="tourn_Div" >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path opacity="0.4"
+                                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                                    fill="url(#paint0_linear_319_1816)" />
+                                <path
+                                    d="M17.08 14.15C14.29 12.29 9.73996 12.29 6.92996 14.15C5.65996 15 4.95996 16.15 4.95996 17.38C4.95996 18.61 5.65996 19.75 6.91996 20.59C8.31996 21.53 10.16 22 12 22C13.84 22 15.68 21.53 17.08 20.59C18.34 19.74 19.04 18.6 19.04 17.36C19.03 16.13 18.34 14.99 17.08 14.15Z"
+                                    fill="url(#paint1_linear_319_1816)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_319_1816" x1="7.25" y1="6.745" x2="20.3542"
+                                        y2="7.98933" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_319_1816" x1="4.95996" y1="17.3775" x2="24.1563"
+                                        y2="20.1507" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <p>Player : {{tourn.playersCount}}</p>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-6" >
+                        <div class="tourn_Div"  >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path
+                                    d="M13.4298 15H4.39985C2.57985 15 1.41985 13.05 2.29985 11.45L4.62985 7.21L6.80985 3.24C7.71985 1.59 10.0998 1.59 11.0098 3.24L13.1998 7.21L14.2498 9.12001L15.5298 11.45C16.4098 13.05 15.2498 15 13.4298 15Z"
+                                    fill="url(#paint0_linear_320_1822)" />
+                                <path opacity="0.4"
+                                    d="M22 15.5C22 19.09 19.09 22 15.5 22C11.91 22 9 19.09 9 15.5C9 15.33 9.01 15.17 9.02 15H13.43C15.25 15 16.41 13.05 15.53 11.45L14.25 9.12C14.65 9.04 15.07 9 15.5 9C19.09 9 22 11.91 22 15.5Z"
+                                    fill="url(#paint1_linear_320_1822)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_320_1822" x1="1.99951" y1="8.50126" x2="21.0553"
+                                        y2="10.4247" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_320_1822" x1="9" y1="15.5" x2="26.9324"
+                                        y2="17.201" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+
+                            <p>Game : {{tourn.game.caption}}</p>
+                        </div>
+                        <div class="tourn_Div"  >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path opacity="0.4"
+                                    d="M16.24 3.65002H7.76004C5.29004 3.65002 3.29004 5.66002 3.29004 8.12002V17.53C3.29004 19.99 5.30004 22 7.76004 22H16.23C18.7 22 20.7 19.99 20.7 17.53V8.12002C20.71 5.65002 18.7 3.65002 16.24 3.65002Z"
+                                    fill="url(#paint0_linear_320_1829)" />
+                                <path
+                                    d="M14.3498 2H9.64977C8.60977 2 7.75977 2.84 7.75977 3.88V4.82C7.75977 5.86 8.59977 6.7 9.63977 6.7H14.3498C15.3898 6.7 16.2298 5.86 16.2298 4.82V3.88C16.2398 2.84 15.3898 2 14.3498 2Z"
+                                    fill="url(#paint1_linear_320_1829)" />
+                                <path
+                                    d="M15 12.95H8C7.59 12.95 7.25 12.61 7.25 12.2C7.25 11.79 7.59 11.45 8 11.45H15C15.41 11.45 15.75 11.79 15.75 12.2C15.75 12.61 15.41 12.95 15 12.95Z"
+                                    fill="url(#paint2_linear_320_1829)" />
+                                <path
+                                    d="M12.38 16.95H8C7.59 16.95 7.25 16.61 7.25 16.2C7.25 15.79 7.59 15.45 8 15.45H12.38C12.79 15.45 13.13 15.79 13.13 16.2C13.13 16.61 12.79 16.95 12.38 16.95Z"
+                                    fill="url(#paint3_linear_320_1829)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_320_1829" x1="3.29004" y1="12.825" x2="27.3272"
+                                        y2="14.9883" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear_320_1829" x1="7.75977" y1="4.35" x2="19.214"
+                                        y2="6.30804" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear_320_1829" x1="7.25" y1="12.2" x2="16.4286"
+                                        y2="17.1337" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                    <linearGradient id="paint3_linear_320_1829" x1="7.25" y1="16.2" x2="14.4399"
+                                        y2="18.8735" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#CC0000" />
+                                        <stop offset="1" stop-color="#FF9D00" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+
+                            <p>State : {{tourn.status.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article >
+    </div>
+     <div *ngIf="Tournaments?.length>0">
+            <pagination-controls class="pagination justify-content-end" (pageChange)="p=$event" (click)="moveToTop()"
+             previousLabel="Prev" nextLabel="Next"   class="pt-2 page-item">
+            </pagination-controls>
+        </div>
+   
+ 

@@ -1,0 +1,254 @@
+<div class="redirectline">
+  <span routerLink="/home">Home</span>
+  <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15">
+  <span>My Account</span>
+  <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15">
+  <span>Profile</span>
+</div>
+<h2 class="m_t_15 live_casino_title">Profile</h2>
+
+<div class="button-row">
+  <button class="btn" [ngClass]="{ active: updateprofilepassword === 'Profile' }"
+    (click)="updateProfilepassword('Profile'); ">
+    <i class='far fa-edit'></i> Change Profile
+  </button>
+  <button class="btn" [ngClass]="{ active: updateprofilepassword === 'Password' }"
+    (click)="updateProfilepassword('Password')">
+    <i class="fa fa-lock"></i> Change Password
+  </button>
+  <ng-container *ngIf="whatsapp">
+    <button class="btn" *ngIf="mobileVerified?.mobileVerified === true || mobileVerified?.mobileVerified === false"
+      [ngClass]="{ active: updateprofilepassword === 'Whatsup', verified: mobileVerified?.mobileVerified === true }"
+      (click)="updateProfilepassword('Whatsup')" [disabled]="mobileVerified?.mobileVerified === true">
+      <i class="fab fa-whatsapp"></i>
+      <span *ngIf="mobileVerified?.mobileVerified === false">
+        WhatsApp Verification
+      </span>
+      <span *ngIf="mobileVerified?.mobileVerified === true">
+        WhatsApp Verified ✓
+      </span>
+    </button>
+
+  </ng-container>
+</div>
+
+<div class="profile-container" *ngIf="updateprofilepassword == 'Profile'">
+  <form class="profile-form" [formGroup]="ProfileUpdate" *ngIf="loginName">
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Username</label>
+        <input type="text" [value]="loginName" [disabled]="true" />
+      </div>
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Email</label>
+        <input type="email" formControlName="email" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Nickname</label>
+        <input type="text" formControlName="nickname"   (input)="sanitizeNickname($event)" />
+        <small class="error-msg"
+        *ngIf="isSameUsernameNickname()">
+        Username and Nickname should not be the same
+      </small>
+      </div>
+
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> First Name</label>
+        <input type="text" formControlName="firstName" (input)="sanitizeName($event, 'firstName')"/>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Last Name</label>
+        <input type="text" formControlName="lastName"   (input)="sanitizeName($event, 'lastName')"/>
+      </div>
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Refer Friend</label>
+        <input type="text" formControlName="pixelURL" style="padding-right: 45px;" />
+        <span class="copyIcon" (click)="copyMessage(copytex)">
+          <i class="fa fa-copy"></i>
+          <span *ngIf="showCopiedMessage" class="copied-msg">Copied</span>
+        </span>
+      </div>
+    </div>
+    <div class="form-row" *ngIf="mobileVerified.address.phone">
+      <div class="form-group" formGroupName="address">
+        <label><span class="gradient-star">*</span> Phone</label>
+        <input type="text" formControlName="phone" [disabled]="true" />
+      </div>
+      <div class="form-group"></div>
+    </div>
+  </form>
+</div>
+<div class="profile-container" *ngIf="updateprofilepassword == 'Password'">
+  <form class="profile-form" [formGroup]="updatePassword">
+    <div class="form-row">
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> Old Password</label>
+
+        <span class="fgsdgd">
+          <input [type]="showOldPass ? 'text' : 'password'" placeholder="Password" formControlName="oldPassword"
+            (keydown.space)="$event.preventDefault()" />
+
+          <i class="setCls_eye fa" [ngClass]="showOldPass ? 'fa-eye' : 'fa-eye-slash'"
+            (click)="showOldPass = !showOldPass">
+          </i>
+        </span>
+
+        <div class="sign-in-desktop__validation-error" *ngIf="updatePassword.get('oldPassword')?.touched &&
+           updatePassword.get('oldPassword')?.invalid">
+
+          <small *ngIf="updatePassword.get('oldPassword')?.errors?.['required']">
+            Old password is required
+          </small>
+
+          <small *ngIf="updatePassword.get('oldPassword')?.errors?.['minlength']">
+            Minimum 6 characters required
+          </small>
+
+          <small *ngIf="updatePassword.get('oldPassword')?.errors?.['maxlength']">
+            Maximum 15 characters allowed
+          </small>
+
+          <small *ngIf="updatePassword.get('oldPassword')?.hasError('pattern') &&
+    !updatePassword.get('oldPassword')?.hasError('minlength') &&
+    !updatePassword.get('oldPassword')?.hasError('maxlength')">
+            Enter alphabets and numeric only
+
+          </small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label><span class="gradient-star">*</span> New Password</label>
+        <span class="fgsdgd">
+          <input [type]="showNewPass ? 'text' : 'password'" placeholder="Min 6 characters" formControlName="newPassword"
+            (keydown.space)="$event.preventDefault()" />
+
+          <i class="setCls_eye fa " [ngClass]="showNewPass ? 'fa-eye' : 'fa-eye-slash'"
+            (click)="showNewPass = !showNewPass">
+          </i>
+
+        </span>
+
+        <div class="sign-in-desktop__validation-error" *ngIf="updatePassword.get('newPassword')?.touched &&
+           updatePassword.get('newPassword')?.invalid">
+
+          <small *ngIf="updatePassword.get('newPassword')?.errors?.['required']">
+            New password is required
+          </small>
+
+          <small *ngIf="updatePassword.get('newPassword')?.errors?.['minlength']">
+            At least 6 characters
+          </small>
+
+          <small *ngIf="updatePassword.get('newPassword')?.errors?.['maxlength']">
+            Max 15 characters
+          </small>
+          <small *ngIf="updatePassword.get('newPassword')?.hasError('pattern') &&
+    !updatePassword.get('newPassword')?.hasError('minlength') &&
+    !updatePassword.get('newPassword')?.hasError('maxlength')">
+            Enter alphabets and numeric only
+          </small>
+        </div>
+      </div>
+
+
+    </div>
+  </form>
+
+  <!-- <div class="validBox">
+<p><i class='fas fa-exclamation-circle' style='font-size: 20px;margin-right: 3px;'></i>Your password should be atleast 8 characters long and should contain atleast one uppercase, one lowercase, one number and a special character</p>
+  </div> -->
+</div>
+<div class="profile-container" *ngIf="updateprofilepassword === 'Whatsup'">
+  <form class="profile-form" [formGroup]="otpForm">
+
+    <!-- PHONE BOX -->
+    <div *ngIf="!showOtpBox">
+      <div class="form-row">
+        <div class="form-group">
+          <label><span class="gradient-star">*</span> Phone</label>
+          <input
+          type="text"
+          placeholder="Enter WhatsApp number"
+          formControlName="phone"
+          maxlength="10"
+          inputmode="numeric"
+          autocomplete="off"
+          (input)="onlyNumbers($event)"
+        />
+          <small class="sign-in-desktop__validation-error"
+            *ngIf="otpForm.get('phone')?.touched && otpForm.get('phone')?.invalid">
+            Enter valid 10-digit mobile number
+          </small>
+        </div>
+        <div class="form-group">
+        </div>
+      </div>
+    </div>
+
+    <!-- OTP BOX -->
+    <div *ngIf="showOtpBox" class="otp-box">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Enter OTP sent to WhatsApp</label>
+          <input
+          type="text"
+          maxlength="6"
+          placeholder="OTP"
+          formControlName="otp"
+          inputmode="numeric"
+          autocomplete="one-time-code"
+          (input)="onlyNumbers($event)"
+        />
+        
+          <p *ngIf="timeLeft > 0">
+            Resend OTP in <b>00:{{ timeLeft }}</b>
+          </p>
+          <button *ngIf="canResendOtp" type="button" class="resend-btn" (click)="WhatsupSubmit()">
+            <i class='fas fa-redo'></i>Resend OTP
+          </button>
+        </div>
+        <div class="form-group">
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+<div class="button-row">
+  <button *ngIf="updateprofilepassword === 'Profile'" class="btn active" (click)=" onProfileUpDateFormSubmit()" [disabled]="isSameUsernameNickname()">
+    Update!
+    <i class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i>
+  </button>
+  <button *ngIf="updateprofilepassword === 'Password'" class="btn active" (click)="onUpdatePasswordSubmit()"
+    [disabled]="updatePassword.invalid || apiLoader1">
+    <!-- <i *ngIf="!apiLoader1" class="fa fa-lock"></i> -->
+    <i class="{{ apiLoader1 ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i>
+    Update!
+  </button>
+  <button *ngIf="updateprofilepassword === 'Whatsup' && !showOtpBox" class="btn active" (click)="WhatsupSubmit()"
+    [disabled]="otpForm.get('phone')?.invalid || apiLoader2">
+    <i [class]="apiLoader2 ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle'"></i>
+    Verify!
+  </button>
+
+  <button *ngIf="updateprofilepassword === 'Whatsup' && showOtpBox" class="btn active" (click)="verifyWhatsappOtp()"
+    [disabled]="otpForm.get('otp')?.invalid || apiLoader2">
+    <i [class]="apiLoader2 ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle'"></i>
+    Verify OTP!
+  </button>
+
+</div>
+<p style="color: #f00;" *ngIf="UpdateProfilemessage && updateprofilepassword === 'Password'">{{UpdateProfilemessage}}
+</p>
+<div class="loader-wrapper" *ngIf="responseLoader">
+  <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="loading" />
+</div>

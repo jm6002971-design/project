@@ -1,0 +1,94 @@
+<div>
+  <div class="redirectline">
+    <span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow"
+      width="15" /> <span>My Account</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow"
+      width="15" />
+    <span class="m_t_15  ">PtoP Transfer</span>
+  </div>
+  <h2 class="m_t_15 live_casino_title">PtoP Transfer</h2>
+  <div class="transactions-container">
+
+    <div class="section-card filter-section" [formGroup]="form">
+      <div class="filter-row">
+        <!-- Start Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> Start Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input matInput [matDatepicker]="picker1" formControlName="startDate" readonly />
+            <mat-datepicker-toggle matSuffix [for]="picker1">
+              <img matDatepickerToggleIcon src="assets/sidemenu_icons/calendar.svg" alt="calendar" />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <!-- End Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> End Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input matInput [matDatepicker]="picker2" formControlName="endDate" readonly />
+            <mat-datepicker-toggle matSuffix [for]="picker2">
+              <img matDatepickerToggleIcon src="assets/sidemenu_icons/calendar.svg" alt="calendar" />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> Currency:</label>
+      
+          <div class="select-wrapper">
+            <select formControlName="currency" id="currency">
+              <option value="INR">INR</option>
+              <option value="USD">USD</option>
+            </select>
+          </div>
+      
+        </div>
+      
+        <div class="filter-item"></div>
+      </div>
+      
+      <div class="button-row">
+
+        <button class="btn active" (click)="onFormSubmit()">Show <i
+            class="{{ isLoading ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+      </div>
+      <p style="color: #f00;" *ngIf="errormassage">{{errormassage}}</p>
+
+
+      <div class="table-responsive m_t_15">
+
+        <table class="transaction-table" *ngIf="hitorydata?.length > 0">
+          <thead>
+            <tr>
+              <th class="sticky-col"><span class="gradient-star ">*</span> Date </th>
+              <th style="text-align: right;"><span class="gradient-star">*</span> Amount</th>
+              <th><span class="gradient-star">*</span> Sender</th>
+              <th><span class="gradient-star">*</span> Receiver</th>
+              <th><span class="gradient-star">*</span> Operation Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of hitorydata | paginate: {itemsPerPage:selectnum, currentPage:p}">
+              <td class="sticky-col">{{ cleanDate(data.operationDate)  | date:'medium': 'local'}}</td>
+              <td style="text-align: right;">{{data?.initialBalance?.wallet?.name == 'INR'?'₹':'$'}} {{data.cashAmount.value | number}}</td>
+              <td>{{data.sender}}</td>
+              <td>{{data.receiver}}</td>
+              <!-- <td>{{data.initiator.name}}</td> -->
+              <td>{{data.operationType.name}}</td>
+              <!-- <td>{{data.description}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div *ngIf="hitorydata?.length>0" class="m_t_15">
+        <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="p=$event"
+         previousLabel="Prev" nextLabel="Next" class="pt-2 page-item ">
+        </pagination-controls>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,103 @@
+<div class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>Balance</span></div>
+<h2 class="m_t_15 live_casino_title">Balance</h2>
+
+<div class="balance-page">
+
+    <section class="m_t_15" >
+      <!-- <h2> <span class="line_ht"></span> My Balance</h2> -->
+      <div class="table-responsive ">
+        <table  class="transaction-table">
+          <thead>
+            <tr> 
+              <th style="text-align: left;"><span class="gradient-star">*</span>Account Name :</th>
+              <th style="text-align: left;"><span class="gradient-star">*</span>My Rake Back Level :</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align: left;">{{profileName}}</td>
+              <td style="text-align: left;">{{vipName}}</td> 
+            </tr>         
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+  
+    <!-- Balans FTM -->
+    <section  class="m_t_15">
+      <h2><span class="line_ht"></span> My Balance</h2>
+      <div class="table-responsive ">
+        <table  class="transaction-table">
+          <thead>
+            <tr>
+              <th class="sticky-col"> </th>
+              <th style="text-align: center;"><span class="gradient-star">*</span>INR :</th>
+              <th style="text-align: center;"><span class="gradient-star">*</span>USD :</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td  class="sticky-col">Available</td>
+              <td style="text-align: right;">{{availableAmount}}</td>
+              <td style="text-align: right;" *ngIf="preferredBalanceUSD"> {{preferredBalanceUSD?.cash?.value}} </td>
+            </tr>
+            <tr>
+              <td class="sticky-col">Bonus</td>
+              <td style="text-align: right;">{{bonus}}</td>
+              <td style="text-align: right;" *ngIf="preferredBalanceUSD"> {{preferredBalanceUSD?.bonus?.value}} </td>
+            </tr>
+            <tr>
+              <td class="sticky-col">In Play</td>
+              <td style="text-align: right;"> {{inPlay}}</td>
+              <td style="text-align: right;" *ngIf="preferredBalanceUSD"> {{preferredBalanceUSD?.cashInPlay?.value}} </td>
+          </tr>
+            <tr>
+              <td class="sticky-col">Total </td>
+              <td style="text-align: right;">{{total}} </td>
+              <td  style="text-align: right;" *ngIf="preferredBalanceUSD">{{preferredBalanceUSD?.cash?.value + preferredBalanceUSD?.bonus?.value + preferredBalanceUSD?.cashInPlay?.value}} </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+  
+    <!-- Vip Point -->
+    <h2 class="  bold   m_t_15 "><span class="line_ht"></span> Rake Back Points 
+      <!-- <span class="pointer" routerLink="/exchange"> ( Exchange  ) </span> -->
+      </h2>
+      <div class="table-responsive ">
+   <table class="transaction-table">
+     <tr>
+       <td class="sticky-col">Rake Back Points  </td>
+       <td> {{vipPoints}} </td>
+     </tr>
+     <tr>
+       <td class="sticky-col"> This Week  </td>
+       <td>{{ weeklyCollectedPints }}  </td>
+     </tr>
+     <tr>
+       <td class="sticky-col">This Month  </td>
+       <td>{{ monthCollectedPints }}  </td>
+     </tr>
+     <tr>
+       <td class="sticky-col">This Year  </td>
+       <td>{{ yearCollectedPints }}  </td>
+     </tr>
+     <tr *ngFor="let vipS of vipObj" >
+       <td class="sticky-col"> {{ vipS.name}}   </td>
+       <td>  
+         You need to earn {{ vipS?.compPoints | number:'1.2-2'}}  Rake back points by {{ cleanDate(vipS?.endDate) | date:'medium':'local' }} 
+         to reach Level  {{vipS?.name}}  </td>
+     </tr> 
+   </table>
+  </div>
+  </div>
+  <div class="loader-wrapper" *ngIf="responseLoader">
+    <img
+      [src]="'/assets/giflogo.gif?' + loaderKey"
+      width="280"
+      alt="loading"
+    />
+  </div>

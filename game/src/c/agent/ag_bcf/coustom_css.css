@@ -1,0 +1,96 @@
+@import "styles_en.css";
+html, body {
+    color: #2c435e;
+    font-size: 14px;
+    font-family: Tahoma, Geneva, sans-serif;
+ 
+	//background:#0c121a url("i/footer-bg.gif") repeat-x scroll center bottom;
+    background:#131313;
+	min-height: 100px;
+    overflow: auto;
+}
+.form-horizontal .control-label {
+    margin-bottom: 0;
+    padding-top: 7px;
+    text-align: left; 
+}
+.table-responsive{ 
+	border:1; 
+}
+.user_info {
+    min-width: 200px;
+    position: absolute; 
+    right: 200px;
+    text-align: right; 
+    top: -68px;
+}
+#ui-datepicker-div{
+	display: none;
+    left: 327.5px;
+    position: absolute;
+    top: 100px !important;
+    z-index: 999; 
+}
+/* .datepicker_common + img{
+	position: relative;
+	right: 18px !important;
+    top: -1px !important;
+} */
+@media only screen and 
+(min-width:280px) and (max-width: 432px) {
+	.subitems a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 24px;
+    padding: 0 10px;
+    display: block;
+    border-right: 1px solid transparent;
+}
+ .subitems .submenu_items_table a { 
+    border-left: 1px solid #444444;
+    border-right: 1px solid transparent;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0 2px;
+    text-decoration: none;
+}
+#lang_container {
+    float: right;
+    height: 123px;
+    min-width: 300px;
+    text-align: right;
+}
+.site {
+    display: block;
+    left: 32px;
+ /*    margin:0px 0px; 
+    position: absolute;  */ 
+    top: 100px;
+    z-index: 3; 
+}
+.user_info {
+    
+    border-radius: 5px;
+	border-top: 1px solid;
+    min-width: 237px;
+    padding: 10px 0 0 10px; 
+    position: absolute;
+    right: 35px;
+    text-align: right;
+    top: -67px;
+}
+#content_container { 
+    background-color: #fff;
+    font-size: 14px;
+    height: auto;
+    min-height: 300px;
+    padding: 10px;
+}
+#top_conatainer {
+	 padding-bottom: 50px;
+}
+}

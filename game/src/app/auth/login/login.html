@@ -1,0 +1,144 @@
+<ng-template #alertHost></ng-template>
+<div class="modal" [class.visible]="isVisible" (click)="handleModalClick($event)">
+    <div class="welcome-card-container" (click)="$event.stopPropagation()">
+        <!-- Clean Close Button -->
+        <button type="button" class="welcome-close-btn" (click)="onClose()" aria-label="Close login popup">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="welcome-card-body">
+            <!-- Welcome Heading Inside Container -->
+            <div class="welcome-header-inside">
+                <div class="welcome-title-row">
+                    <i class="fa-solid" [ngClass]="showForget ? 'fa-key' : 'fa-user'"></i>
+                    <h2>{{ showForget ? 'Reset Password' : 'Welcome' }}</h2>
+                </div>
+                <p class="welcome-subtext">{{ showForget ? 'Enter your details to reset password' : 'Log in to access your RajPoker account' }}</p>
+            </div>
+            <div class="form-slider-container">
+                
+                <!-- LOGIN FORM (*ngIf="!showForget") -->
+                <form *ngIf="!showForget" class="welcome-form login-form" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+                    <div class="welcome-fields">
+                        
+                        <!-- Username Field -->
+                        <div class="welcome-input-group">
+                            <i class="fa-solid fa-user welcome-field-icon"></i>
+                            <input id="username" name="username"
+                                class="welcome-input"
+                                type="text" formControlName="username" 
+                                placeholder="Username"
+                                (input)="sanitizeAlphaNumeric($event,'username')"
+                                (input)="removeSpaces($event)" #AutoFocusLoginUsername />
+                        </div>
+                        <div *ngIf="username?.invalid && (username?.dirty || username?.touched)"
+                            class="welcome-error-msg">
+                            <span *ngIf="username?.errors?.['required']">Username is required</span>
+                            <span *ngIf="username?.errors?.['minlength'] || username?.errors?.['maxlength']">Must be 4-15 characters</span>
+                            <span *ngIf="username?.errors?.['pattern']">Letters and numbers only</span>
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="welcome-input-group">
+                            <i class="fa-solid fa-lock welcome-field-icon"></i>
+                            <input id="password" name="password"
+                                class="welcome-input"
+                                [type]="passwordVisible ? 'text' : 'password'" 
+                                formControlName="password"
+                                placeholder="Password"
+                                (input)="removeSpaces($event)" />
+                            <span class="welcome-eye-icon" (click)="togglePasswordVisibility()" title="Toggle password visibility">
+                                <i class="fa-solid" [ngClass]="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+                            </span>
+                        </div>
+                        <div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+                            class="welcome-error-msg">
+                            <span *ngIf="password?.errors?.['required']">Password is required</span>
+                            <span *ngIf="password?.errors?.['minlength'] || password?.errors?.['maxlength']">Must be 6-15 characters</span>
+                        </div>
+
+                        <!-- Optional Recaptcha -->
+                        <div class="welcome-captcha-wrap">
+                            <re-captcha class="welcome-captcha" (resolved)="resolved($event)"
+                                siteKey="6LdgHXUsAAAAAHdqyB_lEK-NAkXbOlgaCpCVBx0u"></re-captcha>
+                        </div>
+                    </div>
+
+                    <!-- Login Submit Button -->
+                    <button type="submit"
+                        class="welcome-submit-btn"
+                        [disabled]="isLoading">
+                        <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+                        <span>{{ isLoading ? 'Loading...' : 'Login' }}</span>
+                    </button>
+
+                    <!-- Auxiliary Links -->
+                    <div class="welcome-links-row">
+                        <button type="button" class="welcome-link" (click)="showForgetForm()">
+                            Forgot Password?
+                        </button>
+                        <span class="welcome-link-sep">•</span>
+                        <button type="button" class="welcome-link link-highlight" (click)="showPopUp('REGISTER')">
+                            Create account
+                        </button>
+                    </div>
+                </form>
+
+                <!-- RESET PASSWORD FORM (*ngIf="showForget") -->
+                <form *ngIf="showForget" class="welcome-form forget-form" [formGroup]="forgetPasswordForm" (ngSubmit)="onSubmitForget()">
+                    <div class="welcome-fields">
+                        <div *ngIf="error" class="alert alert-danger welcome-alert">
+                            {{ error }}
+                        </div>
+                        
+                        <div class="welcome-input-group">
+                            <i class="fa-solid fa-user welcome-field-icon"></i>
+                            <input id="username12" name="username"
+                                class="welcome-input"
+                                type="text" formControlName="username"
+                                placeholder="Username"
+                                (input)="removeSpaces($event)" />
+                        </div>
+                        <div *ngIf="username?.invalid && (username?.dirty || username?.touched)"
+                            class="welcome-error-msg">
+                            <span *ngIf="username?.errors?.['required']">Username is required</span>
+                            <span *ngIf="username?.errors?.['minlength'] || username?.errors?.['maxlength']">Must be 4-15 characters</span>
+                        </div>
+
+                        <div class="welcome-input-group">
+                            <i class="fa-solid fa-envelope welcome-field-icon"></i>
+                            <input id="email" name="email"
+                                class="welcome-input"
+                                [type]="'email'" formControlName="email"
+                                placeholder="Email Address"
+                                (input)="removeSpaces($event)" />
+                        </div>
+                        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                            class="welcome-error-msg">
+                            <span *ngIf="email?.errors?.['required']">Email is required</span>
+                            <span *ngIf="email?.errors?.['email'] || email?.errors?.['pattern']">Enter a valid email</span>
+                        </div>
+                    </div>
+
+                    <button type="submit"
+                        class="welcome-submit-btn"
+                        [disabled]="isLoading">
+                        <i *ngIf="isLoading" class="fas fa-spinner fa-spin"></i>
+                        <span>{{ isLoading ? 'Loading...' : 'Reset Password' }}</span>
+                    </button>
+
+                    <div class="welcome-links-row">
+                        <button type="button" class="welcome-link" (click)="showForgetForm()">
+                            <i class="fa fa-arrow-left"></i> Back To Login
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loader-wrapper" *ngIf="responseLoader">
+    <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="loading" />
+</div>

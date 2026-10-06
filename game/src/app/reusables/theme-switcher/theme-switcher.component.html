@@ -1,0 +1,72 @@
+<div class="header-theme-control">
+  <!-- Mode Toggle Capsule: 🌙 Dark / ☀️ Light -->
+  <button
+    type="button"
+    class="theme-mode-pill"
+    (click)="toggleMode()"
+    [title]="isDarkMode() ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+    aria-label="Toggle Dark or Light Mode">
+    <span class="mode-icon">{{ isDarkMode() ? '🌙' : '☀️' }}</span>
+    <span class="mode-text">{{ isDarkMode() ? 'Dark' : 'Light' }}</span>
+  </button>
+
+  <!-- Theme Palette Dropdown Button -->
+  <div class="theme-dropdown-wrap">
+    <button
+      type="button"
+      class="theme-palette-btn"
+      (click)="togglePanel()"
+      [attr.aria-expanded]="isOpen()"
+      title="Choose Website Color Theme">
+      <span class="active-swatch-circle" [style.background]="getActiveSkinGradient()"></span>
+      <span class="active-theme-name">{{ getActiveSkinName() }}</span>
+      <i class="fa-solid fa-chevron-down theme-arrow" [class.rotated]="isOpen()"></i>
+    </button>
+
+    <!-- Theme Dropdown Popover Menu -->
+    <div *ngIf="isOpen()" class="theme-popover-menu" (click)="$event.stopPropagation()">
+      <div class="popover-header">
+        <div class="popover-header-title">
+          <span>🎨 Color Themes</span>
+          <span class="popover-badge">7 Available</span>
+        </div>
+        <button type="button" class="popover-close-btn" (click)="togglePanel()" aria-label="Close menu">✕</button>
+      </div>
+
+      <div class="popover-theme-list">
+        <button
+          *ngFor="let s of skins"
+          type="button"
+          class="popover-theme-item"
+          [class.selected]="activeSkin() === s.id"
+          [class.agent-theme]="s.tag === 'AGENT'"
+          [class.affiliate-theme]="s.tag === 'AFFILIATE'"
+          (click)="selectSkin(s.id)">
+          <span class="item-swatch" [style.background]="s.gradient">
+            <span class="item-icon">{{ s.icon }}</span>
+          </span>
+          <div class="item-details">
+            <div class="item-title-row">
+              <span class="item-name">{{ s.name }}</span>
+              <span *ngIf="s.tag" class="item-tag" [class.agent-tag]="s.tag === 'AGENT'" [class.affiliate-tag]="s.tag === 'AFFILIATE'">
+                {{ s.tag }}
+              </span>
+            </div>
+            <span class="item-desc">{{ s.badge }}</span>
+          </div>
+          <i *ngIf="activeSkin() === s.id" class="fa-solid fa-check item-check"></i>
+        </button>
+      </div>
+
+      <div class="popover-footer-tip">
+        <span>💡 Themes apply dynamically without reloading or affecting game feeds.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Global Toast Notification -->
+<div *ngIf="toastMessage()" class="theme-global-toast" role="status">
+  <span class="toast-sparkle">✨</span>
+  <span>{{ toastMessage() }}</span>
+</div>

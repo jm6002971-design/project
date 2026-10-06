@@ -1,0 +1,221 @@
+body {
+	color:#fff;
+	background: #01182a;  
+}
+.main-color {
+	background:#111;
+}
+h2 { 
+	
+	color:#ffff99;
+}
+a, table.border a {
+	color:#ffff99;
+}
+h1 {
+	color:#fff;
+}
+#cboxContent {
+	color:#111;
+	width: 550px;
+}
+.change_btn #button_continue {
+	margin: 35px 0 0 15px;
+} 
+table.border tr.even .lightcell {
+	background-color:#fff;
+}
+.main-color {
+	border-color:#474747;
+}
+.h_logo-color {
+	border-bottom-color:#474747;
+}
+.h_lang-color {
+	border-bottom-color:#474747;
+}
+.menu-color {
+	border-bottom-color:#474747;
+}
+.left_menu-color {
+	border-right-color:#474747;
+	border-bottom-color:#474747;
+}
+.content-color {
+	border-bottom-color:#474747;
+}
+.footer_menu-color {
+	border-bottom-color:#474747;
+}
+.clickandbuy-color {
+	background-color:#474747;
+}
+.menu_table-color {
+	border-color:#474747;
+}
+.header-color {
+	color:#ffffff;
+	background-color:#474747;
+}
+/************************ SUBMENU **********************************************************/
+ul#submenu_help {
+	color:#d82a29;
+}
+ul#submenu_help li a {
+	color:#ffff99;
+
+}
+ul#submenu_help li .active {
+	color:#d82a29;
+}
+ul#submenu_help li ul li .active {
+	color:#d82a29;
+}
+ul#submenu_help .a {
+	color:#ffff99;
+}
+ul#submenu_help li a.not_logged{ 
+	color:#ffff99;
+	border-bottom-color:#ffff99;
+}
+/********************************************************************************************/
+.edit_info-color {
+	color:#924535;
+}
+.welcome-color {
+	color:#ffffff; 
+}
+.footer_tab-color {
+	color:#ffff99;
+}
+.footer_tab-color a {
+	color:#ffff99;
+}
+.cont-color {
+	border-color:#474747;
+}
+.cont-color td {
+	border-color:#474747;
+}
+table.border .darkcell {
+	background-color:#111;
+	color:white;
+	border-color:#474747;
+}
+table.border .lightcell {
+	background-color:#d2d2c6; 
+	color:black;
+}
+.lightcell {
+	color:black;
+}
+table.border .lightcell a {
+	color: #111;
+}
+/************* LANG MENU ****************************************************************/
+.text-color {
+	border-color:#474747;
+	background-color:#092c01;
+}
+.text-color a {
+	color:#ffff99;
+}
+.text-color_a a{
+	color:black;
+}
+.text-color_a {
+	border-color:#474747;
+	background-color:#ffff99;
+	font-weight:bold;
+}
+#lang .text {
+	border-color:#474747;
+}
+.v1-color, .v2-color, .v3-color {
+	border-color:#474747;
+	background-color:#092c01;
+}
+.v1-color {background: #474747;}
+.v1-color_a, .v2-color_a, .v3-color_a {
+	border-color:#474747;
+	background-color:#ffff99;
+}
+.v1-color_a {background: #474747}
+/*****************************************************************************************/
+input.it01 {
+	border-color:#474747;
+	background-color:#ffffff;
+	color:#333333;
+}
+input.input_common {
+	border-color:#474747;
+	background-color:#ffffff;
+	color:#333333;
+}
+select.s01, select.s01_year {
+	border-color:#474747;
+	background-color:#ffffff;
+	color:#333333;
+}
+select.select_common {
+	border-color:#474747;
+	background-color:#ffffff;
+	color:#333333;
+}
+table.border {
+	color:#924535;
+}
+table.border td, table.border {
+	border-color:#474747;
+}
+.first_level {
+	color:#bd4ab2;
+}
+.click a {
+	display:none;
+}
+div.errors {
+	background-color: #474747;
+	color:#FFFFFF;
+}
+#colorbox .colorbox_table_container td {
+	color:#924535;
+}
+.overview_icon {
+	background:#ffffff;
+	width:22px;
+	height:24px;
+}
+.login_icon {
+	background:#ffffff;
+	width:19px;
+	height:24px;
+}
+.help_icon {
+	background:#ffffff;
+	width:21px;
+	height:24px;
+}
+.stats_icon {
+	background:#ffffff;
+	width:19px;
+	height:24px;
+}
+.logout_icon {
+	background:#ffffff;
+	height:24px;
+	width:19px;
+}
+.register_icon {
+	background:#ffffff;
+	height:24px;
+	width:19px;
+}
+.logo_aff_mail {
+	background-image: url(/c/i/logo.png);
+	width: 259px;
+	height: 66px;
+}
+#changePasswordForm .input_common {
+	width: 180px;
+}

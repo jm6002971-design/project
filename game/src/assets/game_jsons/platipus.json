@@ -1,0 +1,239 @@
+{
+    "platipus": [
+        {
+            "gameName": "The Big Score",
+            "gameId": 574,
+            "launchId": "thebigscore"
+        },
+        {
+            "gameName": "Xmas Avalanche",
+            "gameId": 571,
+            "launchId": "xmasavalanche"
+        },
+        {
+            "gameName": "Fruit Boost",
+            "gameId": 572,
+            "launchId": "fruitboost"
+        },
+        {
+            "gameName": "Extra Gems",
+            "gameId": 568,
+            "launchId": "extragems"
+        },
+        {
+            "gameName": "Pearls of the Ocean",
+            "gameId": 565,
+            "launchId": "pearlsoftheocean"
+        },
+        {
+            "gameName": "Ways of the Gauls",
+            "gameId": 563,
+            "launchId": "waysofthegauls"
+        },
+        {
+            "gameName": "Piedra del Sol",
+            "gameId": 559,
+            "launchId": "piedradelsol"
+        },
+        {
+            "gameName": "9 Gems",
+            "gameId": 561,
+            "launchId": "ninegems"
+        },
+        {
+            "gameName": "Posh Cats",
+            "gameId": 557,
+            "launchId": "poshcats"
+        },
+        {
+            "gameName": "Frozen Mirror",
+            "gameId": 554,
+            "launchId": "frozenmirror"
+        },
+        {
+            "gameName": "Diamond Hunt",
+            "gameId": 555,
+            "launchId": "diamondhunt"
+        },
+        {
+            "gameName": "Little Witchy",
+            "gameId": 552,
+            "launchId": "littlewitchy"
+        },
+        {
+            "gameName": "Wild Justice",
+            "gameId": 551,
+            "launchId": "wildjustice"
+        },
+        {
+            "gameName": "Leprechaun's Coins",
+            "gameId": 550,
+            "launchId": "leprechauns"
+        },
+        {
+            "gameName": "Bamboo Grove",
+            "gameId": 549,
+            "launchId": "bamboogrove"
+        },
+        {
+            "gameName": "Guises of Dracula",
+            "gameId": 547,
+            "launchId": "guisesofdracula"
+        },
+        {
+            "gameName": "Might of Zeus",
+            "gameId": 548,
+            "launchId": "mightofzeus"
+        },
+        {
+            "gameName": "7 & Hot Fruits",
+            "gameId": 545,
+            "launchId": "hotfruits "
+        },
+        {
+            "gameName": "Wealth of Wisdom",
+            "gameId": 540,
+            "launchId": "wealthofwisdom  "
+        },
+        {
+            "gameName": "Hawaiian Night",
+            "gameId": 543,
+            "launchId": "hawaiiannight"
+        },
+        {
+            "gameName": "Santa's Bag",
+            "gameId": 542,
+            "launchId": "santasbag"
+        },
+        {
+            "gameName": "Royal Lotus",
+            "gameId": 541,
+            "launchId": "royallotus"
+        },
+        {
+            "gameName": "Chilli Fiesta",
+            "gameId": 539,
+            "launchId": "chillifiesta"
+        },
+        {
+            "gameName": "Dynasty Warriors",
+            "gameId": 538,
+            "launchId": "dynastywarriors"
+        },
+        {
+            "gameName": "Wild Spin",
+            "gameId": 536,
+            "launchId": "wildspin"
+        },
+        {
+            "gameName": "Da Ji Da Li",
+            "gameId": 537,
+            "launchId": "dajidali"
+        },
+        {
+            "gameName": "The Ancient Four",
+            "gameId": 535,
+            "launchId": "theancientfour"
+        },
+        {
+            "gameName": "Caishen's Gifts",
+            "gameId": 534,
+            "launchId": "caishensgifts"
+        },
+        {
+            "gameName": "Pirate's Map",
+            "gameId": 532,
+            "launchId": "piratesmap"
+        },
+        {
+            "gameName": "Jackpot Lab",
+            "gameId": 531,
+            "launchId": "jackpotlab"
+        },
+        {
+            "gameName": "Aztec Coins",
+            "gameId": 529,
+            "launchId": "azteccoins"
+        },
+        {
+            "gameName": "Webby Heroes",
+            "gameId": 526,
+            "launchId": "webbyheroes"
+        },
+        {
+            "gameName": "Pharaoh's Empire",
+            "gameId": 492,
+            "launchId": "pharaohsempire"
+        },
+        {
+            "gameName": "Bison Trail",
+            "gameId": 491,
+            "launchId": "bisontrail"
+        },
+        {
+            "gameName": "Jade Valley",
+            "gameId": 485,
+            "launchId": "jadevalley"
+        },
+        {
+            "gameName": "Neon Classic",
+            "gameId": 488,
+            "launchId": "neonclassic"
+        },
+        {
+            "gameName": "Power of Poseidon",
+            "gameId": 452,
+            "launchId": "powerofposeidon "
+        },
+        {
+            "gameName": "Great Ocean",
+            "gameId": 486,
+            "launchId": "greatocean "
+        },
+        {
+            "gameName": "Aztec Temple",
+            "gameId": 448,
+            "launchId": "aztectemple"
+        },
+        {
+            "gameName": "Monkey's Journey",
+            "gameId": 480,
+            "launchId": "monkeysjourney"
+        },
+        {
+            "gameName": "Sakura Wind",
+            "gameId": 469,
+            "launchId": "sakurawind"
+        },
+        {
+            "gameName": "Lucky Money",
+            "gameId": 475,
+            "launchId": "luckymoney"
+        },
+        {
+            "gameName": "Crystal Sevens",
+            "gameId": 425,
+            "launchId": "crystalsevens"
+        },
+        {
+            "gameName": "Magical Mirror",
+            "gameId": 446,
+            "launchId": "magicalmirror"
+        },
+        {
+            "gameName": "Safari Adventures",
+            "gameId": 426,
+            "launchId": "safariadventures"
+        },
+        {
+            "gameName": "Jewel Bang",
+            "gameId": 395,
+            "launchId": "jewelbang"
+        },
+        {
+            "gameName": "Fiery Planet",
+            "gameId": 392,
+            "launchId": "fieryplanet"
+        }
+    ]
+}

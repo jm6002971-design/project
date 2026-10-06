@@ -1,0 +1,334 @@
+.promo-container {
+  display: grid;
+  gap: 15px;
+  padding: 10px;
+}
+h6.heading {
+  /* margin: 80px; */
+  font-size: 27px;
+  padding: 10px;
+  color: #e7aa04;
+  /* / border-bottom: 1px solid; */
+}
+.promo-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+ p, li {
+  color: #fff;
+  font-size: 17px;
+  margin: 0;
+  line-height: 1.8;
+}
+.promo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.promo-card.active {
+border: 2px solid #00ff9c; /* highlight color */
+box-shadow: 0 0 10px rgba(0, 255, 156, 0.5);
+}
+button.close:hover {
+      opacity: 1;
+      box-shadow: 0px 0px 10px 0px #e7aa04;
+}
+button.close { 
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--gradient-primary);
+    border: none;
+    color: #fff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: var(--gradient-primary);
+    text-transform: capitalize;
+    color: #fff;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 5;
+  }
+  /* HTML: <div class="loader"></div> */
+.loaderPromotion { 
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(farthest-side, #ffa516 94%, #0000) top/8px 8px no-repeat, conic-gradient(#0000 30%, #ffa516);
+      -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+      animation: l13 1s infinite linear;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+  }
+ :host ::ng-deep th , td  {
+    border: 1px solid #514c4c;
+    padding: 5px;
+    background: fixed;
+}
+:host ::ng-deep tr.bg_cl {
+  background: var(--gradient-primary) !important;
+}
+:host ::ng-deep tr td {
+  background: #1e1e1e  !important;
+  color: #fff !important;
+  border: 1px solid #514c4c !important;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+/* Mobile → 1 banner */
+@media (max-width: 767px) {
+  .promo-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet → 2 banners */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .promo-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop → 3 banners */
+@media (min-width: 1024px) {
+  .promo-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}  li , p {
+  color:#999999;
+  font-size: 1rem;
+}
+h2 {
+  margin-top: 22px;
+  font-size:1.5rem;
+}
+.layout {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.mobile-dropdown {
+  display: none;
+}
+
+/* ✅ MOBILE VIEW */
+@media (max-width: 767px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  /* Hide side menu */
+  .side-menu {
+    display: none;
+  }
+
+  /* Show dropdown */
+  .mobile-dropdown {
+    display: block;
+    padding: 10px;
+  }
+
+  .mobile-dropdown select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+  } 
+
+  .main-banner {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+/* LEFT MENU */
+.side-menu {
+  width: 250px;
+  background: #1e1e1e;
+  border-radius: 6px;
+ border:1px solid #303030;
+}
+
+.side-menu div {
+  padding: 12px;
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.side-menu div.active { 
+  background: var(--gradient-primary);
+  border-radius: 6px;
+  color: #fff;
+}
+
+select{
+  background: var(--gradient-primary);
+  text-transform: capitalize;
+}
+option{
+  text-transform: capitalize;
+}
+/* RIGHT CONTENT */
+.content {
+  flex: 1;
+  color: #ddd;
+}
+
+.main-banner {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  /* max-width: 850px; */
+}
+
+.highlight {
+  color: #00ff9c;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+.image-card {
+  position: relative;
+  width: 100%;
+  width: 100%;
+  aspect-ratio: 490 / 280;
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 850px;
+  cursor: pointer;
+}
+
+/* Skeleton base */
+.skeleton {
+  position: absolute;
+  inset: 0;
+  background: #2a2a2a;
+  z-index: 10;
+}
+
+
+/* Wavy shimmer effect */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+/* Hide image until loaded */
+img.hide {
+  display: none;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+:host ::ng-deep ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+:host ::ng-deep ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+:host ::ng-deep ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #fbc233; /* your theme color */
+  font-size: 18px;
+}
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;   /* ✅ FIX HEIGHT */
+  background: #1a1a1a;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Keep same height space */
+.main-banner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Skeleton */
+.banner-wrapper .skeleton {
+  position: absolute;
+  inset: 0;
+  background: #2a2a2a;
+  z-index: 10;
+}
+
+/* Shimmer */
+.banner-wrapper .skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.5),
+    transparent
+  );
+  animation: shimmer 1.2s infinite;
+}
+
+/* Hide image until loaded */
+.hide {
+  display: none;
+}

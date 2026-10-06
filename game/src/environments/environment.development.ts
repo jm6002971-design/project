@@ -1,0 +1,105 @@
+export const environment = {
+    production: true,
+    baseUrl: '',
+    skinId: "rajpoker",
+    Domain: "https://rajpoker.com",
+    api: {
+        player: {
+            register: "/api/player/register",
+            login: "/api/player/login",
+            logout: "/api/player/logout",
+            fotgotPassword: "/api/player/forgotPassword",
+            getProfile: "/api/player/getProfile",
+            updateProfile: "/api/player/updateProfile",
+            updatePassword: "/api/player/updatePassword",
+            playerStats: "/api/player/getStats",
+            playerLevels: "/api/cp/playerLevels",
+            playerProviderList: "api/player/getPlayerProviderList",
+            getProviders: "api/agentAccount/getProviders",
+            twofactorOptin: '/api/player/verifyTwoFactorOptIn',
+            verifyAccount: '/api/player/verifyAccount',
+            aviatrix: '/rest/aviatrix/launchGame',
+            torro: "/rest/torrospin/launchGame",
+            closeGameSession: "api/player/closeSession",
+            gameclose: "rest/torrospin/gameClosed",
+            nonce: "api/player/nonce?address",
+            webAuthVerify: '/api/player/webAuth/verify',
+            getAvatarList: "api/player/getAvatarList",
+            setAvatar: "api/player/setAvatar",
+            getAvatar: "/api/player/getAvatar",
+            resetpasswordNew: '/api/player/reset-password',
+            leaderboardlist: "/api/leaderboard/list",
+            leader: "/api/leaderboard/getParticipants",
+            generateOTP: "api/player/generateOTP",
+            validateOTP: "api/player/validateOTP",
+            addMobileVerifyBonus: "api/cashier/addMobileVerifyBonus",
+            gvprovider: "/rest/gv/request/launchGame",
+            vivoslots: "/rest/vivo/balance_integration/vivoGaming",
+            vivoslots1: "/api/playVivo/handler/vivo",
+            kingmidas: "/rest/kingmidas/launchGame",
+            VOUCHERapi: "/api/cashier/interKassaCashout"
+
+        },
+
+        cashier: {
+            balance: "/api/cashier/balance",
+            deposit: "/api/cashier/buy",
+            interKassaCashOut: "/api/cashier/interKassaCashout",
+            getCaspianPayTrxCoversionRates: '/api/cashier/getCaspianPayTrxCoversionRates',
+            withDrawCashout: '/api/cashier/cashout',
+            // transferUrl:  "/api/cashier/getPaymentMethods",
+            transferUrl: "/api/cashier/pToPTransfer",
+            cancelWithdrawRequest: '/api/cashier/cancelWithdrawRequest',
+            getOpenWithdrawRequests: '/api/cashier/getOpenWithdrawRequests',
+            exchangRates: '/api/cashier/getExchangeRates',
+            walletExchange: '/api/cashier/walletExchange',
+            getExchangeRates: "/api/cp/exchangeRates",
+            exchangeVipPointsUrl: "/api/cp/exchange",
+            getBankAccounts: '/api/cashier/getBankAccounts',
+            addBankAccount: '/api/cashier/addBankAccount',
+            deleteBankAccount: '/api/cashier/deleteBankAccounts'
+
+
+        },
+
+        games: {
+            pragmatictoken: "/rest/pp/ppToken",
+            rubyPlayLaunch: "/rest/ruby_play/launch",
+            aviatrixGameLaunch: "/rest/aviatrix/launchGame",
+            cpgGameLaunch: "/rest/cpg/balance/launchGame",
+            barbaraGameLaunch: "rest/barbara/launchGame",
+            mancalaGameLaunch: "/rest/mancala/getToken",
+            ezugiGameLaunch: "/rest/ezugi/session",
+            habaneroGameLaunch: "rest/habanero/session",
+            vibraGameLaunch: "/rest/vibra/launch",
+            endorphinaGameLaunch: '/rest/endorphina/endorphinaUrl',
+            playVivoHandlar: "/api/playVivo/handler/vivo",
+            sporToken: "/rest/bti/btiToken",
+            gameurl: "/rest/caballonegro",
+            vivoGameLaunch: "api/Vivo/handler",
+            popokGameLaunch: "rest/popokgaming/launchGame",
+            instantPlay: "rest/api/gad/gameLaunchUrl/XYZ",
+            jdbLaunch: "rest/jdb/gameLaunch",
+            heblounch: "/rest/habanero/session",
+            indicasino: "/rest/indiCasino/api/handler",
+              onegamehub: "/rest/onegamehub/launchGame",
+        },
+
+        history: {
+            transaction: '/api/history/transaction',
+            transactionCheck: '/api/history/transactionCheck',
+            remotegame: "/api/history/remoteGames",
+            pokerhistory: "/api/history/game",
+            newresponse1: '/api/history/transaction',
+
+        },
+        sports: {
+            sportoken: "/rest/bti/btiToken",
+            sportbalance: "/rest/bti/getBalance",
+            getEventsList: "/rest/bti/getEventsList",
+        },
+        poker: {
+            PokerTournament: "/api/player/getPokerTournamentsList"
+        }
+    },
+};

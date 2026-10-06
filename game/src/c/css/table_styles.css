@@ -1,0 +1,199 @@
+/***********************************
+	BORDER TABLE
+************************************/
+table.border, .cms_content_container table,
+.border-p-100, .w100, .w100-p {
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 5px;
+	color: #0c0c0c;
+	border-bottom: 1px solid #949494 !important; 
+}
+table.border, .cms_content_container table,
+.border-p-100 {
+	border: 1px solid #111111;
+	background:#ffffff none repeat scroll 0 0; 
+}
+.history_detail table.border {
+	width: 90%;
+	margin: 0 auto;
+}
+table.border th.center, .cms_content_container table th {
+	text-align: center; 
+}
+table.comppoints td.money {
+	text-align: center !important;
+}
+table.border td, table.border th,
+.cms_content_container table td, .cms_content_container table th,
+.border-p-100 th, .border-p-100 td, .w100 th, .w100 td,
+.w100-p td, .w100-p th {
+	padding: 4px;
+	vertical-align: middle;
+}
+table.border th {
+	text-align: center;
+}
+.even .lightcell, .rake_even .lightcell, .even .lightcell,
+.cms_content_container table td,
+.dates .todate th.month, .dates .todate th.day, .dates .todate th.year,
+.inner_help .border .even td,
+.border-p-100 .even td, .w100 .even td, .w100-p .even td {
+	background: #ffffff;
+	border-bottom: 1px solid #111111;
+}
+.even .lightcell a, .even .lightcell a:hover,
+.odd .lightcell a, .odd .lightcell a:hover,
+.cms_content_container table a, .cms_content_container table a:hover {
+/*color: #fff !important;*/ 
+}
+.odd .lightcell, .lightcell, .hilightcell, .rake_odd .lightcell,
+.dates .fromdate th.month, .dates .fromdate th.day, .dates .fromdate th.year,
+.inner_help .border .odd td,
+.border-p-100 .odd td, .w100 .odd td, .w100-p .odd td {
+	border-bottom: 1px solid #949494 !important;
+	background:#ffffff;
+}
+.even .darkcell, .tour_table .even td, .dates .todate .title {
+   background: #ffffff none repeat scroll 0 0;
+	border-bottom: 1px solid #949494 !important;
+	color: #0c0c0c;
+	text-align: left;
+	font-family: Segoe UI !important; 
+	font-style: italic; 
+}
+.odd .darkcell, .darkcell, .tour_table .odd td, .filter_table .darkcell td,
+.dates .fromdate .title, .dates .fromdate th.button-cell, .dates .td th {
+	background: #ffffff none repeat scroll 0 0;
+	border-bottom: 1px solid #949494 !important;
+	text-align: left;
+}
+.fromdate th.button-cell {
+	text-align: center !important;
+	padding-bottom: 42px !important;
+}
+.tournaments_table {  
+	width: 100%;
+}
+.tournaments_table tr.header {
+	background: #a8a8a8;
+	border: 1px solid #f1f1f1;
+}
+.tournaments_table tr.header td {
+	color: #333333;
+	padding: 3px 15px;
+	text-align: center;
+}
+.tournaments_table .tour_even {
+	background: #e1e1e1;
+	border-bottom: 1px solid #111111;
+}
+.tournaments_table .tour_odd {
+	background: #f2f2f2;
+	border-bottom: 1px solid #111111;
+}
+.tournaments_table .tour_odd td, .tournaments_table .tour_even td {
+	color: #828282;
+	padding: 6px 13px;
+	vertical-align: middle;
+	text-align: center;
+}
+.tournaments_table td.tour_buyin {
+	padding: 6px 0;
+}
+.tournaments_table td.tour_name, .tournaments_table tr.header td.h_tourney_name {
+	text-align: left;
+}
+.tournaments_table td.tour_status {
+	color: #9f0005;
+}
+tr.header, th.header {
+	/* border: 1px solid #3a3a3a; */
+	background:transparent linear-gradient(to bottom, #ffffff 0%, #203b5b 80%) repeat scroll 0 0
+}
+.date_filter tr.header, .date_filter th.header {
+	border: none;
+	border-bottom: 1px solid #111111;
+	text-align:left;
+}
+tr.header th, th.header, .filter_table .td_1, .cms_content_container table th,
+.cms_content_container table th, .inner_help .border th,
+.border-p-100 th, .w100 th, .w100-p th, .deposit_result_table th {
+	background: #ededed none repeat scroll 0 0;
+	color: #333333;
+	font-weight: 300; 
+	text-align: left;
+	font-family: Segoe UI !important;
+	font-style: italic;
+	padding: 12px 0;
+	border-bottom: 1px solid #949494 !important; 
+}
+.pages td, .pages td a {
+	line-height: 22px;
+}
+table.balance_tab td.user_name, .cashout_t .user {
+	text-align: right;
+	font-weight: normal;
+	padding-right: 12px
+}
+.balance_tab td, .balance_tab th {
+	width: 50%;
+}
+table.border td.money, table.border td.numbercell {
+	padding-right: 10px;
+	text-align: center;      
+}
+#content table.border td.user {
+	text-align: right;
+	font-weight: bold;
+	padding-right: 30px;
+}
+.filter_table .month, .filter_table .day, .filter_table .year {
+	text-align: center;
+}
+.filter_table p {
+	padding: 2px 0;
+}
+table.pages {
+	width: 100%;
+	margin-top: 5px;
+}
+table.border td.datetime, table.border td.textcell {
+	text-align: left;
+}
+table.border.balance_tab td.datetime, table.border.balance_tab td.textcell {
+	text-align: left;
+}
+table.border td.number {
+	text-align: center;
+}
+.table > thead > tr > th {
+	border: 1px solid #ddd;
+	vertical-align: bottom; 
+}
+table.border a:hover {
+	text-decoration: none;
+}
+.show {
+	border-left: 1px solid #111111;
+}
+.odd.next_currency .darkcell, .odd.next_currency .lightcell{
+	border-top: 1px solid #111111;
+}
+.filter_table .header.monthes,
+.filter_table .header.years,
+.filter_table .header.days{
+	text-align: center;
+}
+table.border.balance_tab {
+	margin-bottom: 20px;
+}
+h2.table_header {
+	margin-bottom: 5px;
+}
+.balance_tab td, .balance_tab th {
+	width: 10%;
+}
+.cashier_transactions_tables h2 {
+	padding-top: 15px;
+}

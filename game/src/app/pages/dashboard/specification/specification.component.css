@@ -1,0 +1,132 @@
+.copyIcon:hover{
+
+    color: #fff;
+}
+.copyIcon  {
+  position: relative;
+  right: 0;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  top: -30px;
+  right: 20px;
+}
+.copyIcon i{
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+}
+
+.copied-msg {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 2px;
+  /* display: none; */
+}
+
+.copyIcon:hover .copied-msg {
+  display: block;
+}
+i.setCls_eye {
+  position: relative;
+  right: 31px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  top: 0px;
+  z-index: 100;
+}
+.fgsdgd input{
+  width: 100%;
+}
+span.fgsdgd {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.validBox p{
+  margin: 0;
+
+}
+.validBox {
+ 
+  background: #1d1d1d;
+  max-width: 310px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 7px;
+  text-align: start;
+  font-size: 14px;
+  border: 1px solid #4b4848;
+  position: relative;
+  left: 15px;
+}
+@media (max-width:768px){
+  .validBox{
+    left: 8px;
+    top: 10px;
+  }
+}.btn.verified { 
+    background: #25d366;
+    color: #fff;
+    cursor: no-drop;
+    opacity: 1;
+}
+/* OTP Container */
+ 
+
+/* OTP Input */
+.otp-box input {  
+  letter-spacing: 8px; 
+  transition: 0.3s;
+} 
+/* Timer */
+.otp-box p b {
+  color: #f00;
+}
+.error-msg{
+  color: #f00;
+}
+.otp-box p {
+  margin: 12px 0;
+  font-size: 13px;
+  color: #fff;
+}
+
+/* Verify Button */
+.resend-btn { 
+    background: none;
+    border: none;
+    background: var(--gradient-primary);
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.resend-btn i {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.otp-box .btn:hover:not(:disabled) {
+  background: #1ebe5d;
+}
+
+.otp-box .btn:disabled {
+  background: #a7e5c2;
+  cursor: not-allowed;
+}

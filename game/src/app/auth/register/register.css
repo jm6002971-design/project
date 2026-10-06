@@ -1,0 +1,355 @@
+/* ==========================================================================
+   RAJPOKER REGISTER MODAL POPUP
+   Matches user's reference image:
+   - Floating top banner badge: 👤 Create Account (Dark navy, rounded, drop shadow)
+   - Soft light card body with gentle shadow
+   - Left external slate icons
+   - Clean white rounded input boxes
+   - Centered Cyan/Teal Sign Up button
+   ========================================================================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10015;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Card Container */
+.welcome-card-container {
+    position: relative;
+    width: 92%;
+    max-width: 440px;
+    background: #eaedf1;
+    border-radius: 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25), 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 42px 28px 24px 28px;
+    animation: welcomeCardPop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    font-family: 'Poppins', sans-serif;
+    color: #1f2937;
+    margin: 30px auto;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.welcome-card-container::-webkit-scrollbar {
+    width: 4px;
+}
+.welcome-card-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+/* Dark mode adaptability */
+[data-mode="dark"] .welcome-card-container {
+    background: #141a24;
+    color: #f1f5f9;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes welcomeCardPop {
+    from {
+        opacity: 0;
+        transform: scale(0.88) translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Floating Protruding Header Ribbon (Exact match to screenshot) */
+.welcome-header-ribbon {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00283d;
+    padding: 11px 34px;
+    min-width: 210px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 22px rgba(0, 40, 61, 0.45);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.welcome-ribbon-icon {
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.welcome-ribbon-text {
+    font-size: 1.22rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+/* Clean Close Button */
+.welcome-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.06);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 5;
+}
+
+[data-mode="dark"] .welcome-close-btn {
+    background: rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+}
+
+.welcome-close-btn:hover {
+    background: rgba(225, 29, 72, 0.15);
+    color: #e11d48;
+    transform: rotate(90deg);
+}
+
+.welcome-card-body {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.welcome-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Input Row with External Left Icon */
+.welcome-input-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.welcome-field-icon {
+    width: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+[data-mode="dark"] .welcome-field-icon {
+    color: #94a3b8;
+}
+
+.welcome-input-wrap {
+    flex: 1;
+    position: relative;
+}
+
+.welcome-input-wrap.with-action {
+    display: flex;
+    gap: 8px;
+}
+
+.welcome-inline-btn {
+    background: #42b4d6;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.welcome-inline-btn:hover:not(:disabled) {
+    background: #36a3c4;
+}
+
+.welcome-inline-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+/* White Input Field */
+.welcome-input {
+    width: 100%;
+    height: 42px;
+    background: #ffffff !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.92rem;
+    color: #1f2937 !important;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+[data-mode="dark"] .welcome-input {
+    background: #0f131a !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+.welcome-input::placeholder {
+    color: #9ca3af;
+    font-size: 0.88rem;
+}
+
+.welcome-input:focus {
+    outline: none;
+    border-color: #42b4d6 !important;
+    box-shadow: 0 0 0 3px rgba(66, 180, 214, 0.25);
+}
+
+.welcome-eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 4px;
+}
+
+.welcome-eye-icon:hover {
+    color: #42b4d6;
+}
+
+.welcome-error-msg {
+    margin-left: 38px;
+    font-size: 0.74rem;
+    color: #dc2626;
+    font-weight: 500;
+    margin-top: 1px;
+}
+
+.welcome-consent-row {
+    margin-left: 38px;
+    margin-top: 12px;
+}
+
+.welcome-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.76rem;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+[data-mode="dark"] .welcome-checkbox-label {
+    color: #94a3b8;
+}
+
+.welcome-checkbox-label input {
+    margin-top: 3px;
+    cursor: pointer;
+    accent-color: #42b4d6;
+}
+
+/* Cyan / Teal Sign Up Button */
+.welcome-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 20px auto 10px auto;
+    min-width: 140px;
+    height: 42px;
+    padding: 0 24px;
+    background: #42b4d6;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(66, 180, 214, 0.45);
+    transition: all 0.22s ease;
+}
+
+.welcome-submit-btn:hover:not(:disabled) {
+    background: #36a3c4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(66, 180, 214, 0.6);
+}
+
+.welcome-submit-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+.welcome-links-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 0.82rem;
+}
+
+.welcome-link {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.82rem;
+    padding: 0;
+}
+
+.welcome-link.link-highlight {
+    color: #0284c7;
+    font-weight: 600;
+}
+
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}

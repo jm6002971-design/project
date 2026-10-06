@@ -1,0 +1,12 @@
+<div class="overlay" *ngIf="message">
+  <div class="modal modal--open">
+    <p class="modal__text">{{ message.content }}</p>
+    <button class="button" [ngClass]="message.type === 'success'?'success_btn':'failed_btn'"
+      (click)="removeMessage(message.id)">
+      <span class="button__label">
+        {{ message.type === 'success' ? 'Done' : 'OK' }}
+      </span>
+    </button>
+
+  </div>
+</div>

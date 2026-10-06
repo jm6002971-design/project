@@ -1,0 +1,181 @@
+ 
+  .section-card { 
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px; 
+  }
+  
+  /* Filter section */
+  .filter-section .filter-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-item {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .filter-item label {
+    display: block;
+    font-size: 1.1rem;
+    /* margin-bottom: 6px; */
+  }
+  
+  .filter-item label span {
+    /* color: #ff4444; */
+  }
+  
+  .input-group {
+    position: relative;
+  }
+  
+  .input-group input[type='date'] {
+    width: 100%;
+    background: #222;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    padding: 10px 35px 10px 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .input-group img {
+    position: absolute;
+    right: 34px;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    filter: invert(52%) sepia(82%) saturate(7499%) hue-rotate(4deg)
+      brightness(100%) contrast(106%);
+  }
+  
+  /* Button */
+  .btn-show {
+    background: var(--gradient-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 230px;
+  }
+  
+  .btn-show:hover {
+    background: linear-gradient(90deg, #ff7733, #ff4400);
+  }
+  
+  /* Table */
+  .balance-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  .balance-table th,
+  .balance-table td {
+    padding: 12px;
+    border: 1px solid #333;
+    font-size: 14px;
+    text-wrap: nowrap;
+  }
+  
+  .balance-table th {
+    /* color: #ff6600; */
+    background: #0f0f0f;
+  }
+  
+  .balance-table td {
+    background: #161616;
+  }
+  
+  /* Responsive view */
+  @media (max-width: 768px) {
+    .filter-row {
+      flex-direction: column;
+    }
+  
+    .btn-show {
+      width: 100%;
+    }
+  
+    .balance-table th,
+    .balance-table td {
+      font-size: 13px;
+      padding: 10px;
+    }
+    .section-card{
+      padding: 0;
+    }
+  }
+  .date-field {
+    width: 100%;
+    background: #1f1f1f;
+    border-radius: 8px;
+  }
+  
+  mat-datepicker-toggle   img  {
+    /* width: 30px;
+    height: 30px;
+    cursor: pointer;
+    filter: invert(68%) sepia(96%) saturate(5093%) hue-rotate(6deg) brightness(100%) contrast(105%);
+    right: 26px;
+    position: absolute;
+    top: 3px; */
+}
+ 
+  .mat-mdc-form-field {
+    background: #1f1f1f;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .mat-datepicker-content {
+    background-color: #232323 !important;
+    color: #fff !important;
+  }
+  
+  .mat-calendar-body-selected {
+    background-color: #ff5c33 !important;
+    color: #fff !important;
+  }
+  ::ng-deep .cdk-overlay-pane .mat-datepicker-content {
+    /* background: var(--gradient-primary) !important; */
+     background: #ffffff !important;
+    color: #fff !important;
+    border-radius: 8px;
+  }
+  
+  ::ng-deep .cdk-overlay-pane .mat-calendar {
+    /* background: var(--gradient-primary) !important; */
+     background: #ffffff !important;
+    color: #fff !important;
+  }
+  
+  ::ng-deep .mat-calendar-body-selected {
+    background-color: #ff5c33 !important;
+    color: #fff !important;
+  }
+  
+  ::ng-deep .mdc-line-ripple::before,
+  ::ng-deep .mdc-line-ripple::after {
+    border: none !important;
+    display: none !important;
+  }
+  ::ng-deep 
+.mdc-text-field--no-label:not(.mdc-text-field--textarea) 
+.mat-mdc-form-field-input-control.mdc-text-field__input,
+::ng-deep 
+.mat-mdc-text-field-wrapper 
+.mat-mdc-form-field-input-control {
+  padding: 8px 12px !important;
+  height: auto !important;
+}

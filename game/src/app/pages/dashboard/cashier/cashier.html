@@ -1,0 +1,597 @@
+<div class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>Cashier</span></div>
+<h2 class="m_t_15 live_casino_title">Cashier</h2>
+<div *ngIf="activeAction == 'Withdrawal'">
+  <p> <i class="fa fa-info-circle"
+      style="font-size: 20px;color: #ff3a00;border-radius: 50px;background: #fbfbfb;width: 20px;height: 20px;"></i>
+    Cashouts in INR can take upto 24 hours. </p>
+  <p> <i class="fa fa-info-circle"
+      style="font-size: 20px;color: #ff3a00;border-radius: 50px;background: #fbfbfb;width: 20px;height: 20px;"></i>
+    Crypto cashouts can take upto 4 hours. </p>
+
+</div>
+
+<div class="button-row">
+  <button *ngFor="let action of actions" (click)="setActive(action)" [class.active]="activeAction === action">
+    {{ action }}
+  </button>
+</div>
+
+<div *ngIf="activeAction == 'Deposit'">
+  <div class="currency-toggle">
+    <!-- <label>
+      <input type="radio" name="Depositcurrency" (change)="togglePayments($event)" value="INR" [(ngModel)]="Depositcurrency" />
+      <span [class.selected]="Depositcurrency === 'INR'">INR</span>
+    </label> -->
+    <!-- <label>
+      <input type="radio" name="Depositcurrency" (change)="togglePayments($event)" value="IMPS" [(ngModel)]="Depositcurrency" />
+      <span [class.selected]="Depositcurrency === 'IMPS'">IMPS</span>
+    </label> -->
+    <label style="border: 1px solid #333232;border-radius: 6px;">
+      <input type="radio" name="Depositcurrency" value="INR" [(ngModel)]="Depositcurrency" />
+      <span class="currency-option" [class.selected]="Depositcurrency === 'INR'">
+        INR
+      </span>
+    </label>
+    <!-- <label>
+      <input type="radio" name="Depositcurrency" value="USD" [(ngModel)]="Depositcurrency" />
+      <span [class.selected]="Depositcurrency === 'USD'">USD</span>
+    </label> -->
+    <label style="border: 1px solid #333232;border-radius: 6px;">
+      <input type="radio" name="Depositcurrency" value="USD" [(ngModel)]="Depositcurrency" />
+      <span class="currency-option" [class.selected]="Depositcurrency === 'USD'">
+        USD
+      </span>
+    </label>
+    <label style="border: 1px solid #333232;border-radius: 6px;">
+      <input type="radio" name="Depositcurrency" value="VOUCHER" [(ngModel)]="Depositcurrency" />
+      <span class="currency-option" [class.selected]="Depositcurrency === 'VOUCHER'">
+        <img src="assets/profile_imgs/payment3.webp" alt="Voucher" class="currency-logo" />
+      </span>
+    </label>
+  </div>
+
+  <hr class="divider" />
+  <div *ngIf="Depositcurrency == 'INR' || Depositcurrency == 'IMPS'">
+    <!-- Amount Section -->
+    <form [formGroup]="walletForm" (ngSubmit)="submit('CRIPTO')">
+      <div class="amount-section" *ngIf="!showPaymentOptions">
+        <label><span class="gradient-star">*</span> Amount :</label>
+        <input type="text" class="cashout_inp" [placeholder]="placeholderText" formControlName="amount" />
+        <div class="sign-in-desktop__validation-error"
+          *ngIf="walletForm.get('amount')?.touched && walletForm.get('amount')?.invalid">
+          <span *ngIf="walletForm.get('amount')?.errors?.['required']">⚠️ Amount is required</span>
+          <span *ngIf="walletForm.get('amount')?.errors?.['min']">⚠️ Minimum amount is {{minAmount}}</span>
+          <span *ngIf="walletForm.get('amount')?.errors?.['max']">⚠️ Maximum amount is {{maxAmount}}</span>
+          <span *ngIf="walletForm.get('amount')?.errors?.['pattern']">⚠️ Numbers only</span>
+        </div>
+      </div>
+      <div class="button-row">
+        <button class="btn active" type="submit" [disabled]="walletForm.invalid"> Deposit <i
+            class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+      </div>
+
+    </form>
+  </div>
+
+  <div class="row" *ngIf="Depositcurrency === 'USD'">
+
+    <div class="" (click)="bitcoin('343')" title="Deposit" style="cursor: pointer;">
+      <img loading="lazy" alt="Tether Coin" src="assets/profile_imgs/Crypto.jpg" width="200">
+      <!-- <button class="deposit-button">{{'USD Deposit</button> -->
+    </div>
+
+  </div>
+  <div *ngIf="Depositcurrency === 'VOUCHER'">
+    <form [formGroup]="walletFormVOUCHERDeposit" (ngSubmit)="submit('VOUCHER')">
+
+      <!-- Amount -->
+      <div class="amount-section">
+        <label><span class="gradient-star">*</span> Amount :</label>
+
+        <input type="text" class="cashout_inp" placeholder="Amount Min 100 Max 50,000" formControlName="amount"
+          (keypress)="numberOnly($event)" />
+
+        <div class="sign-in-desktop__validation-error"
+          *ngIf="walletFormVOUCHERDeposit.get('amount')?.touched && walletFormVOUCHERDeposit.get('amount')?.invalid">
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('amount')?.errors?.['required']">
+            ⚠️ Amount is required
+          </span>
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('amount')?.errors?.['min']">
+            ⚠️ Minimum amount is 100
+          </span>
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('amount')?.errors?.['max']">
+            ⚠️ Maximum amount is 50,000
+          </span>
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('amount')?.errors?.['pattern']">
+            ⚠️ Numbers only
+          </span>
+        </div>
+      </div>
+
+      <!-- Coupon -->
+      <div class="amount-section">
+        <label><span class="gradient-star">*</span> Coupon :</label>
+
+        <input type="text" class="cashout_inp" placeholder="Enter Coupon" formControlName="coupon"
+          (input)="onCouponInput($event)" />
+
+        <div class="sign-in-desktop__validation-error"
+          *ngIf="walletFormVOUCHERDeposit.get('coupon')?.touched && walletFormVOUCHERDeposit.get('coupon')?.invalid">
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('coupon')?.errors?.['required']">
+            ⚠️ Coupon is required
+          </span>
+
+          <span *ngIf="walletFormVOUCHERDeposit.get('coupon')?.errors?.['pattern']">
+            ⚠️ Only letters, numbers and "_" allowed
+          </span>
+        </div>
+      </div>
+      <div class="voucher-box">
+        <span class="voucher-text">Don't have a voucher?</span>
+        <a href="https://www.kashybee.com/verified-resellers" target="_blank" class="voucher-btn">
+          Click here!
+        </a>
+      </div>
+      <!-- Button -->
+      <div class="button-row">
+        <button class="btn active" type="submit" [disabled]="walletFormVOUCHERDeposit.invalid || apiLoader">
+
+          Deposit
+          <i class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i>
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>
+
+<div *ngIf="activeAction == 'Withdrawal'">
+  <div class="currency-toggle">
+    <label>
+      <input type="radio" name="Withdrawalcurrency" value="INR" (click)="AddUF('INR')"
+        [(ngModel)]="Withdrawalcurrency" />
+      <span [class.selected]="Withdrawalcurrency === 'INR'">INR</span>
+    </label>
+    <label>
+      <input type="radio" name="Withdrawalcurrency" value="USD" (click)="AddUF('USD')"
+        [(ngModel)]="Withdrawalcurrency" />
+      <span [class.selected]="Withdrawalcurrency === 'USD'">USD</span>
+    </label>
+    <label>
+      <input type="radio" name="Depositcurrency" value="VOUCHER" (click)="AddUF('VOUCHER')"
+        [(ngModel)]="Withdrawalcurrency" />
+      <span [class.selected]="Withdrawalcurrency === 'VOUCHER'">VOUCHER</span>
+    </label>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Amount Section -->
+  <div class="withdrawal-container">
+    <div *ngIf="Withdrawalcurrency === 'USD'">
+      <form class="fd inpElm" [formGroup]="usdForm" (ngSubmit)="withdraw()">
+        <div class="form-row">
+          <div class="form-group" formGroupName="cashoutsend">
+
+            <label for="login-input-email" class="fd"><span class="gradient-star">*</span> Email</label>
+            <input type="email" id="login-input-email" placeholder="Enter your Email" formControlName="email"
+              [value]="ussdemail">
+            <small class="sign-in-desktop__validation-error">
+              <span *ngIf="usdForm.get('cashoutsend.email')?.invalid && usdForm.get('cashoutsend.email')?.touched"
+                class="help-block">
+
+                <span *ngIf="usdForm.get('cashoutsend.email')?.errors?.['required']">
+                  Enter your Email!
+                </span>
+
+                <span *ngIf="usdForm.get('cashoutsend.email')?.errors?.['email']">
+                  Enter valid Email!
+                </span>
+
+                <span *ngIf="usdForm.get('cashoutsend.email')?.errors?.['pattern']">
+                  Enter valid Email format!
+                </span>
+
+              </span>
+            </small>
+
+
+          </div>
+          <div class="form-group" formGroupName="cashoutsend">
+
+            <label for="login-input-usdtAddress" class="fd"><span class="gradient-star">*</span> USDT Address
+              <!-- <img loading="lazy" width="15" style="margin-bottom:-3px;"
+                  alt="Tether Coin" src="assets/img/tether_coin.svg"> -->
+            </label>
+            <input type="text" id="login-input-usdtAddress" formControlName="usdtAddress" placeholder="USDT Address"
+              (ngModelChange)="validateAddressLive()">
+            <small class="sign-in-desktop__validation-error"
+              *ngIf="usdForm.get('cashoutsend.usdtAddress')?.invalid && usdForm.get('cashoutsend.usdtAddress')?.touched">
+              <span *ngIf="usdForm.get('cashoutsend.usdtAddress')?.errors?.['required']">
+                ⚠️ USDT Address is required!
+              </span>
+            </small>
+
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" formGroupName="cashoutsend">
+
+            <label for="login-input-usdtAddress" class="fd"><span class="gradient-star">*</span> USDT Address
+              Type</label>
+            <div class="dropdown-header uppercase" (click)="toggleDropdown()"
+              [ngClass]="{ 'placeholder': !selectedCurrency1, 'selected': selectedCurrency1 }">
+              {{ selectedCurrency1 || 'Select Currency Type' }} <span *ngIf="isDropdownOpen"><i class="fa fa-sort-up"
+                  style="font-size:23px;color:#d51112"></i> </span> <span *ngIf="!isDropdownOpen"><i
+                  class="fa fa-sort-down" style="font-size:23px;color:#d51112"></i> </span>
+            </div>
+            <ul *ngIf="isDropdownOpen" class="dropdown-list" formControlName="usdtAddressType">
+              <li (click)="selectCurrency('USDT')" class="usdt-option">USDT
+                (TRC20)</li>
+              <li (click)="selectCurrency('TRX')" class="trx-option">TRX (TRC20)
+              </li>
+              <li (click)="selectCurrency('bsc')" class="trx-option">BSC (BEP20)
+              </li>
+            </ul>
+            <small class="sign-in-desktop__validation-error"
+              *ngIf="usdForm.get('cashoutsend.usdtAddressType')?.invalid && usdForm.get('cashoutsend.usdtAddressType')?.touched">
+              <span *ngIf="usdForm.get('cashoutsend.usdtAddressType')?.errors?.['required']">
+                ⚠️ USDT Address Type is required!
+              </span>
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label class="fd"><span class="gradient-star">*</span> Available For Payout</label>
+            <input type="text" name="waletAmountUsd" formControlName="payoutvalue" [value]="waletAmountUsd"
+              [disabled]=true>
+          </div>
+        </div>
+
+        <div class="form-group" formGroupName="cashoutsend">
+          <label class="fd"><span class="gradient-star">*</span> Cashout amount in USD</label>
+          <input type="number" placeholder="Amount Min 10 Max 5,000" formControlName="amount" min="10" max="5000"
+            (keypress)="amountEnter($event)" (input)="validateAmount()" [(ngModel)]="AmountUSD" class="single_input" />
+          <small class="sign-in-desktop__validation-error">
+            <span *ngIf="usdForm.get('cashoutsend.amount')?.invalid && usdForm.get('cashoutsend.amount')?.touched"
+              class="help-block">
+
+              <span *ngIf="usdForm.get('cashoutsend.amount')?.errors?.['required']">
+                Payout Amount is required
+              </span>
+
+              <span *ngIf="usdForm.get('cashoutsend.amount')?.errors?.['min'] 
+                              || usdForm.get('cashoutsend.amount')?.errors?.['max']">
+                Payout Amount must be min 10 max 5,000
+              </span>
+
+              <span *ngIf="usdForm.get('cashoutsend.amount')?.errors?.['pattern']">
+                Only numeric values are allowed
+              </span>
+
+            </span>
+          </small>
+        </div>
+        <div *ngIf="showAmountError" class="error-msg sign-in-desktop__validation-error">
+          Amount exceeds your available balance ({{ waletAmountUsd |
+          currency:'USD':'symbol':'1.2-2' }})
+        </div>
+        <div class="fd m_t_10" *ngIf="selectedCurrency === 'TRX' && AmountUSD && AmountUSD >= 10 && Cryptoprices">
+          <label class="fd">Amount of TRX you will receive</label>
+          <input type="text" name="availableForPayout" [value]=" AmountUSD / Cryptoprices" disabled>
+          <span *ngIf="CryptopricesLoader" class="m_l_5 loader_TRX"></span>
+        </div>
+        <div class=" p_t_15 button-row">
+          <button type="submit" class="btn active" [ngClass]="{'backp_color': usdForm.invalid || CryptopricesLoader}"
+            [disabled]="usdForm.invalid || !Cryptoprices || CryptopricesLoader || showAmountError || errMsg">
+            <span>Withdrawal <i class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></span>
+            <span *ngIf="historyloader" class="m_l_5 loader_2"></span>
+          </button>
+        </div>
+        <p style="color: #f00;" *ngIf="errMsg">{{errMsg}}</p>
+      </form>
+
+    </div>
+    <div *ngIf="Withdrawalcurrency === 'INR'">
+      <form class="fd inpElm" [formGroup]="criptoWithDrawalForm" (ngSubmit)="onWithdrawSubmit()" *ngIf="hasBankAccount">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="login-input-amount" class="fd"><span class="gradient-star">*</span> Amount</label>
+
+            <input type="phone" class="styled-input bg_3" placeholder="Amount Min 1,000 Max 19,999"
+              formControlName="amount" min="1000" max="19999" (keypress)="phonenum($event)"
+              (input)="checkMaxAmount()" />
+            <small class="sign-in-desktop__validation-error"
+              *ngIf="criptoWithDrawalForm.get('amount')?.invalid && criptoWithDrawalForm.get('amount')?.touched">
+
+              <span *ngIf="criptoWithDrawalForm.get('amount')?.errors?.['required']">Amount is required</span>
+              <span *ngIf="criptoWithDrawalForm.get('amount')?.errors?.['pattern']">Amount must be a number</span>
+              <span *ngIf="criptoWithDrawalForm.get('amount')?.errors?.['min']">Minimum amount is 1,000</span>
+              <span *ngIf="criptoWithDrawalForm.get('amount')?.errors?.['max']">Maximum amount is 19,999</span>
+
+            </small>
+
+          </div>
+          <div class="form-group">
+            <label for="login-input-amountName" class="fd"><span class="gradient-star">*</span> Account Name</label>
+            <input type="text" class="styled-input bg_3" placeholder="Account Name" formControlName="name"
+              (keypress)="accountName($event)" />
+
+            <div class="sign-in-desktop__validation-error"
+              *ngIf="criptoWithDrawalForm.get('name')?.invalid && criptoWithDrawalForm.get('name')?.touched">
+
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('name')?.errors?.['required']">
+                Account name is required
+              </span>
+
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('name')?.errors?.['pattern']">
+                Account name is invalid
+              </span>
+
+            </div>
+
+            <!-- <span class="note-animate"><b>Note:</b> Please enter name as per bank records</span> -->
+
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="login-input-accountNumber" class="fd"><span class="gradient-star">*</span> Account
+              Number</label>
+
+            <input type="phone" class="styled-input bg_3" placeholder="Account Number" formControlName="personalNumber"
+              (keypress)="Accontnumber($event)" />
+            <div class="sign-in-desktop__validation-error"
+              *ngIf="criptoWithDrawalForm.get('personalNumber')?.invalid && criptoWithDrawalForm.get('personalNumber')?.touched">
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('personalNumber')?.errors?.['required']">
+                Account number is required
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label><span class="gradient-star">*</span> IFSC Code</label>
+
+            <input type="text" maxlength="15" minlength="11" class="styled-input bg_3" formControlName="ifsc"
+              placeholder="IFSC Code" (keypress)="allowIFSCInput($event)" (input)="toUppercaseIFSC()" />
+
+            <div *ngIf="criptoWithDrawalForm.get('ifsc')?.touched" class="sign-in-desktop__validation-error">
+
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('ifsc')?.errors?.['required']">
+                IFSC is required
+              </span>
+
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('ifsc')?.errors?.['pattern']">
+                Invalid IFSC Format (Example: HDFC0001234)
+              </span>
+
+              <span class="clr_f0" *ngIf="criptoWithDrawalForm.get('ifsc')?.errors?.['minlength'] ||
+                       criptoWithDrawalForm.get('ifsc')?.errors?.['maxlength']">
+                IFSC must be exactly 15 characters
+              </span>
+
+            </div>
+          </div>
+        </div>
+        <div class="button-row">
+
+          <button type="submit" class="btn active" [ngClass]="{'backp_color' : criptoWithDrawalForm.invalid }"
+            [disabled]="criptoWithDrawalForm.invalid  ">
+            Withdrawal <i class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i>
+
+          </button>
+        </div>
+      </form>
+      <div *ngIf="!hasBankAccount">
+        <button class="btn add-bank-btn" routerLink="/myaccount/bank">
+          + Add Bank Account
+        </button>
+        <p> Please add your bank account to continue withdrawals.</p>
+
+      </div>
+
+    </div>
+    <div *ngIf="Withdrawalcurrency === 'VOUCHER'">
+      <form [formGroup]="walletFormVOUCHER" (ngSubmit)="submitVOUCHER()">
+        <div class="amount-section  ">
+          <label><span class="gradient-star">*</span> Amount :</label>
+          <input type="text" class="cashout_inp" placeholder="Amount  Min 1,000 Max 50,000" formControlName="amount" />
+          <div class="sign-in-desktop__validation-error"
+            *ngIf="walletFormVOUCHER.get('amount')?.touched && walletFormVOUCHER.get('amount')?.invalid">
+            <span *ngIf="walletFormVOUCHER.get('amount')?.errors?.['required']">⚠️ Amount is required</span>
+            <span *ngIf="walletFormVOUCHER.get('amount')?.errors?.['min']">⚠️ Minimum amount is 1,000</span>
+            <span *ngIf="walletFormVOUCHER.get('amount')?.errors?.['max']">⚠️ Maximum amount is 50,000</span>
+            <span *ngIf="walletFormVOUCHER.get('amount')?.errors?.['pattern']">⚠️ Numbers only</span>
+          </div>
+        </div>
+        <div class="amount-section  ">
+          <label><span class="gradient-star">*</span> Email :</label>
+          <input type="email" class="cashout_inp" placeholder="Email" formControlName="email" />
+          <div class="sign-in-desktop__validation-error"
+            *ngIf="walletFormVOUCHER.get('email')?.touched && walletFormVOUCHER.get('email')?.invalid">
+            <span *ngIf="walletFormVOUCHER.get('email')?.errors?.['required']">⚠️ Email is required</span>
+            <span *ngIf="walletFormVOUCHER.get('email')?.errors?.['pattern']">⚠️ Enter Valid e-mail</span>
+          </div>
+        </div>
+
+        <div class="button-row">
+          <button class="btn active" type="submit" [disabled]="walletFormVOUCHER.invalid">Withdrawal <i
+              class="{{ apiLoadervoucher ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="activeAction == 'Transfer to Player'">
+  <div class="currency-toggle">
+    <label>
+      <input type="radio" name="Transfercurrency" value="INR" [(ngModel)]="Transfercurrency"
+        (click)="changechps('INR')" />
+      <span [class.selected]="Transfercurrency === 'INR'">INR</span>
+    </label>
+    <label>
+      <input type="radio" name="Transfercurrency" value="USD" [(ngModel)]="Transfercurrency"
+        (click)="changechps('USD')" />
+      <span [class.selected]="Transfercurrency === 'USD'">USD</span>
+    </label>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- Amount Section -->
+  <div class="withdrawal-container">
+    <form class="fd inpElm" [formGroup]="transferChipForm" (ngSubmit)="transfer()">
+      <div class="form-row">
+        <div class="form-group">
+
+          <label class="fd"><span class="gradient-star">*</span> Balance : </label>
+          <input *ngIf="nametrueFles" type="text" name="availableForPayout" formControlName="payoutvalue"
+            [value]="availableForPayout">
+          <input *ngIf="!nametrueFles" type="text" name="waletAmountUsd" formControlName="payoutvalue"
+            [value]="waletAmountUsd">
+        </div>
+        <div class="form-group">
+          <label class="fd"><span class="gradient-star">*</span> Transfer To Player </label>
+          <input type="text" formControlName="nickname" placeholder="Enter Nickname" name="nickname">
+          <small class="sign-in-desktop__validation-error">
+            <span *ngIf="!transferChipForm.get('nickname')?.valid && transferChipForm.get('nickname')?.touched"
+              class="help-block">
+              <span *ngIf="transferChipForm.get('nickname')?.errors?.['required']">Enter
+                your Nickname!</span>
+              <span *ngIf="transferChipForm.get('nickname')?.errors?.['minlength']">Nickname
+                must be at least 4 characters!</span>
+              <span *ngIf="transferChipForm.get('nickname')?.errors?.['pattern']">Enter
+                alphabets and numeric only!</span>
+            </span>
+          </small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="fd"><span class="gradient-star">*</span> Amount </label>
+          <input type="number" name="amount" formControlName="amount" placeholder="Enter Amount"
+            (keypress)="enterAMountChi($event)">
+          <small class="sign-in-desktop__validation-error fielderror" *ngIf="walletCCode === 'INR'">
+            <span *ngIf="!transferChipForm.get('amount')?.valid && transferChipForm.get('amount')?.touched"
+              class="help-block">
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['required']">
+                Enter Your Amount</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['min']">
+
+                Minimum 1,000</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['max']">
+                Maximum 100,000</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['pattern']">
+                Enter Valid Amount</span>
+            </span>
+          </small>
+          <small class="sign-in-desktop__validation-error  fielderror" *ngIf="walletCCode === 'USD'">
+            <span *ngIf="!transferChipForm.get('amount')?.valid && transferChipForm.get('amount')?.touched"
+              class="help-block">
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['required']">
+                Enter Your Amount</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['min']">
+                Minimum 10</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['max']">
+                Maximum 1,000</span>
+              <span *ngIf="transferChipForm.get('amount')?.errors?.['pattern']">
+                Enter Valid Amount</span>
+            </span>
+          </small>
+          <br />
+          <small *ngIf="walletCCode === 'INR'" class="clr_2">* Minimum 1,000 Maximum 100,000</small>
+          <small *ngIf="walletCCode === 'USD'" class="clr_2">* Minimum 10 Maximum 1,000 </small>
+        </div>
+        <div class="form-group">
+          <label class="fd"><span class="gradient-star">*</span> Comments </label>
+          <textarea rows="1" cols="33" name="message" formControlName="message"
+            placeholder="Enter your comment here "></textarea>
+          <small class=" sign-in-desktop__validation-error fielderror">
+            <span *ngIf="!transferChipForm.get('message')?.valid && transferChipForm.get('message')?.touched"
+              class="help-block">
+              <!-- <span *ngIf="transferChipForm.get('message').errors['required']">
+                    {{'Enter Your Amount</span> -->
+              <span *ngIf="transferChipForm.get('message')?.errors?.['pattern']">
+                Allowed characters are</span>
+            </span>
+          </small>
+        </div>
+      </div>
+      <div class="button-row">
+        <button type="submit" class="btn active" [ngClass]="{'backp_color' : transferChipForm.invalid}"
+          [disabled]="transferChipForm.invalid">
+          <span>Transfer <i class="{{ apiLoader ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></span>
+          <!-- <span *ngIf="historyloader" class="m_l_5 loader_2"></span> -->
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div *ngIf="activeAction == 'Pending Withdrawals'">
+  <div class="table-responsive m_t_15" *ngIf="WithdrawsResponse.length > 0">
+    <table class="transaction-table">
+      <thead>
+        <tr>
+          <th class="sticky-col"><span class="gradient-star ">*</span> Amount</th>
+          <th><span class="gradient-star">*</span> Date</th>
+          <th><span class="gradient-star">*</span> Status</th>
+          <th><span class="gradient-star">*</span> Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let withdraw of WithdrawsResponse ;">
+        <tr>
+          <td class="sticky-col"><span>{{withdraw.currency == 'USD'?'$':'₹'}}</span>
+            <!-- <span *ngIf="{withdraw.currency == 'INR'}">₹</span>  -->
+            {{withdraw.amount | number}}</td>
+          <td>{{withdraw.creationDate | slice:0:10}} - {{withdraw.creationDate | slice:12:19}}</td>
+          <!-- <td>{{withdraw.displayRefTxnID}}</td> -->
+          <td>{{withdraw.status}}</td>
+          <td class="submit-btn"><button type="submit" class="btn_1" style="font-weight: 500;"
+              (click)="cancelwithdrawal(withdraw.refTxnID)">REVERSE <i
+                class="{{ loadingId === withdraw.refTxnID ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i>
+            </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h1 class="pending_error" *ngIf="errMsg">{{errMsg}}</h1>
+
+
+
+
+
+  <div class="popup-overlay" *ngIf="urlSafe">
+    <div class="popup-container">
+      <div class="popup-header">
+        <span class="close-btn" (click)="closeIframe()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </span>
+      </div>
+      <div class="iframe-wrapper">
+        <div class="iframe-loader" *ngIf="!iframeLoaded">
+          <img src="assets/siteImg/Comp_2.gif" alt="Loading..." class="loader-gif" />
+        </div>
+        <iframe scrolling="yes" frameborder="0" allowfullscreen [src]="urlSafe" (load)="onIframeLoaded()"
+          [class.loaded]="iframeLoaded"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="loader-wrapper" *ngIf="responseLoader">
+    <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="loading" />
+  </div>

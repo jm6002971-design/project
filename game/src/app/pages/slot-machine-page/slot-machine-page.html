@@ -1,0 +1,263 @@
+<ng-template #alertHost></ng-template>
+<section>
+    <div class="loader-wrapper" *ngIf="responseLoader" role="status" aria-live="polite">
+        <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="Loading sports game, please wait" />
+    </div>
+    <div *ngIf="urlSafe">
+        <div>
+            <button type="button" class="game-close-btn" aria-label="Close sports game" (click)="subtabClose()"> ✕
+            </button>
+            <iframe #gameIframe id="game_object" class="game-iframe" scrolling="auto" frameborder="0" allowfullscreen
+                title="Slot game" [src]="urlSafe"></iframe>
+        </div>
+        <button type="button" class="iframe_fullS_icon ml-4" aria-label="Toggle fullscreen mode"
+            (click)="toggleFullScreen()">
+
+            <i class="fas fa-expand-arrows-alt" aria-hidden="true">
+            </i>
+
+        </button>
+    </div>
+    <div>
+
+        <nav class="redirectline" aria-label="Breadcrumb"><span routerLink="/home">Home</span> <img
+                src="assets/home_icons/arrow_right.png" alt="" aria-hidden="true" width="15"> <span>Slots
+            </span> </nav>
+
+        <header>
+            <h2 class="main_heading live_casino_title">Slots</h2>
+            <p class="main_para">At Raj Poker, there are slots with big prizes</p>
+        </header>
+
+        <div class="Provider_div">
+            <div class="Provider_scroll">
+                <button class="Provider_btn" *ngFor="let Provider of ProviderList"
+                    [ngClass]="{ Active: ProviderName === Provider.name}" (click)="providerChange(Provider.name)"
+                    [attr.aria-pressed]="ProviderName === Provider.name">
+                    {{ Provider.name }}
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'fivemen'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/vivo/vivo_slots/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="FivemenLauch(game.gameId)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'habanero'">
+                <article class="Game_box" *ngFor="let game of loadedGames" [title]="game.gameName">
+                    <ng-container *ngIf="game.BrandGameId">
+                        <img src="assets/games/habanero/{{game.KeyName}}_230.webp"
+                            [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async"
+                            style="height: 100%;" />
+                        <div class="game_name_button">
+                            <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                            <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                                (click)="habanaroGm(game.gameName,game.KeyName)">Lets Go!</button>
+                        </div>
+
+                    </ng-container>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'jdb'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/JDB/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'spribe'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/Spribe/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container"
+                *ngIf="ProviderName == 'netentgv' || ProviderName == 'playtechgv'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <!-- <img [src]="game.images" [alt]="game.title + ' slot game'" loading="lazy" decoding="async" /> -->
+  <img
+  [src]="'assets/GameImgs/' + ProviderName + '/' + game.gameId + '_230.webp'"style="aspect-ratio: 3/3; "
+  [alt]="game.gameName + ' slot game'"
+  loading="lazy"
+  decoding="async"
+/>
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.title }}"
+                            (click)="gvproviderapi(game)">Lets
+                            Go!</button>
+                    </div>
+                </article> 
+            </div>
+            <div class="Maingame_row trending_scroll_container"
+                *ngIf="ProviderName == '18peaches'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img [src]="game.image" [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="on18Peaches(game)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'redtiger'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/Redtiger/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="evolutiongms(game.openTable,game)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'kingmidas'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="assets/GameImgs/kingmidas/{{game.gameName}}.jpg"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="kingmidasmethod(game)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row Avaitrix_row trending_scroll_container" *ngIf="ProviderName == 'injoy'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/Injoy/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'hotroad'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/HGR/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'yellowbat'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/YB/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'gtf'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/GTF/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'amb'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="assets/GameImgs/AMB/{{game.gameName}}.png" [alt]="game.gameName + ' slot game'"
+                        style="height: 100%;" loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onJDBGames(game.Gtype,game.Mtype)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'endorphina'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="https://luckhunter.prep4.live/slotimages/Endophina/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="endrophinaLunchreal(game.gameId, game.gameName)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container" *ngIf="ProviderName == 'pragmaticplay'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="{{CurrentDomain}}/slotimages/pragmaticplay/{{game.gameName}}.png"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async" style="height: 100%;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onLaunchPragmatic(game.gameId, game.gameName)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+            <div class="Maingame_row trending_scroll_container"
+                *ngIf="ProviderName == 'tomhorn' || ProviderName == 'nucleus' || ProviderName == 'betsoft' || ProviderName == 'platipus'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="assets/GameImgs/vivogaming/{{ProviderName}}/{{game.gameId}}.jpg"
+                        [alt]="game.gameName + ' slot game'" loading="lazy" decoding="async"
+                        style="object-fit: fill;" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="vivogameLaunch(game)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="Maingame_row Avaitrix_row trending_scroll_container" *ngIf="ProviderName == 'aviatrix'">
+                <article class="Game_box" *ngFor="let game of loadedGames " [title]="game.gameName">
+                    <img src="assets/GameImgs/crash/aviatrix.png" [alt]="game.gameName + ' slot game'"
+                        style="height: 100%;" loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button type="button" class="button button_game" aria-label="Play {{ game.gameName }}"
+                            (click)="onaviatrix(game)">Lets
+                            Go!</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<div *ngIf="isLoadingMore" class="load_games" aria-hidden="true"></div>

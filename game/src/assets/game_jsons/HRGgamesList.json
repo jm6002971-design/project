@@ -1,0 +1,53 @@
+{
+    "HRGgames": [
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41008,
+            "gameName": "HOT 7up 7down",
+            "bg_cl": "#ffd100"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41007,
+            "gameName": "Hot Baccarat",
+            "bg_cl": "#ff2c00"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41006,
+            "gameName": "Hot Color Game",
+            "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41005,
+            "gameName": "Hot Sicbo",
+            "bg_cl": "#ff001e"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41004,
+            "gameName": "Hot Roulette",
+            "bg_cl": "#ff3800"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41002,
+            "gameName": "Roulette",
+            "bg_cl": "#0060ff"
+        },
+        {
+            "provider": "HRG",
+            "Gtype": 41,
+            "Mtype": 41001,
+            "gameName": "Baccarat",
+            "bg_cl": "#ca314c"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+<div class="redirectline">
+    <span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15" /> <span>My Account</span> <img src="assets/home_icons/arrow_right.png"
+      alt="rightArrow"
+      width="15"
+    />
+    <span class="m_t_15 ">Poker History</span>
+  </div>
+  <h2 class="m_t_15  live_casino_title">Poker History</h2> 
+  <div class="balance-page m_t_15" [formGroup]="form">
+    <!-- Date Filter -->
+    <section class="section-card filter-section">
+      <div class="filter-row">
+        <!-- Start Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> Start Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input
+              matInput [ngModel]="startDate | date:'yyyy-MM-dd'"
+              [matDatepicker]="picker1"
+              formControlName="startDate"
+              readonly
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker1">
+              <img
+                matDatepickerToggleIcon
+                src="assets/sidemenu_icons/calendar.svg"
+                alt="calendar"
+              />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+  
+        <!-- End Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> End Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input
+              matInput [ngModel]="endDate | date:'yyyy-MM-dd'"
+              [matDatepicker]="picker2"
+              formControlName="endDate"
+              readonly
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker2">
+              <img
+                matDatepickerToggleIcon
+                src="assets/sidemenu_icons/calendar.svg"
+                alt="calendar"
+              />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+  <div class="button-row">
+
+    <button class="btn active" (click)="onShow()">  Show <i class="{{ isLoading ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+  </div>
+  <p style="color: #f00;" *ngIf="errormassage">{{errormassage}}</p>
+    </section>
+  
+    <!-- Table Section -->
+    <section class=" table-responsive" *ngIf="pokerhistory.length>0">
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th class=" sticky-col"><span class="gradient-star">*</span> Date</th>
+            <th><span class="gradient-star">*</span> Table Name</th>
+            <th><span class="gradient-star">*</span> Game</th>
+            <th class="text-right"><span class="gradient-star">*</span> Hands</th>
+            <!-- <th class="text-right"><span class="gradient-star">*</span> Initial Balance</th>
+            <th class="text-right"><span class="gradient-star">*</span> Closing  Balance</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of pokerhistory | paginate: {itemsPerPage:selectnum, currentPage:p}">
+            <td class="sticky-col">{{ cleanDate(item.startDate) | date:'medium':'local' }}</td>
+            <td>{{ item.tableName }}</td>
+            <td>{{ item.game.caption }}</td> 
+            <td class="text-right">{{ item.rounds }}</td> 
+            <!-- <td class="text-right"> {{item?.game?.wallet?.name == 'INR'?'₹':'$'}} {{ item.initialBalance?.value  | number:'1.2-2' }}</td> 
+            <td class="text-right"> {{item?.game?.wallet?.name == 'INR'?'₹':'$'}} {{ item.closingBalance?.value  | number:'1.2-2'}}</td>  -->
+          </tr>
+        </tbody>
+      </table>
+    </section> 
+    <div *ngIf="pokerhistory.length>0" class="m_t_15">
+    <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="p=$event"
+    previousLabel="Prev" nextLabel="Next"  class="pt-2 page-item">
+    </pagination-controls>
+
+    </div>
+  </div>
+   

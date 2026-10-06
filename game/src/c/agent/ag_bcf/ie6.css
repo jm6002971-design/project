@@ -1,0 +1,9 @@
+img, a.b1, a.b2, a.b3, a.b4, .footer_container_l, .footer_container,
+.footer_container_r {
+    behavior: url(/c/iepngfix/iepngfix.htc);
+}
+
+.subitems a {
+    border-right: none;
+}
+

@@ -1,0 +1,26 @@
+.installIosDiv img {
+    width: 100%;
+  }
+  .installIosDiv {
+    max-width: 500px;
+    margin: auto;
+  }
+  .installIosDiv h4.text-center {
+    margin: 10px 0px;
+    font-size: 16px;
+  }
+  
+  .fd.instaProcess {
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  button.btn_1 a, button.btn_1{
+    background: var(--gradient-primary);
+    border: 0;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,117 @@
+<div class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>Currency Exchange</span></div>
+    <h2 class="m_t_15 live_casino_title">Currency Exchange</h2>
+
+<div class="converter-container">
+  <div class="toggle-buttons">
+    <button class="btn" [class.active]="selectedMode === 'usdToInr'" (click)="setMode('usdToInr')">
+      USD To INR
+    </button>
+    <button class="btn " [class.active]="selectedMode === 'inrToUsd'" (click)="setMode('inrToUsd')">
+      INR To USD
+    </button>
+  </div>
+
+  <h2>
+    <span class="highlight">{{ selectedMode === 'usdToInr' ? 'USD to INR' : 'INR to USD' }}</span>
+    <span> - Convert {{ selectedMode === 'usdToInr' ? 'US Dollars to INR' : 'Indian Rupees to USD' }}</span>
+
+  </h2>
+
+  <div class="limits" *ngIf="selectedMode === 'usdToInr'">
+    <span class="limit">Min: <strong>1 USD</strong></span>
+    <span class="limit">Max: <strong>1,000 USD</strong></span>
+    <span class="limit">Daily Limit: <strong>10,000 USD</strong></span>
+  </div>
+  <div class="limits" *ngIf="selectedMode === 'inrToUsd'">
+    <span class="limit">Min: <strong>100 INR</strong></span>
+    <span class="limit">Max: <strong>1,000,000 INR</strong></span>
+    <span class="limit">Daily Limit: <strong>1,000,000 INR</strong></span>
+  </div>
+  <p class="live_casino_title" style="font-size: 16px;" *ngIf="selectedMode === 'usdToInr'">1 USD =  <span *ngIf="!responseloader"> INR {{ inrPerUsd | number:'1.2-2'}}</span>   <span *ngIf="responseloader" class="loader dual-ring" aria-hidden="true"></span></p>
+  <p class="live_casino_title" style="font-size: 16px;" *ngIf="selectedMode === 'inrToUsd'">1 INR = <span *ngIf="!responseloader">  USD {{ usdPerInr | number:'1.2-2'}}</span>   <span *ngIf="responseloader" class="loader dual-ring" aria-hidden="true"></span></p>
+<div class="vip-controls">
+  <div class="radio-group">
+    <label>
+      <input type="radio" name="convertTo" (click)="loadDataToView('Cash')" value="cash" [(ngModel)]="convertTo"  />
+      <span>Cash</span>
+    </label>
+    <label>
+      <input type="radio" name="convertTo" (click)="loadDataToView('Bonus')" value="bonus" [(ngModel)]="convertTo" />
+      <span>Bonus</span>
+    </label>
+  </div>
+
+</div>
+  <div class="transfer-box" *ngIf="selectedMode === 'usdToInr'">
+    <div class="input-box">
+      <label><span class="gradient-star">*</span> SEND</label>
+      <div class="input-field">
+        <img class="P_R_5" src="assets/sidemenu_icons/USD.svg" alt="USD" loading="lazy" width="47">
+        <!-- <span>{{ currency1 }}</span> -->
+        <span class="currencyIcon">
+          <input type="number" [(ngModel)]="convertedAmount" placeholder="Enter amount"
+            (input)="changeConvertedVal($event.target.value)">
+         
+        </span>
+      </div>
+      <p style="color: #f00;">{{ errorMsg }}</p>
+    </div>
+
+    <div class="col-sm-12 col-md-2 m_t_10 Transfer_icon_middle">
+      <img  src="assets/sidemenu_icons/arrange-circle.svg" alt="">
+    </div>
+
+    <div class="input-box">
+      <label><span class="gradient-star">*</span> RECEIVE</label>
+      <div class="input-field">
+        <img class="P_R_5" src="assets/sidemenu_icons/INR.svg" alt="INR" loading="lazy" width="47">
+        <!-- <span>INR</span> -->
+        <span class="currencyIcon">
+          <input type="number" [(ngModel)]="userEnteredAmount" disabled>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="transfer-box" *ngIf="selectedMode === 'inrToUsd'">
+    <div class="input-box">
+      <label><span class="gradient-star">*</span> SEND</label>
+      <div class="input-field">
+        <img  class="P_R_5" src="assets/sidemenu_icons/INR.svg" alt="INR" loading="lazy" width="47">
+        <!-- <span>INR</span> -->
+        <span class="currencyIcon">
+          <input type="number" [(ngModel)]="convertedAmount" placeholder="Enter amount"
+            (input)="changeAmtVal($event.target.value)">
+        </span>
+      </div>
+      <p  style="color: #f00;">{{ errorMsg }}</p>
+    </div>
+
+    
+    <div class="col-sm-12 col-md-2 m_t_10 Transfer_icon_middle">
+      <img src="assets/sidemenu_icons/arrange-circle.svg" alt="">
+    </div>
+    
+    <div class="input-box">
+      <label><span class="gradient-star">*</span> RECEIVE</label>
+      <div class="input-field">
+        <img class="P_R_5" src="assets/sidemenu_icons/USD.svg" alt="USD" loading="lazy" width="47">
+        <!-- <span>USD</span> -->
+        <span class="currencyIcon">
+          <input type="number" [(ngModel)]="userEnteredAmount" disabled>
+        </span>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <div class="button-row">
+    <button (click)="submitExchangeCurrency()" [disabled]="isSubmitting  ||!userEnteredAmount || errorDisable" class="btn active">Lets
+      Go!</button>
+    </div>
+    <p *ngIf="isError">{{errMsg}}
+    </p>
+</div>

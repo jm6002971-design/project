@@ -1,0 +1,130 @@
+{
+    "AMBgames": [
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50020,
+            "gameName": "Leprechaun Treasure",
+            "bg_cl": "#0bb94c"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50019,
+            "gameName": "Roma Glory",
+            "bg_cl": "#bb0c15"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50018,
+            "gameName": "Golf Star",
+            "bg_cl": "#14d6e3"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50017,
+            "gameName": "Double Delight",
+            "bg_cl": "#ff001e"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50016,
+            "gameName": "Gold Rush",
+            "bg_cl": "#711a30"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50015,
+            "gameName": "Ace Bartender",
+            "bg_cl": "#792cb5"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50014,
+            "gameName": "Jingu Bang",
+            "bg_cl": "#cd0e2a"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50013,
+            "gameName": "Dragon'S Jewel",
+            "bg_cl": "#6646ec"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50012,
+            "gameName": "Gold Pirate",
+            "bg_cl": "#365050"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50010,
+            "gameName": "Dinosaur Paradise",
+            "bg_cl": "#6f6976"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50009,
+            "gameName": "Hyakki Yagyo",
+            "bg_cl": "#5a57bf"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50008,
+            "gameName": "Dead Fiesta Party",
+            "bg_cl": "#bf2730"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50007,
+            "gameName": "Lucky Ganesha",
+            "bg_cl": "#d6ac1a"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50006,
+            "gameName": "Golden Lucky Cat",
+            "bg_cl": "#a94c26"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50005,
+            "gameName": "Maya adventure",
+            "bg_cl": "#414420"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50004,
+            "gameName": "Fortune bull",
+            "bg_cl": "#d1e31c"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50003,
+            "gameName": "Mahjong Ways Deluxe",
+            "bg_cl": "#d72a2c"
+        },
+        {
+            "provider": "AMB",
+            "Gtype": 50,
+            "Mtype": 50002,
+            "gameName": "Thirteen orphans",
+            "bg_cl": "#368c53"
+        }
+    ]
+}

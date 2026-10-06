@@ -1,0 +1,63 @@
+<div class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow" width="15"> <span>Rake Back</span></div>
+
+    <h2 class="m_t_15 live_casino_title">Rake Back</h2>
+
+<div class="vip-container">
+
+  <div class="vip-controls">
+    <div class="vip-header">
+      <h3>Rake Back Points <b> {{vipPoints | number}} </b></h3>
+      <p>Convert Rake Back Points To</p>
+    </div>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="convertTo" (click)="loadDataToView('Cash')" value="cash" [(ngModel)]="convertTo" />
+        <span>Cash</span>
+      </label>
+      <label>
+        <input type="radio" name="convertTo" (click)="loadDataToView('Bonus')" value="bonus" [(ngModel)]="convertTo" />
+        <span>Bonus</span>
+      </label>
+    </div>
+
+    <div class="convert-box">
+      <img src="assets/sidemenu_icons/INR.svg" alt="" style="margin-right: 5px;">
+      <div class="desktopverion">
+        <div class="fd p_b_5 text-nowrap desktopverion"> Convert Rake Back Points To :  </div>
+
+      </div>
+      <div class="select-wrapper">
+        <div class="fd p_b_5 text-nowrap mobile_section_pb"> Convert Rake Back Points To : </div>
+        <select [(ngModel)]="selectedDropDownValue"
+                [disabled]="!selectedDropDown || selectedDropDown.length==0"
+                class="p_12 input-field">
+          <option *ngFor="let v of selectedDropDown">{{v}}</option>
+        </select>
+      </div>
+          </div>
+    <p *ngIf="errMsg" style="color: #f00; margin: 0;">{{errMsg}}</p>
+    <div class="button-row">
+      <div class="fd p_b_5" *ngIf="selectedDropDownValue"> Summary :
+        Buy <b> {{selectedDropDownValue}} </b> for <b>
+          {{cashToVipMapping[uiSelection][selectedDropDownValue]}}</b> Rake Back Points </div>
+          <button class="btn active"
+        [disabled]="!selectedDropDownValue"
+        (click)="submitExchange()">Convert</button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="transaction-table">
+      <tr>
+        <th><span class="gradient-star">*</span> Rake Back Points</th>
+        <th><span class="gradient-star">*</span> {{uiSelection}}</th>
+      </tr>
+      <tr *ngFor="let record of tableData">
+        <td *ngFor="let v of record">{{v | number}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<p *ngIf="isError"> {{errMsg}}</p>

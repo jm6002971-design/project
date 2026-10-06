@@ -1,0 +1,188 @@
+<div *ngIf="hasBankAccounts" class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>Bank</span></div>
+<h2 *ngIf="hasBankAccounts"  class="m_t_15 live_casino_title">Bank</h2>
+<div class="table-responsive">
+    <table class="transaction-table" *ngIf="hasBankAccounts">
+        <thead>
+            <tr>
+                <th class="sticky-col">Name</th>
+                <th>Account Number</th>
+                <!-- <th>Branch Name</th> -->
+                <th>IFSC Code</th>
+                <th>Bank Name</th>
+                <th>Account Status</th>
+                <th>Delete Bank Account</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bank of getbankaccountdetails; let i = index">
+                <td class="sticky-col">{{bank.nameOnBank}}</td>
+                <td>{{bank.bankAccountNumber}}</td>
+                <!-- <td>{{bank.bankBranchName}}</td> -->
+                <td>{{bank.bankIFSCCOde}}</td>
+                <td>{{bank.bankName}}</td>
+                <td>{{bank.accountStatus}}</td>
+                <td  ><button class="deleteBTN btn"  [class.active]="activeIndex === i" (click)="deletBank(i)"><span></span><p>Delete</p></button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="profile-container" *ngIf="!hasBankAccounts">
+        <div class="redirectline"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>My Account </span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>Bank</span></div>
+        <h2 class="m_t_15 live_casino_title">Bank</h2>
+    <!-- <div class="profile-container"> -->
+        <form class="profile-form" [formGroup]="BankForm" (ngSubmit)="onFormSubmit()">
+            <div class="form-row">
+                <!-- <div class="form-group">
+                    <label><span class="gradient-star">*</span> Account Type</label>
+                    <span class="fgsdgd">
+                        <select formControlName="accountType">
+                            <option value="savings">Savings</option>
+                            <option value="current">Current</option>
+                        </select>
+                    </span>
+                    <div class="sign-in-desktop__validation-error" *ngIf="BankForm.get('accountType')?.touched &&
+                 BankForm.get('accountType')?.invalid">
+                        <small *ngIf="BankForm.get('accountType')?.errors?.['required']">
+                            Select Account Type
+                        </small>
+                    </div>
+                </div> -->
+
+                <div class="form-group">
+                    <label><span class="gradient-star">*</span> Bank Name</label>
+
+                    <span class="fgsdgd">
+                        <input type="text" placeholder="Bank Name" formControlName="bankName" />
+                    </span>
+
+                    <div class="sign-in-desktop__validation-error" *ngIf="BankForm.get('bankName')?.touched &&
+                 BankForm.get('bankName')?.invalid">
+
+                        <small *ngIf="BankForm.get('bankName')?.errors?.['required']">
+                            Enter Bank Name
+                        </small>
+
+                        <small *ngIf="BankForm.get('bankName')?.errors?.['minlength']">
+                            Length should be in between 3 to 40
+                        </small>
+
+                        <small *ngIf="BankForm.get('bankName')?.errors?.['maxlength']">
+                            Length should be in between 3 to 40
+                        </small>
+                        <small *ngIf="BankForm.get('bankName')?.errors?.['pattern']">
+                            Enter valid bank name (letters and spaces only)
+                        </small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><span class="gradient-star">*</span> Account Name</label>
+
+                    <span class="fgsdgd">
+                        <input type="text" placeholder="Account Name" formControlName="NameOnAccount"
+                            (keydown.space)="$event.preventDefault()" />
+                    </span>
+
+                    <div class="sign-in-desktop__validation-error" *ngIf="BankForm.get('NameOnAccount')?.touched &&
+                 BankForm.get('NameOnAccount')?.invalid">
+
+                        <small *ngIf="BankForm.get('NameOnAccount')?.errors?.['required']">
+                            Enter Account Name
+                        </small>
+
+                        <small *ngIf="BankForm.get('NameOnAccount')?.errors?.['minlength']">
+                            Length should be in between 4 to 24
+                        </small>
+
+                        <small *ngIf="BankForm.get('NameOnAccount')?.errors?.['maxlength']">
+                            length should be in between 4 to 24
+                        </small>
+                        <small *ngIf="BankForm.get('NameOnAccount')?.errors?.['pattern']">
+                            Enter Valid Bank Name
+                        </small>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label><span class="gradient-star">*</span> Account Number</label>
+
+                    <span class="fgsdgd">
+                        <input type="text" placeholder="Account Number" formControlName="bankAccountNumber"
+                            (keydown.space)="$event.preventDefault()"  inputmode="numeric"
+                            maxlength="32"/>
+                    </span>
+
+                    <div class="sign-in-desktop__validation-error" *ngIf="BankForm.get('bankAccountNumber')?.touched &&
+                 BankForm.get('bankAccountNumber')?.invalid">
+
+                        <small *ngIf="BankForm.get('bankAccountNumber')?.errors?.['required']">
+                            Enter Bank Account Number
+                        </small>
+
+                        <small *ngIf="BankForm.get('bankAccountNumber')?.errors?.['minlength']">
+                            The account number should be between 6 to 32
+                        </small>
+
+                        <small *ngIf="BankForm.get('bankAccountNumber')?.errors?.['maxlength']">
+                            The account number should be between 6 to 32
+                        </small>
+                        <small *ngIf="BankForm.get('bankAccountNumber')?.errors?.['pattern']">
+                            Enter Valid Account Number
+                        </small>
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label><span class="gradient-star">*</span> IFSC CODE</label>
+                    <span class="fgsdgd">
+                        <input type="text" placeholder="IFSC Code" formControlName="ifsccode"
+                            (keydown.space)="$event.preventDefault()" (keypress)="allowIFSCInput($event)"
+                            (input)="toUppercaseIFSC()" maxlength="15"/>
+                    </span>
+
+                    <div class="sign-in-desktop__validation-error" *ngIf="BankForm.get('ifsccode')?.touched &&
+                 BankForm.get('ifsccode')?.invalid">
+
+                        <small *ngIf="BankForm.get('ifsccode')?.errors?.['required']">
+                            Enter IFSC Code
+                        </small>
+
+                        <small *ngIf="BankForm.get('ifsccode')?.errors?.['pattern']">
+                            Invalid IFSC Format (Example: HDFC0001234)
+                        </small>
+                        <small *ngIf="BankForm.get('ifsccode')?.errors?.['minlength']">
+                            IFSC must be exactly 11 characters
+                        </small>
+
+                        <small *ngIf="BankForm.get('ifsccode')?.errors?.['maxlength']">
+                            IFSC must be exactly 15 characters
+                        </small>
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+
+                </div>
+            </div>
+            <div class="button-row">
+                <button class="btn active" [disabled]="BankForm.invalid" type="submit">
+                    Add Account
+                </button>
+            </div>
+        </form>
+    </div>
+
+      
+</div>
+<div class="loader-wrapper" *ngIf="responseLoader">
+    <img
+      [src]="'/assets/giflogo.gif?' + loaderKey"
+      width="280"
+      alt="loading"
+    />
+  </div>

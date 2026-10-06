@@ -1,0 +1,178 @@
+<ng-template #alertHost></ng-template>
+
+<div class="modal" [class.visible]="isVisible" (click)="handleModalClick($event)">
+    <div class="welcome-card-container register-card" (click)="$event.stopPropagation()">
+        <!-- Protruding Floating Header: 👤 Create Account -->
+        <div class="welcome-header-ribbon">
+            <i class="fa-solid fa-user-plus welcome-ribbon-icon"></i>
+            <span class="welcome-ribbon-text">Create Account</span>
+        </div>
+
+        <!-- Clean Close Button -->
+        <button type="button" class="welcome-close-btn" (click)="onClose()" aria-label="Close register popup">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="welcome-card-body">
+            <form class="welcome-form" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+                <div class="welcome-fields">
+                    
+                    <!-- Username -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="welcome-input-wrap">
+                            <input id="username" name="username"
+                                class="welcome-input"
+                                type="text" formControlName="username" autocomplete="off"
+                                placeholder="Username"
+                                (input)="sanitizeAlphaNumeric($event,'username')"
+                                (input)="removeSpaces($event)">
+                        </div>
+                    </div>
+                    <div *ngIf="username?.invalid && (username?.dirty || username?.touched)"
+                        class="welcome-error-msg">
+                        <span *ngIf="username?.errors?.['required']">Username is required</span>
+                        <span *ngIf="username?.errors?.['minlength'] || username?.errors?.['maxlength']">Must be 4-15 characters</span>
+                        <span *ngIf="username?.errors?.['pattern']">Letters and numbers only</span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <div class="welcome-input-wrap">
+                            <input id="password" name="password"
+                                class="welcome-input"
+                                [type]="passwordVisible ? 'text' : 'password'" 
+                                formControlName="password"
+                                placeholder="Password"
+                                (input)="removeSpaces($event)" />
+                            <span class="welcome-eye-icon" (click)="togglePasswordVisibility()" title="Toggle password visibility">
+                                <i class="fa-solid" [ngClass]="passwordVisible ? 'fa-eye-slash' : 'fa-eye'"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+                        class="welcome-error-msg">
+                        <span *ngIf="password?.errors?.['required']">Password is required</span>
+                        <span *ngIf="password?.errors?.['minlength'] || password?.errors?.['maxlength']">Must be 6-15 characters</span>
+                    </div>
+
+                    <!-- Nickname -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-id-badge"></i>
+                        </div>
+                        <div class="welcome-input-wrap">
+                            <input id="nickname" name="nickname"
+                                class="welcome-input" 
+                                placeholder="Nickname"
+                                (input)="sanitizeAlphaNumeric($event,'nickname')"
+                                type="text" formControlName="nickname" (input)="removeSpaces($event)" />
+                        </div>
+                    </div>
+                    <div class="welcome-error-msg" *ngIf="(nickname?.dirty || nickname?.touched)">
+                        <span *ngIf="nickname?.errors?.['required']">Nickname is required</span>
+                        <span *ngIf="nickname?.errors?.['minlength'] || nickname?.errors?.['maxlength']">Must be 4-15 characters</span>
+                        <span *ngIf="registerForm.hasError('usernameNicknameMatch')">Username and Nickname cannot match</span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="welcome-input-wrap">
+                            <input id="email" name="email"
+                                class="welcome-input"
+                                type="email" formControlName="email" 
+                                placeholder="Email Address"
+                                (input)="removeSpaces($event)" />
+                        </div>
+                    </div>
+                    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+                        class="welcome-error-msg">
+                        <span *ngIf="email?.errors?.['required']">Email is required</span>
+                        <span *ngIf="email?.errors?.['email'] || email?.errors?.['pattern']">Enter a valid email</span>
+                    </div>
+
+                    <!-- Phone & OTP -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="welcome-input-wrap with-action">
+                            <input type="text" formControlName="phone" maxlength="10"
+                                class="welcome-input"
+                                placeholder="Phone (10 digits)"
+                                [readonly]="otpVerified">
+                            <button class="welcome-inline-btn" *ngIf="!otpVerified" type="button" (click)="sendOTP()"
+                                [disabled]="otpTimer > 0 && isOtpSent">
+                                {{ !isOtpSent ? 'Get OTP' : (otpTimer > 0 ? otpTimer : 'Resend') }}
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- OTP Input -->
+                    <div *ngIf="showOtpBox" class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+                        <div class="welcome-input-wrap with-action">
+                            <input type="text" formControlName="otp" maxlength="6"
+                                class="welcome-input"
+                                placeholder="Enter 6-digit OTP">
+                            <button type="button" class="welcome-inline-btn" (click)="verifyOTP()"
+                                [disabled]="registerForm.get('otp')?.invalid">
+                                Verify
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Referral Code -->
+                    <div class="welcome-input-group">
+                        <div class="welcome-field-icon">
+                            <i class="fa-solid fa-tag"></i>
+                        </div>
+                        <div class="welcome-input-wrap">
+                            <input id="promoCode" name="promoCode"
+                                class="welcome-input"
+                                placeholder="Referral Code (Optional)"
+                                type="text" formControlName="promoCode" />
+                        </div>
+                    </div>
+
+                    <!-- Consent 18+ Checkbox -->
+                    <div class="welcome-consent-row">
+                        <label class="welcome-checkbox-label">
+                            <input id="isConsent" name="isConsent" formControlName="isConsent" type="checkbox" />
+                            <span>I am over 18 years old and accept Terms & Conditions</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Centered Cyan/Teal Sign Up Button -->
+                <button type="submit"
+                    class="welcome-submit-btn"
+                    [disabled]="isLoading || registerForm.invalid || btnDisabled || !otpVerified">
+                    <i [ngClass]="isLoading ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle'"></i>
+                    <span>{{ isLoading ? 'Creating...' : 'Sign Up' }}</span>
+                </button>
+
+                <div class="welcome-links-row">
+                    <span>Already a member?</span>
+                    <button type="button" class="welcome-link link-highlight" (click)="showPopUp('LOGIN')">
+                        Login >>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="loader-wrapper" *ngIf="responseLoader">
+    <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="loading" />
+</div>

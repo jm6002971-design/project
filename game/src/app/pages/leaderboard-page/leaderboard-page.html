@@ -1,0 +1,133 @@
+<div class="leaderboard-page-container">
+    <div class="leaderboard-header">
+        <h1>Tournaments & Leaderboards</h1>
+        <p>Compete with players worldwide and track your real-time rankings</p>
+    </div>
+
+    <div class="leaderboard-grid" *ngIf="filteredSettings?.length > 0 || tableloader; else emptyState">
+        <!-- Left Side: Leaderboard Active List -->
+        <div class="leaderboard-card">
+            <h2 class="leaderboard-card-title">
+                <i class="fas fa-trophy"></i> Active Leaderboards
+            </h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th style="text-align: right;">Players</th>
+                            <th style="text-align: center;">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of filteredSettings; let i = index"
+                            class="row-animate"
+                            [class.active-row]="activeRowId === item.id"
+                            [style.animation-delay]="i * 50 + 'ms'">
+                            <td style="font-weight: 600;">{{ item.name.split(' - ')[0] }}</td>
+                            <td style="text-align: right; font-variant-numeric: tabular-nums;">
+                                {{ item.participants }}
+                            </td>
+                            <td style="text-align: center;">
+                                <button
+                                    type="button"
+                                    class="btn-view-participants"
+                                    [disabled]="loadingRowId === item.id"
+                                    (click)="getPlayers(item.id)"
+                                >
+                                    <i *ngIf="loadingRowId === item.id" class="fa fa-spinner fa-spin"></i>
+                                    <span *ngIf="loadingRowId !== item.id">View</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Right Side: Player Standings -->
+        <div class="leaderboard-card">
+            <h2 class="leaderboard-card-title">
+                <i class="fas fa-medal"></i> Standings
+            </h2>
+            
+            <div class="loader-container" *ngIf="tableloader">
+                <div class="lds-spinner">
+                    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                </div>
+                <span class="loader-text">Fetching current standings...</span>
+            </div>
+
+            <div *ngIf="!tableloader && showPlayerdata?.length > 0; else noData">
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Player Name</th>
+                                <th style="text-align: right;">Points</th>
+                                <th style="text-align: right;">Payout State</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let p of paginatedPlayers; let i = index"
+                                class="row-animate"
+                                [style.animation-delay]="i * 40 + 'ms'">
+                                <td style="font-weight: 700;" [style.color]="p.position <= 3 ? 'var(--secondary-clr)' : '#a0aec0'">
+                                    #{{ p.position }}
+                                </td>
+                                <td style="font-weight: 600;">{{ p.nickName || p.nickname }}</td>
+                                <td style="text-align: right; font-weight: 700; color: var(--secondary-clr); font-variant-numeric: tabular-nums;">
+                                    {{ p.points }}
+                                </td>
+                                <td style="text-align: right;">
+                                    <span style="font-size: 12px; padding: 4px 8px; border-radius: 4px; background: rgba(255,255,255,0.05);">
+                                        {{ p.payoutState || 'Active' }}
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-controls" *ngIf="totalPages > 1">
+                    <button
+                        type="button"
+                        class="pagination-btn"
+                        (click)="prevPage()"
+                        [disabled]="currentPage === 1"
+                    >
+                        <i class="fas fa-chevron-left"></i> Prev
+                    </button>
+                    <span class="pagination-info">
+                        Page <strong>{{ currentPage }}</strong> of <strong>{{ totalPages }}</strong>
+                    </span>
+                    <button
+                        type="button"
+                        class="pagination-btn"
+                        (click)="nextPage()"
+                        [disabled]="currentPage === totalPages"
+                    >
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <ng-template #noData>
+                <div class="no-data-state" *ngIf="!tableloader">
+                    <i class="fas fa-users-slash"></i>
+                    <p>No participant data available for this leaderboard.</p>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+
+    <ng-template #emptyState>
+        <div class="leaderboard-card" style="text-align: center; padding: 60px 20px;">
+            <i class="fas fa-calendar-times" style="font-size: 48px; color: var(--secondary-clr); opacity: 0.8; margin-bottom: 16px;"></i>
+            <h3 style="font-size: 20px; margin: 0 0 8px 0;">No Active Tournaments</h3>
+            <p style="color: #a0aec0; margin: 0;">Check back later for new events and leaderboard challenges.</p>
+        </div>
+    </ng-template>
+</div>

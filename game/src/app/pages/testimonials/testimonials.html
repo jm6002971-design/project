@@ -1,0 +1,47 @@
+<div class="testimonial-section">
+
+  <div class="section-header">
+    <div class="endorsed-badge-row">
+      <span class="endorsed-pill"><i class="fa-solid fa-shield-halved"></i> 100% AUDITED &amp; CERTIFIED</span>
+    </div>
+    <h2 class="endorsed-section-title">
+      GLOBALLY ENDORSED &amp; <span class="gold-gradient-title">RECOGNIZED</span>
+    </h2>
+    <p class="endorsed-subtitle">Trusted by leading international iGaming audit boards, high-roller communities &amp; affiliate networks</p>
+  </div>
+
+  <div class="testimonial-slider">
+
+    <div class="testimonial-track">
+
+      <div class="testimonial-card" *ngFor="let item of testimonials" (click)="onTestimonial(item)">
+
+        <div class="top-section">
+
+          <div class="user-avatar-wrap">
+            <img [src]="item.image" class="user-image" alt="{{ item.name }}">
+          </div>
+
+          <div class="user-details">
+            <h3>{{ item.name }}</h3>
+            <div class="trust-stars-row">
+              <span class="star-rating">★★★★★</span>
+              <span class="trust-score-badge">4.9 / 5.0</span>
+            </div>
+          </div>
+
+          <span class="verified-seal"><i class="fa-solid fa-circle-check"></i> VERIFIED</span>
+
+        </div>
+
+        <p class="review">
+          {{ item.review }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

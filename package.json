@@ -1,0 +1,9 @@
+{
+  "name": "game-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix game start",
+    "build": "npm --prefix game run build"
+  }
+}

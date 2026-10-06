@@ -1,0 +1,50 @@
+<ng-template #alertHost></ng-template>
+<section>
+    <div class="loader-wrapper" *ngIf="responseLoader" role="status" aria-live="polite">
+        <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="Loading crash game, please wait" />
+    </div>
+    <div *ngIf="urlSafe">
+        <div>
+            <button type="button" class="game-close-btn" aria-label="Close crash game" (click)="subtabClose()"> ✕
+            </button>
+            <iframe #gameIframe id="game_object" class="game-iframe" scrolling="auto" frameborder="0" allowfullscreen
+                title="crash game" [src]="urlSafe"></iframe>
+        </div>
+        <button type="button" class="iframe_fullS_icon ml-4" aria-label="Toggle fullscreen mode"
+            (click)="toggleFullScreen()">
+
+            <i class="fas fa-expand-arrows-alt" aria-hidden="true">
+            </i>
+        </button>
+    </div>
+    <div  > 
+        <div class="redirectline" aria-label="Breadcrumb"><span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15"> <span>Indian Games </span>  </div>
+
+        <header>
+            <h2 id="indian-games-title" class="main_heading live_casino_title">Indian Games</h2>
+            <p class="main_para">At Raj Poker, there are indian games with big prizes</p>
+        </header>
+
+        <div>
+            <div class="Maingame_row trending_scroll_container">
+
+                <article  class="Game_box" *ngFor="let game of paginatedGames  " [title]="game.gameName">
+                    <img src="assets/Balla Games/{{game.className}}.png"  [alt]="game.displayName + ' Indian game'" loading="lazy" decoding="async"/>
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.displayName}}</h5>
+                        <button type="button"          aria-label="Play {{ game.displayName }}"
+                        (click)='ballagamesLaunch(game.gameId, game.gameName)'
+                            class="button button_game">Lets Go!</button>
+                    </div>
+                
+                </article>
+            </div>
+        </div> 
+         <!-- <div *ngIf="paginatedGames.length>0">
+            <pagination-controls class="pagination justify-content-end" (pageChange)="p=$event"
+                previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+            </pagination-controls>
+        </div> -->
+
+    </div>
+</section>

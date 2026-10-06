@@ -1,0 +1,54 @@
+<ng-template #alertHost></ng-template>
+<section>
+    <div class="loader-wrapper" *ngIf="responseLoader" role="status" aria-live="polite">
+        <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="Loading crash game, please wait" />
+    </div>
+    <div *ngIf="urlSafe">
+        <div>
+            <button type="button" class="game-close-btn" aria-label="Close crash game" (click)="subtabClose()"> ✕
+            </button>
+            <iframe #gameIframe id="game_object" class="game-iframe" scrolling="auto" frameborder="0" allowfullscreen
+                title="crash game" [src]="urlSafe"></iframe>
+        </div>
+        <button type="button" class="iframe_fullS_icon ml-4" aria-label="Toggle fullscreen mode"
+            (click)="toggleFullScreen()">
+
+            <i class="fas fa-expand-arrows-alt" aria-hidden="true">
+            </i>
+        </button>
+    </div>
+    <div>
+
+        <div class="redirectline" aria-label="Breadcrumb"><span routerLink="/home">Home</span> <img
+                src="assets/home_icons/arrow_right.png" alt="" aria-hidden="true" width="15"> <span>Crash
+            </span> </div>
+
+        <header>
+            <h2 class="main_heading live_casino_title" id="crash-title">Crash</h2>
+            <p class="main_para">At Raj Poker, there are crash games with big prizes </p>
+        </header>
+
+        <div>
+            <div class="Maingame_row trending_scroll_container">
+                <div class="Game_box" *ngFor="let game of paginatedGames  ">
+                    <img *ngIf="game.provider == 'JDB'" src="assets/GameImgs/crash/{{game.imgUrl}}.png" alt=""
+                        loading="lazy" decoding="async" />
+                    <img *ngIf="game.provider == 'Spribe' " src="assets/GameImgs/crash/{{game.imgUrl}}.png"
+                        alt="" loading="lazy" decoding="async" />
+                    <img *ngIf="game.gameId == 'nft-aviatrix'" src="assets/GameImgs/crash/aviatrix.png" alt=""
+                        loading="lazy" decoding="async" />
+                    <div class="game_name_button">
+                        <h5 class="Game_Name_head">{{game.gameName}}</h5>
+                        <button *ngIf="game.provider == 'JDB'" aria-label="Play {{game.gameName}}" type="button"
+                            (click)='zepllienGame(game.gameId, game.gameName)' class="button button_game">Lets
+                            Go!</button>
+                        <button *ngIf="game.provider == 'Spribe' " aria-label="Play {{game.gameName}}" type="button"
+                            (click)='onJDBGames(game.Gtype, game.Mtype)' class="button button_game">Lets Go!</button>
+                        <button *ngIf="game.gameId == 'nft-aviatrix'" aria-label="Play {{game.gameName}}" type="button"
+                            (click)='onaviatrix(game)' class="button button_game">Lets Go!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

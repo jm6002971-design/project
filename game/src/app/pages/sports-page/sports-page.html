@@ -1,0 +1,26 @@
+
+<ng-template #alertHost></ng-template>
+<section aria-labelledby="sports-title">
+  <div class="loader-wrapper" *ngIf="responseLoader"  role="status" aria-live="polite">
+        <img [src]="'/assets/giflogo.gif?' + loaderKey" width="280" alt="Loading sports game, please wait"/>
+  </div>
+      <div *ngIf="urlSafe">
+        <div >
+          <button type="button" class="game-close-btn" aria-label="Close sports game" (click)="subtabClose()"> ✕ </button>
+            <iframe #gameIframe id="game_object" class="game-iframe" scrolling="auto" frameborder="0" allowfullscreen  title="Sports betting game"
+              [src]="urlSafe"></iframe>
+        </div>
+        <button
+      type="button"
+      class="iframe_fullS_icon ml-4"
+      aria-label="Toggle fullscreen mode"
+      (click)="toggleFullScreen()">
+
+      <i
+        class="fas fa-expand-arrows-alt"
+        aria-hidden="true">
+      </i>
+
+    </button>
+    </div>
+ </section>

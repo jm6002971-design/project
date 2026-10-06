@@ -1,0 +1,85 @@
+/* ===== SPORTSBOOK: CYBER STADIUM & LIVE ARENA THEME ===== */
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sports Game Iframe Container */
+.game-iframe {
+  width: 100%;
+  height: calc(100vh - 120px);
+  min-height: 720px;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(6, 182, 212, 0.2);
+  background: #090e17;
+  transition: all 0.3s ease;
+}
+
+/* Floating Controls */
+.game-close-btn {
+  position: fixed;
+  top: 90px;
+  right: 24px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1.5px solid rgba(239, 68, 68, 0.5);
+  color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.game-close-btn:hover {
+  background: #ef4444;
+  border-color: #ffffff;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+
+.iframe_fullS_icon {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.45);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.iframe_fullS_icon:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.7);
+}
+
+/* Loader Wrapper */
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  width: 100%;
+}

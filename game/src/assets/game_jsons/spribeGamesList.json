@@ -1,0 +1,60 @@
+{
+    "spribeGames": [
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22009,
+            "gameName": "Hotline",
+             "bg_cl": "#0060ff"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22008,
+            "gameName": "Mini Roulette",
+             "bg_cl": "#08ff64"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22007,
+            "gameName": "Keno",
+             "bg_cl": "#ff0041"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22006,
+            "gameName": "Hilo",
+             "bg_cl": "#ff8a00"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22005,
+            "gameName": "Mines",
+             "bg_cl": "#0047ff"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22004,
+            "gameName": "Plinko",
+             "bg_cl": "#00b9ff"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22003,
+            "gameName": "Goal",
+             "bg_cl": "#03ff3f"
+        },
+        {
+            "provider": "SPRIBE",
+            "Gtype": 22,
+            "Mtype": 22002,
+            "gameName": "Dice",
+             "bg_cl": "#e112ff"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+<div class="redirectline">
+    <span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15" /> <span>My Account</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow"
+      width="15"
+    />
+    <span class="m_t_15  ">Casino History</span>
+  </div>
+  <h2 class="m_t_15 live_casino_title">Casino History</h2>
+  <div class="transactions-container"  [formGroup]="form">
+  
+ 
+  
+    <!-- ✅ Date filter -->
+    <section class="section-card filter-section">
+      <div class="filter-row">
+        <!-- Start Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> Start Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input
+              matInput [ngModel]="startDate | date:'yyyy-MM-dd'"
+              [matDatepicker]="picker1"
+              formControlName="startDate"
+              readonly
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker1">
+              <img
+                matDatepickerToggleIcon
+                src="assets/sidemenu_icons/calendar.svg"
+                alt="calendar"
+              />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+  
+        <!-- End Date -->
+        <div class="filter-item">
+          <label><span class="gradient-star">*</span> End Date:</label>
+          <mat-form-field appearance="fill" class="date-field">
+            <input
+              matInput [ngModel]="endDate | date:'yyyy-MM-dd'"
+              [matDatepicker]="picker2"
+              formControlName="endDate"
+              readonly
+            />
+            <mat-datepicker-toggle matSuffix [for]="picker2">
+              <img
+                matDatepickerToggleIcon
+                src="assets/sidemenu_icons/calendar.svg"
+                alt="calendar"
+              />
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+  <div class="button-row">
+
+    <button class="btn active" (click)="onShow()">Show <i class="{{ isLoading ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+  </div>
+  <p style="color: #f00;" *ngIf="errormassage">{{errormassage}}</p>
+
+    </section>
+    <div class="table-responsive m_t_15">
+     
+      <table class="transaction-table" *ngIf="casinohistory?.length > 0" >
+        <thead>
+          <tr>
+            <th class=" sticky-col"><span class="gradient-star">*</span> Form Date </th>
+            <th><span class="gradient-star">*</span> To Date</th>
+            <th ><span class="gradient-star">*</span> Name</th>
+            <!-- <th><span class="gradient-star">*</span> Initial Balance</th> -->
+            <th class="text-right"><span class="gradient-star">*</span> Total Bet</th>
+            <th class="text-right"><span class="gradient-star">*</span> BuyIn</th>
+            <th class="text-right"><span class="gradient-star">*</span> Pay Out</th>
+            <!-- <th><span class="gradient-star">*</span> Win</th> -->
+            <!-- <th><span class="gradient-star">*</span> Closing Balance </th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of casinohistory | paginate: {itemsPerPage:selectnum, currentPage:p}">
+            <td class="sticky-col">{{ cleanDate(item.from)  | date : 'medium':'local'}}</td>
+            <td>{{ cleanDate(item?.to) | date: 'medium':'local' }}</td>
+            <td>{{ item.name }}</td>
+            <!-- <td>{{ item.initialBalance }}</td> -->
+            <td class="text-right">{{ item.bet }}</td>
+            <td class="text-right">{{ item.buyIn }}</td>
+            <td class="text-right">{{ item.payouts }}</td>
+            <!-- <td>{{ item.win }}</td> -->
+            <!-- <td>{{ item.closingBalance }}</td> -->
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+    
+        <div *ngIf="casinohistory?.length>0" class="m_t_15">
+          <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="p=$event"
+           previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+          </pagination-controls>
+      
+          </div>
+
+  </div>
+  

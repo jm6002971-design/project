@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#000000;
+}
+
+body {
+    width: auto;
+}
+
+#flash_container{
+    height: 100%;
+    margin:0 auto;
+}
+
+.flash_container {
+    height: 100%;
+}
+
+.game {
+    height: 100%;
+    width: 100%;
+}
+
+.flash_expand  #pokerlobby, .flash_expand #pokertourneylobby {
+    min-height:600px;
+}
+
+.unsupported_game, .unsupported_game a {
+    color: #fff !important;
+}

@@ -1,0 +1,27 @@
+<div class="deposit-page fd ">
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+      <img src="assets/banner_UIP.png" alt="Deposit Banner">
+    </div>
+  
+    <!-- Payment Methods -->
+    <div class="payment-container">
+  
+      <div class="payment-item" *ngFor="let method of paymentMethods">
+  
+        <img 
+          class="payment-icon"
+          [src]="'assets/payment_icons/' + method.toLowerCase() + '.svg'"
+          alt="{{method.name}}"
+        />
+  
+        <span class="payment-name">
+          {{method.toLowerCase()}}
+        </span>
+  
+      </div>
+  
+    </div>
+  
+  </div>

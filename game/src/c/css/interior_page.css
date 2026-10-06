@@ -1,0 +1,65 @@
+/************************************
+        INNER PAGES
+************************************/
+
+#root {
+    margin: 0 auto 50px;
+}
+
+#main_menu_container {
+    float: none;
+	background: #202020;
+	padding: 2px 5px;
+}
+
+.button.button_play_poker_inner, .button.button_play_casino_inner, .button.button_download_inner, .button.button_mobile_poker_inner {
+    background: url("../i/button/button_play_poker_inner.png") no-repeat;
+    width: 226px;
+    height: 60px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.button.button_mobile_poker_inner {
+    background: url("../i/button/button_mobile_poker_inner.png") no-repeat;
+}
+
+.button.button_download_inner {
+    background: url("../i/button/button_download_inner.png") no-repeat;
+}
+
+.button.button_play_casino_inner {
+    background: url("../i/button/button_play_casino_inner.png") no-repeat;
+}
+
+.content_wrapper {
+    margin: 0 37px;
+   /*  border-top: none; */
+    min-height: 40px; 
+}
+
+.center_wrapper {
+    width: 770px;
+    margin-top: 0;
+}
+
+.inner_center_wrapper_bottom_bg {
+    background: url("../i/content_bottom_bg.png") no-repeat -14px 0;
+    height: 51px;
+    margin-bottom: -50px;
+    float: left;
+    width: 772px;
+}
+
+.h1_title {
+    color: #a60005;
+    margin: 18px 38px 16px;
+}
+
+.wallet_form {
+    margin: -15px 0 45px;
+}
+.help_text{margin: 10px 20px;}
+.blacktxt{color: #000000;}
+.list_common li{ list-style: decimal;}
+.help_text li, .list_common li{padding-bottom: 6px;}

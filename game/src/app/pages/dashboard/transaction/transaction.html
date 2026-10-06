@@ -1,0 +1,195 @@
+<div class="redirectline">
+  <span routerLink="/home">Home</span> <img src="assets/home_icons/arrow_right.png" alt="rightArrow" width="15" /> <span>My Account</span> <img src="assets/home_icons/arrow_right.png"
+    alt="rightArrow"
+    width="15"
+  />
+  <span class="m_t_15  ">Transactions</span>
+</div>
+<h2 class="m_t_15 live_casino_title">Transactions</h2>
+<div class="transactions-container">
+
+  <!-- ✅ Transaction type options -->
+  <div class="transaction-types">
+    <label
+      *ngFor="let type of types"
+      class="type-option"
+      [class.active]="typeForm.value.typesValue.includes(type.senttype)"
+    >
+      <input
+        type="checkbox"
+        hidden
+        [checked]="typeForm.value.typesValue.includes(type.senttype)"
+        (change)="onChangetype(type.senttype, $event.target.checked)"
+      />
+      <span class="dot"></span> {{ type.language }}
+    </label>
+  </div>
+
+  <!-- ✅ Date filter -->
+  <section class="section-card filter-section" [formGroup]="form">
+    <div class="filter-row">
+      <!-- Start Date -->
+      <div class="filter-item">
+        <label><span class="gradient-star">*</span> Start Date:</label>
+        <mat-form-field appearance="fill" class="date-field">
+          <input
+            matInput [ngModel]="startDate | date:'yyyy-MM-dd'"
+            [matDatepicker]="picker1"
+            formControlName="startDate"
+            readonly
+          />
+          <mat-datepicker-toggle matSuffix [for]="picker1">
+            <img
+              matDatepickerToggleIcon
+              src="assets/sidemenu_icons/calendar.svg"
+              alt="calendar"
+            />
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <!-- End Date -->
+      <div class="filter-item">
+        <label><span class="gradient-star">*</span> End Date:</label>
+        <mat-form-field appearance="fill" class="date-field">
+          <input
+            matInput [ngModel]="endDate | date:'yyyy-MM-dd'"
+            [matDatepicker]="picker2"
+            formControlName="endDate"
+            readonly
+          />
+          <mat-datepicker-toggle matSuffix [for]="picker2">
+            <img
+              matDatepickerToggleIcon
+              src="assets/sidemenu_icons/calendar.svg"
+              alt="calendar"
+            />
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+<div class="button-row">
+  <button class="btn active" (click)="onFormSubmit()">Show <i class="{{ isLoading ? 'fas fa-spinner fa-spin' : 'fas fa-check-circle' }}"></i></button>
+
+</div>
+<p style="color: #f00;" *ngIf="errormassage">{{errormassage}}</p>
+
+  </section>
+
+  <!-- ✅ Transactions Table -->
+  <h4 *ngIf="hitorydatacashouts?.length >0"> Cashouts</h4>
+  <div class="table-responsive m_t_15">
+  <table class="transaction-table" *ngIf="hitorydatacashouts?.length">
+    <thead>
+      <tr>
+        <th><span class="gradient-star">*</span> Date</th>
+        <th ><span class="gradient-star">*</span> Amount</th>
+        <th ><span class="gradient-star">*</span> Paid Amount</th>
+        <th ><span class="gradient-star">*</span> Cancell Amount</th>
+        <th><span class="gradient-star">*</span> Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of hitorydatacashouts | paginate: {itemsPerPage:selectnumcash, currentPage:p} ">
+        <td>{{ cleanDate(item.createdOn) | date:'medium': 'local' }}</td>
+        <td class="text-right">{{item.wallet == 'USD'?'$':'₹'}} {{ item.amount  | number:'1.2-2'  }}</td>
+        <td class="text-right">{{item.wallet == 'USD'?'$':'₹'}} {{ item.paidAmount  | number:'1.2-2'  }}</td>
+        <td class="text-right">{{item.wallet == 'USD'?'$':'₹'}} {{ item.cancelledAmount  | number:'1.2-2'  }}</td>
+        <td >{{ item.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="hitorydatacashouts.length>0" class="m_t_15">
+  <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="p=$event"
+   previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+  </pagination-controls>
+
+  </div>
+<h4 *ngIf="hitorydatadeposits?.length >0"> Deposits</h4>
+<div class="table-responsive m_t_15 w-100">
+  <table class="transaction-table  " *ngIf="hitorydatadeposits?.length">
+    <thead>
+      <tr>
+        <th class="sticky-col"><span class="gradient-star">*</span> Date</th>
+        <th><span class="gradient-star">*</span>Cash Amount</th>
+        <th><span class="gradient-star">*</span>Bonus Amount</th>
+        <!-- <th><span class="gradient-star">*</span> Payment System</th>  -->
+        <th><span class="gradient-star">*</span> Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of hitorydatadeposits | paginate: {itemsPerPage:selectnumDeposit, currentPage:q} ">
+        <td class="sticky-col">{{ cleanDate(item.startDate) |   date:'medium': 'local' }}</td>
+        <td  class="text-right">{{item.currency == 'USD'?'$':'₹'}} {{ item.cashAmount  | number:'1.2-2'  }}</td>
+        <td  class="text-right">{{item.currency =='USD'?'$':'₹'}} {{ item.bonus  | number:'1.2-2'  }}</td>
+        <!-- <td>{{ item.paymentSystem }}</td>  -->
+        <td>{{ item.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="hitorydatadeposits.length>0" class="m_t_15">
+  <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="q=$event"
+   previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+  </pagination-controls>
+
+  </div>
+<h4 *ngIf="hitorydatabonus?.length >0"> Bonus Adjustment</h4>
+<div class="table-responsive m_t_15 w-100">
+  <table class="transaction-table" *ngIf="hitorydatabonus?.length">
+    <thead>
+      <tr>
+        <th><span class="gradient-star sticky-col">*</span>Date</th>
+        <th ><span class="gradient-star">*</span>Amount</th>
+        <!-- <th><span class="gradient-star">*</span>Currency</th>  -->
+        <th><span class="gradient-star">*</span>Bonus Type</th>
+        <th><span class="gradient-star">*</span> Released Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of hitorydatabonus | paginate: {itemsPerPage:selectnumBouns, currentPage:s} ">
+        <td class="sticky-col">{{ cleanDate(item.startDate)  | date:'medium': 'local' }}</td>
+        <td  class="text-right">{{item.currency == 'USD'?'$':'₹'}} {{ item.amount  | number:'1.2-2'  }}</td>
+        <!-- <td   >{{ item.currency }}</td> -->
+        <td>{{ item.bonusType }}</td> 
+        <td>{{ item.releasedAmount }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="hitorydatabonus.length>0" class="m_t_15">
+  <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="s=$event"
+   previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+  </pagination-controls>
+
+  </div>
+<h4 *ngIf="hitorydata?.length >0"> Cash Adjustment</h4>
+  <div class="table-responsive m_t_15">
+  <table class="transaction-table" *ngIf="hitorydata?.length">
+    <thead>
+      <tr>
+        <th><span class="gradient-star sticky-col">*</span> Date</th>
+        <th class="text-right"><span class="gradient-star">*</span>Cash Amount</th>
+        <th><span class="gradient-star">*</span>Operation Type</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of hitorydata  | paginate: {itemsPerPage:selectnumaje, currentPage:r}">
+        <td class="sticky-col">{{ cleanDate(item.operationDate)  | date:'medium': 'local'}}</td>
+        <td class="text-right"> {{item.wallet?.name == 'USD'?'$':'₹'}} {{ item.cashAmount?.value  | number:'1.2-2'  }}</td>
+        <td>{{ item.operationType?.name }}</td> 
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div *ngIf="hitorydata?.length>0" class="m_t_15">
+  <pagination-controls class="pagination justify-content-end" (click)="moveToTop()" (pageChange)="r=$event"
+   previousLabel="Prev" nextLabel="Next" class="pt-2 page-item">
+  </pagination-controls>
+
+  </div>
+</div>

@@ -1,0 +1,180 @@
+.vip-container {
+    background: #1b1b1b;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    border-radius: 12px;  
+  }
+  
+  .vip-header h3 {
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  .vip-header p {
+    font-size: 14px;
+    color: #ccc;
+    margin: 5px 0 15px;
+  }
+  
+  .vip-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .radio-group input[type='radio'] {
+    accent-color: #ff9900;
+    transform: scale(1.2);
+  }
+  
+  .convert-box { 
+      display: flex;
+      align-items: center;
+      background: #111;
+      border-radius: 8px;
+      padding: 8px 15px;
+      /* flex: 1; */
+      min-width: 312px;
+      justify-content: flex-start;
+  }
+  
+  .convert-box .icon {
+    background: #ffcc00;
+    color: #111;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .convert-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    flex: 1;
+  }
+  
+  .deposit-btn {
+    background: linear-gradient(90deg, #ff0000, #ff6600);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 80, 0, 0.6);
+    transition: 0.3s ease;
+  }
+  
+  .deposit-btn:hover {
+    transform: scale(1.05);
+  }
+  .deposit-btn:hover {
+    transform: scale(1.05);
+  } 
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  thead {
+    background: #111;
+  }
+  
+  th {
+    padding: 10px; 
+    font-weight: 600;
+  }
+  
+  td {
+    padding: 10px;
+    border: 1px solid #252525;
+    color: #ddd;
+    font-size: 14px;
+    background: #161616;
+  }
+  .button-row{
+    display: grid;
+  }
+  tbody tr:nth-child(even) {
+    background: #1f1f1f;
+  }
+  
+  /* 📱 Mobile responsive */
+  @media (max-width: 600px) {
+    .vip-controls {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .deposit-btn {
+      width: 100%;
+    }
+    .vip-container { 
+      padding: 5px; 
+  }
+  }
+  .select-wrapper {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .select-wrapper select {
+    width: 120px;
+    background: #000;   /* మీకు కావాల్సిన background */
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    padding-right: 35px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #333;
+  }
+  
+  /* Custom Arrow */
+  .select-wrapper::after {
+    content: "▼";
+    font-size: 12px;
+    color: #fff;
+    position: relative;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .desktopverion{
+    display: flex !important;
+}
+.mobile_section_pb {
+  display: none !important;
+}
+  @media (max-width: 768px) {
+    .desktopverion{
+      display: none !important;
+  }
+  .mobile_section_pb {
+    display: flex !important;
+}
+  }

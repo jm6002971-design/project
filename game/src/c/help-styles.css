@@ -1,0 +1,114 @@
+/****************************
+    HELP CARDS
+*******************************/
+.royal_flush  {
+     background:url('i/help/royal_flush.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.straight_flush  {
+     background:url('i/help/straight_flush.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.fourofkind  {
+     background:url('i/help/4ofkind.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.full_house  {
+     background:url('i/help/full_house.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.flush  {
+     background:url('i/help/flush.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.straight  {
+     background:url('i/help/straight.gif') no-repeat bottom center;
+     width:250px;
+     height:155px;
+}
+
+.three_kind  {
+     background:url('i/help/three_kind.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.two_pair  {
+     background:url('i/help/two_pair.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.one_pair  {
+     background:url('i/help/one_pair.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.high_card  {
+     background:url('i/help/high_card.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.five_high  {
+     background:url('i/help/five_high.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.six_high  {
+     background:url('i/help/six_high.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+.seven_high  {
+     background:url('i/help/seven_high.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+.eight_high  {
+     background:url('i/help/eight_high.gif') no-repeat bottom center;
+     width:250px;
+     height:80px;
+}
+
+.cards_set {
+    text-align:center;
+}
+.cards_set .card {
+    width:40px;
+    height:56px;
+    display:inline-block;
+}
+
+.cards_set .b_4 {background:transparent url("i/help/cards/bub_4.png");}
+.cards_set .b_a {background:transparent url("i/help/cards/bub_ace.png");}
+.cards_set .c_a {background:transparent url("i/help/cards/cherv_ace.png");}
+.cards_set .c_j {background:transparent url("i/help/cards/cherv_j.png");}
+.cards_set .c_k {background:transparent url("i/help/cards/cherv_king.png");}
+.cards_set .p_10 {background:transparent url("i/help/cards/pik_10.png");}
+.cards_set .p_2 {background:transparent url("i/help/cards/pik_2.png");}
+.cards_set .p_3 {background:transparent url("i/help/cards/pik_3.png");}
+.cards_set .p_6 {background:transparent url("i/help/cards/pik_6.png");}
+.cards_set .p_7 {background:transparent url("i/help/cards/pik_7.png");}
+.cards_set .p_a {background:transparent url("i/help/cards/pik_ace.png");}
+.cards_set .p_k {background:transparent url("i/help/cards/pik_king.png");}
+.cards_set .p_q {background:transparent url("i/help/cards/pik_quen.png");}
+.cards_set .t_5 {background:transparent url("i/help/cards/tref_5.png");}
+.cards_set .t_8 {background:transparent url("i/help/cards/tref_8.png");}
+.cards_set .t_a {background:transparent url("i/help/cards/tref_ace.png");}
+
+.rank_table td.darkcell {
+	width:250px
+}

@@ -1,0 +1,566 @@
+.fd {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.sign-in-desktop__error {
+    color: var(--error-validation-clr);
+    padding: 0 2rem;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    margin: 1rem 2rem;
+    margin-top: 0;
+}
+
+
+.sign-in-desktop__validation-error {
+    color: var(--error-validation-clr);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.input-desktop__password {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.input-desktop__password:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.input-desktop {
+    position: relative;
+}
+
+.input-desktop__native {
+    width: 100%;
+    background: #000 !important;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    padding: 5px 35px 5px 130px;
+    /* padding: 5px 40px 5px 130px; */
+    height: 45px;
+    /* text-align: right; */
+    font-family: "Poppins";
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__content-container {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 800px;
+    height: auto;
+    max-height: 650px;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.sign-in-desktop__background {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 650px;
+    object-fit: 100%;
+    border-radius: 20px;
+}
+
+
+.deskBackLoginImage {
+    display: block;
+}
+
+.mobileBackLoginImage {
+    display: none;
+}
+
+.sign-in-destktop-form_cover {
+    position: relative;
+    width: 50%;
+    float: right;
+    background: #0c0c0c45;
+    backdrop-filter: blur(20px);
+    height: auto;
+    height: 506px;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 280px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sign-in-Login-title {
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sign-in-desktop__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.sign-in-desktop__title {
+    width: 95%;
+    margin-left: 10%;
+    display: none;
+}
+
+.sign-in-desktop__fields {
+    width: 100%;
+}
+
+.sign-in-desktop_fgt_button {
+    background: transparent;
+    transition: transform 0.2s ease-in;
+}
+
+
+.sign-in-desktop_fgt_button:hover,
+.sign-in-desktop_fgt_button:focus,
+.sign-in-desktop_fgt_button:active {
+    border: 1px solid white;
+}
+
+@keyframes modalBounce {
+    0% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.02);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.sign-in-desktop__cross {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 10;
+}
+
+/* .sign-in-desktop__cross:hover {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.8;
+} */
+
+.sign-in-desktop__cross svg {
+    fill: #9583A0;
+}
+
+.sign-in-desktop__cross:hover svg {
+    fill: var(--error-validation-clr);
+}
+
+.sign-in-desktop__input {
+    margin: 20px 0;
+}
+
+.sign-in-desktop__input input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(149, 131, 160, 0.2);
+    transition: all 0.3s ease;
+    outline: 1px solid #cc0000;
+}
+
+.login_alert-error {
+    width: 100%;
+    padding: 0.1rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.sign-in-desktop__button {
+    width: 100%;
+    padding: 5px;
+    border: 0px;
+    outline: 0px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+
+.sign-in-desktop__button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.remember-me-container {
+    /* margin: 15px 0;
+    display: flex;
+    align-items: center; */
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: var(--text-xl);
+}
+
+.remember-me-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+    color: #5a4b66;
+    transition: all 0.3s ease;
+}
+
+.remember-me-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #000000;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remember-me-checkbox:hover .checkmark {
+    border-color: #000000;
+    transform: scale(1.05);
+}
+
+.remember-me-checkbox input:checked~.checkmark {
+    /* background-color: #6c5ce7;
+    border-color: #6c5ce7; */
+    background-color: #000;
+    border-color: #000;
+    animation: checkmarkPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.checkmark-svg {
+    width: 10px;
+    height: 8px;
+    fill: none;
+    stroke: #e72e16;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16;
+    stroke-dashoffset: 16;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.remember-me-checkbox input:checked~.checkmark .checkmark-svg {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.3s ease 0.2s;
+}
+
+@keyframes checkmarkPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.remember-me-text {
+    margin-left: 8px;
+    transition: color 0.3s ease;
+}
+
+.remember-me-checkbox:hover .remember-me-text {
+    color: var(--color-purple-light);
+}
+
+.input-desktop__password {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.input-desktop__password:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.input-desktop__password_active {
+    opacity: 1;
+}
+
+.input-desktop__password {
+    transform-origin: center;
+}
+
+.input-desktop__password.animate {
+    animation: eyeBlink 0.5s ease;
+}
+
+@keyframes eyeBlink {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateY(-50%) scale(0.8);
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .modal__content-container {
+        padding: 24px 20px;
+        width: calc(100% - 40px);
+        max-width: none;
+    }
+
+
+    @keyframes mobileModalBounce {
+        0% {
+            transform: translateY(30px) scale(0.95);
+        }
+
+        100% {
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    .remember-me-checkbox {
+        font-size: 13px;
+    }
+}
+
+.is-loading .modal__content-container {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+
+/* Parent container holding both forms */
+.form-slider-container {
+    position: relative;
+    width: 100%;
+
+    /* Let container auto-expand based on tallest child */
+    display: flex;
+    flex-direction: row;
+
+    /* Needed to keep both forms in one horizontal track */
+    overflow: hidden;
+}
+
+/* ALL forms share same space */
+.login-form,
+.forget-form {
+    flex: 0 0 100%;
+    /* each form takes full width */
+    position: relative;
+    /* not absolute */
+    transition: transform 0.6s ease;
+}
+
+/* INITIAL POSITIONS */
+/* initial */
+.login-form {
+    /* transform: translateX(0%); */
+    display: block;
+}
+
+.forget-form {
+    /* transform: translateX(10%); */
+    display: none;
+}
+
+/* forget password clicked */
+.form-slider-container.showForget .login-form {
+    /* transform: translateX(-110%); */
+    display: none;
+}
+
+.form-slider-container.showForget .forget-form {
+    /* transform: translateX(0%); */
+    display: block;
+}
+
+.login_icons {
+    font-size: 22px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 5px;
+    z-index: 10;
+    color: transparent;
+    background: var(--text-primary);
+    background-clip: text;
+}
+
+.input-desktop__native:focus~.login_icons,
+.input-desktop__native:active~.login_icons {
+    color: transparent;
+    background: var(--gradient-primary);
+    background-clip: text;
+}
+
+.login_labels {
+    position: absolute;
+    font-size: 0.95rem;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 40px;
+    z-index: 10;
+    font-family: "Poppins";
+    color: var(--text-primary);
+    background: #000000;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    50% {
+        box-shadow: 0 20px 40px rgba(149, 131, 160, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .modal.visible .modal__content-container {
+        animation: modalBounce 0.6s ease;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .modal__content-container {
+        padding: 24px 20px;
+        width: 100dvw;
+        height: 100dvh;
+        max-height: 100dvh;
+        top: 0;
+        left: 0;
+        transform: none;
+        max-width: none;
+        align-items: end;
+        padding: 0;
+    }
+
+    .deskBackLoginImage {
+        display: none;
+    }
+
+    .mobileBackLoginImage {
+        display: block;
+    }
+
+
+
+    .sign-in-desktop__background {
+        width: 100dvw;
+        height: 100dvh;
+        max-width: 100dvw;
+        max-height: 100dvh;
+        border-radius: 0;
+    }
+
+    .sign-in-destktop-form_cover {
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .input-desktop {
+        height: 3.2rem;
+    }
+
+    .sign-in-desktop__label {
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .sign-in-desktop__input {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    .sign-in-desktop__form {
+        border-radius: 1rem;
+        width: 100%;
+        font-size: 1rem;
+        max-width: 550px;
+    }
+}
+
+
+input.input-desktop__native:-webkit-autofill,
+input.input-desktop__native:-webkit-autofill:hover,
+input.input-desktop__native:-webkit-autofill:focus,
+input.input-desktop__native:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #000000 inset !important;
+    box-shadow: 0 0 0 1000px #000000 inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}

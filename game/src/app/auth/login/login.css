@@ -1,0 +1,318 @@
+/* ==========================================================================
+   RAJPOKER LOGIN MODAL POPUP
+   Matches user's reference image:
+   - Floating top banner badge: 👤 Welcome (Dark navy, rounded, drop shadow)
+   - Soft light card body with gentle shadow
+   - Left external slate icons (👤, 🔒)
+   - Clean white rounded input boxes
+   - Centered Cyan/Teal Login button
+   ========================================================================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.78);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10015;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 16px;
+}
+
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Card Container */
+.welcome-card-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #11141e;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(225, 29, 72, 0.2);
+    padding: 28px 28px 24px 28px;
+    animation: welcomeCardPop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin-top: 0;
+    scrollbar-width: none;
+}
+
+.welcome-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes welcomeCardPop {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Welcome Header Inside Container */
+.welcome-header-inside {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.welcome-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.welcome-title-row i {
+    font-size: 1.4rem;
+    color: #fbbf24;
+}
+
+.welcome-title-row h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.welcome-subtext {
+    font-size: 0.82rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+/* Clean Close Button */
+.welcome-close-btn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 5;
+}
+
+.welcome-close-btn:hover {
+    background: rgba(225, 29, 72, 0.25);
+    color: #ffffff;
+    border-color: #e11d48;
+    transform: rotate(90deg);
+}
+
+/* Card Body */
+.welcome-card-body {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.welcome-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Input Group & Fields */
+.welcome-input-group {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.welcome-field-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fbbf24;
+    font-size: 1.15rem;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.welcome-input {
+    width: 100%;
+    height: 48px;
+    background: #0b0e14 !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 12px;
+    padding: 8px 42px 8px 44px !important;
+    font-size: 0.95rem;
+    color: #ffffff !important;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-input::placeholder {
+    color: #64748b;
+    font-size: 0.92rem;
+}
+
+.welcome-input:focus {
+    outline: none;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-eye-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px;
+    z-index: 3;
+    transition: color 0.2s ease;
+}
+
+.welcome-captcha-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.welcome-error-msg {
+    font-size: 0.78rem;
+    color: #f87171;
+    font-weight: 500;
+    margin-top: 4px;
+    padding-left: 6px;
+}
+
+/* Submit Button */
+.welcome-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 24px auto 10px auto;
+    width: 100%;
+    height: 46px;
+    padding: 0 24px;
+    background: linear-gradient(135deg, #e11d48 0%, #f59e0b 100%);
+    border: none;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(225, 29, 72, 0.45);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.welcome-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(225, 29, 72, 0.6), 0 0 20px rgba(245, 158, 11, 0.4);
+    color: #ffffff;
+}
+
+.welcome-submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.welcome-submit-btn:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+}
+
+/* Links row */
+.welcome-links-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    font-size: 0.82rem;
+}
+
+.welcome-link {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.82rem;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+[data-mode="dark"] .welcome-link {
+    color: #94a3b8;
+}
+
+.welcome-link:hover {
+    color: #0284c7;
+    text-decoration: underline;
+}
+
+.welcome-link.link-highlight {
+    color: #0284c7;
+    font-weight: 600;
+}
+
+.welcome-link-sep {
+    color: #cbd5e1;
+}
+
+.welcome-alert {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    margin-bottom: 8px;
+}
+
+/* Loader wrapper */
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
