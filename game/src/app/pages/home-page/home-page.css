@@ -3598,7 +3598,7 @@ i.fas.fa-caret-left.active-row {
 .promo-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.86);
+  background-color: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   display: flex;
@@ -3606,13 +3606,14 @@ i.fas.fa-caret-left.active-row {
   align-items: center;
   z-index: 999999;
   animation: promoFadeIn 0.3s ease forwards;
-  padding: 16px;
+  padding: 24px 16px;
+  box-sizing: border-box;
 }
 
 .promo-image-card-container {
   position: relative;
-  max-width: 390px;
-  width: 90vw;
+  max-width: 410px;
+  width: min(88vw, 410px);
   max-height: 86vh;
   border-radius: 20px;
   overflow: visible;
@@ -3625,32 +3626,33 @@ i.fas.fa-caret-left.active-row {
   align-items: center;
 }
 
+/* Floating Gold Close Button: Positioned OUTSIDE top-right corner to NEVER overlap chips or artwork */
 .promo-floating-close-btn {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  background: rgba(0, 0, 0, 0.72);
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
-  color: #ffffff;
-  width: 34px;
-  height: 34px;
+  top: -14px;
+  right: -12px;
+  background: radial-gradient(circle, #1a1e29 0%, #0c0e14 100%);
+  border: 2px solid #eab308;
+  color: #fbbf24;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 30;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 50;
   padding: 0;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.9), 0 0 14px rgba(234, 179, 8, 0.45);
 }
 
 .promo-floating-close-btn:hover {
-  background: #e11d48;
-  border-color: #ffffff;
-  transform: rotate(90deg) scale(1.12);
-  box-shadow: 0 0 18px rgba(225, 29, 72, 0.85);
+  background: #b45309;
+  border-color: #fef08a;
+  color: #ffffff;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 22px rgba(234, 179, 8, 0.85);
 }
 
 .promo-flyer-clickable {
@@ -3660,13 +3662,14 @@ i.fas.fa-caret-left.active-row {
   overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 35px rgba(212, 175, 55, 0.25);
-  border: 1px solid rgba(251, 191, 36, 0.3);
+  border: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .promo-flyer-img {
   width: 100%;
   height: auto;
-  max-height: 82vh;
+  max-height: min(78vh, 660px);
   display: block;
   object-fit: contain;
   border-radius: 20px;
@@ -3675,6 +3678,37 @@ i.fas.fa-caret-left.active-row {
 
 .promo-flyer-clickable:hover .promo-flyer-img {
   transform: scale(1.015);
+}
+
+.promo-bottom-hint {
+  margin-top: 12px;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  background: rgba(15, 20, 32, 0.9);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  color: #fde047;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.promo-bottom-hint:hover {
+  background: rgba(234, 179, 8, 0.25);
+  border-color: #fbbf24;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(234, 179, 8, 0.35);
+}
+
+.hint-ext-icon {
+  font-size: 11px;
+  opacity: 0.8;
 }
 
 @keyframes promoFadeIn {
@@ -3693,35 +3727,69 @@ i.fas.fa-caret-left.active-row {
   }
 }
 
-/* ===== RESPONSIVE MEDIA QUERIES (IDENTICAL PATTERN ON MOBILE & LAPTOP) ===== */
-@media (max-width: 900px) {
-  .banner-slide-wrapper {
-    aspect-ratio: 16 / 7;
-  }
+/* ===== RESPONSIVE MEDIA QUERIES (SEAMLESS LOOK ACROSS PC, TABLET, AND MOBILE) ===== */
 
-  /* Keep same 2x2 grid pattern for category cards as laptop */
-  .stake-feature-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+/* Tablet & Smaller Laptops (601px - 992px) */
+@media (max-width: 992px) {
+  .banner-slide-wrapper {
+    aspect-ratio: 860 / 235;
   }
 
   .quick-download-strip {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    padding: 0 16px;
   }
 
   .quick-dock-btn {
-    max-width: 100%;
     height: 48px;
     font-size: 14px;
     padding: 0 12px;
   }
+
+  .dock-btn-icon-wrap {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .dock-btn-text {
+    font-size: 13.5px;
+    margin-left: 8px;
+  }
+
+  .stake-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .stake-feature-card {
+    min-height: 155px;
+    padding: 18px 20px;
+  }
+
+  .stake-card-graphic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .stake-graphic-img {
+    max-width: 95px;
+    max-height: 95px;
+  }
+
+  .hero-ticker-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
 
+/* Mobile Screens (<= 600px) */
 @media (max-width: 600px) {
+  /* Match mobile-optimized banner format (800x372) */
   .banner-slide-wrapper {
-    aspect-ratio: 16 / 8;
+    aspect-ratio: 800 / 372;
   }
 
   .banner-dashed-indicators button {
@@ -3734,10 +3802,11 @@ i.fas.fa-caret-left.active-row {
   }
 
   .banner-nav-chevron {
-    width: 36px;
-    font-size: 18px;
+    width: 34px;
+    font-size: 16px;
   }
 
+  /* 2x2 Quick Action Dock */
   .quick-download-strip {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -3768,10 +3837,10 @@ i.fas.fa-caret-left.active-row {
     padding: 2px 5px;
   }
 
-  /* Exact same 2x2 pattern for Casino, Sports, Slots, Poker */
+  /* 2x2 Feature Showcase Cards (Casino, Sports, Slots, Poker) */
   .stake-feature-section {
     padding: 0 12px;
-    margin-top: 16px;
+    margin-top: 14px;
   }
 
   .stake-feature-grid {
@@ -3780,61 +3849,155 @@ i.fas.fa-caret-left.active-row {
   }
 
   .stake-feature-card {
-    min-height: 125px;
-    padding: 14px 14px;
+    position: relative;
+    overflow: hidden;
+    min-height: 128px;
+    padding: 14px 12px;
     border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .stake-card-left {
+    max-width: 100%;
+    width: 100%;
+    z-index: 2;
   }
 
   .stake-card-title {
-    font-size: 1.1rem;
+    font-size: 1.08rem;
     font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 3px 0;
   }
 
   .stake-card-subtitle {
     font-size: 0.72rem;
-    margin-bottom: 8px;
+    margin: 0 0 8px 0;
+    opacity: 0.8;
   }
 
   .stake-explore-btn {
     font-size: 0.68rem;
     padding: 3px 8px;
     gap: 4px;
+    font-weight: 700;
   }
 
   .stake-card-graphic {
-    width: 65px;
-    height: 65px;
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 68px;
+    height: 68px;
+    z-index: 1;
+    pointer-events: none;
   }
 
   .stake-graphic-img {
-    max-width: 62px;
-    max-height: 62px;
+    max-width: 65px;
+    max-height: 65px;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+  }
+
+  /* Compact 2x2 Ticker Ribbon */
+  .hero-ticker-ribbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 0 12px;
+    margin-top: 14px;
+  }
+
+  .ticker-box {
+    padding: 10px 12px;
+    border-radius: 12px;
+    gap: 10px;
+  }
+
+  .ticker-icon-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .ticker-caption {
+    font-size: 9px;
+  }
+
+  .ticker-number {
+    font-size: 12px;
+  }
+
+  /* Responsive Promo Popup on Mobile */
+  .promo-modal-backdrop {
+    padding: 20px 12px;
   }
 
   .promo-image-card-container {
-    max-width: 330px;
+    max-width: min(88vw, 340px);
     width: 88vw;
   }
 
+  .promo-floating-close-btn {
+    top: -12px;
+    right: -6px;
+    width: 34px;
+    height: 34px;
+  }
+
   .promo-flyer-img {
-    max-height: 78vh;
+    max-height: min(74vh, 520px);
+  }
+
+  .promo-bottom-hint {
+    font-size: 12px;
+    padding: 6px 14px;
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 420px) {
+/* Extra Small Phones (<= 380px) */
+@media (max-width: 380px) {
   .quick-download-strip {
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
+    padding: 0 8px;
+  }
+
+  .quick-dock-btn {
+    height: 44px;
+    font-size: 12.5px;
+    padding: 0 8px;
+  }
+
+  .dock-btn-icon-wrap {
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+
+  .dock-btn-text {
+    font-size: 12px;
+    margin-left: 4px;
+  }
+
+  .dock-btn-badge {
+    display: none;
+  }
+
+  .stake-feature-section {
+    padding: 0 8px;
   }
 
   .stake-feature-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
   .stake-feature-card {
+    min-height: 118px;
     padding: 12px 10px;
-    min-height: 115px;
   }
 
   .stake-card-title {
@@ -3847,12 +4010,17 @@ i.fas.fa-caret-left.active-row {
   }
 
   .stake-card-graphic {
-    width: 55px;
-    height: 55px;
+    width: 58px;
+    height: 58px;
   }
 
   .stake-graphic-img {
-    max-width: 52px;
-    max-height: 52px;
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+  .hero-ticker-ribbon {
+    padding: 0 8px;
+    gap: 6px;
   }
 }

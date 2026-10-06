@@ -565,12 +565,12 @@
     </div>
 </div>
 
-<!-- Official RajPoker Instagram Promotion Popup Modal (Image Only as Requested) -->
+<!-- Official RajPoker Instagram Promotion Popup Modal (Luxury Floating Design) -->
 <div class="promo-modal-backdrop" *ngIf="showPromotion" (click)="closePopup()" role="dialog" aria-modal="true" aria-label="Official Promotion">
     <div class="promo-image-card-container" (click)="$event.stopPropagation()">
-        <!-- Close Button (X) at Top Right -->
-        <button class="promo-floating-close-btn" (click)="closePopup()" aria-label="Close popup">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        <!-- Close Button (X) Floating Outside Top Right -->
+        <button class="promo-floating-close-btn" (click)="closePopup()" aria-label="Close popup" title="Close popup">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>
                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -580,6 +580,13 @@
         <!-- Entire Flyer Graphic: Click to open Instagram -->
         <div class="promo-flyer-clickable" (click)="openInstagram()" role="button" tabindex="0" title="Follow our Instagram @RAJPLAY.LIVE">
             <img src="assets/instagram_popup.png" alt="Follow Our Instagram Page @RAJPLAY.LIVE" class="promo-flyer-img" loading="eager" />
+        </div>
+
+        <!-- Follow Us Interactive Badge Below Flyer -->
+        <div class="promo-bottom-hint" (click)="openInstagram()" role="button" tabindex="0" title="Follow on Instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Follow <strong>&#64;RAJPLAY.LIVE</strong></span>
+            <i class="fa-solid fa-arrow-up-right-from-square hint-ext-icon"></i>
         </div>
     </div>
 </div>

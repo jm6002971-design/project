@@ -196,7 +196,12 @@ export class HomePage implements AfterViewInit {
 
   getBannerMedia(img: any): string {
     if (!img) return 'assets/homebanner/bannerD1.jpg';
-    const media = img.media || img.image || '';
+    let media = img.media || img.image || '';
+    if (typeof window !== 'undefined' && window.innerWidth <= 767) {
+      media = media.replace(/bannerD([1-6])\.jpg/g, 'bannerM$1.jpg');
+    } else if (typeof window !== 'undefined' && window.innerWidth <= 992 && window.innerWidth > 767) {
+      media = media.replace(/bannerD([1-6])\.jpg/g, 'bannerT$1.jpg');
+    }
     if (media.startsWith('http://') || media.startsWith('https://') || media.startsWith('assets/')) {
       return media;
     }
