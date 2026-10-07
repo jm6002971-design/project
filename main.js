@@ -3519,11 +3519,11 @@ var routes = [
     children: [
       {
         path: "home",
-        loadComponent: () => import("./chunk-J434RX3I.js").then((m) => m.HomePage)
+        loadComponent: () => import("./chunk-M2EVJQ2Q.js").then((m) => m.HomePage)
       },
       {
         path: "register",
-        loadComponent: () => import("./chunk-J434RX3I.js").then((m) => m.HomePage)
+        loadComponent: () => import("./chunk-M2EVJQ2Q.js").then((m) => m.HomePage)
       },
       {
         path: "terms-and-conditions",
@@ -3531,7 +3531,7 @@ var routes = [
       },
       {
         path: "referrer",
-        loadComponent: () => import("./chunk-J434RX3I.js").then((m) => m.HomePage)
+        loadComponent: () => import("./chunk-M2EVJQ2Q.js").then((m) => m.HomePage)
       },
       {
         path: "tournaments",
@@ -3572,7 +3572,7 @@ var routes = [
       // IMPORTANT: keep dynamic route LAST
       {
         path: ":redirectKey",
-        loadComponent: () => import("./chunk-J434RX3I.js").then((m) => m.HomePage)
+        loadComponent: () => import("./chunk-M2EVJQ2Q.js").then((m) => m.HomePage)
       }
     ]
   },
