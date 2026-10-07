@@ -199,6 +199,8 @@ export class HomePage implements AfterViewInit {
     let media = img.media || img.image || '';
     if (typeof window !== 'undefined' && window.innerWidth <= 767) {
       media = media.replace(/bannerD([1-6])\.jpg/g, 'bannerM$1.jpg');
+      media = media.replace('rajpoker_vip_master.jpg', 'rajpoker_vip_master_m.jpg');
+      media = media.replace('rajpoker_live_casino_vip.jpg', 'rajpoker_live_casino_vip_m.jpg');
     } else if (typeof window !== 'undefined' && window.innerWidth <= 992 && window.innerWidth > 767) {
       media = media.replace(/bannerD([1-6])\.jpg/g, 'bannerT$1.jpg');
     }
