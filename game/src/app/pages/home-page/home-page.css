@@ -2013,48 +2013,12 @@ p.nameLeg {
 }
 
 
-@media (max-width: 767px) {
-
-  .carousel-item,
-  .carousel-inner {
-    height: 185px !important;
-  }
-
-  .carousel-item img {
-    height: 185px !important;
-    width: 100% !important;
-    /* object-fit: cover !important; */
-  }
+/* Responsive carousel heights handled via aspect-ratio in native banner slider */
+.carousel-item {
+  height: auto;
 }
-
-/* 📲 Tablet (768px – 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-
-  .carousel-item,
-  .carousel-inner {
-    height: 235px !important;
-  }
-
-  .carousel-item img {
-    height: 235px !important;
-    width: 100% !important;
-    /* object-fit: cover !important; */
-  }
-}
-
-/* 💻 Desktop (1025px and above) */
-@media (min-width: 1025px) {
-
-  .carousel-item,
-  .carousel-inner {
-    height: 280px !important;
-  }
-
-  .carousel-item img {
-    height: 280px !important;
-    width: 100% !important;
-    /* object-fit: cover !important; */
-  }
+.carousel-inner {
+  height: auto;
 }
 
 .league-text {
@@ -2351,9 +2315,13 @@ p.nameLeg {
   }
 
   .home_grid_box {
-    display: block;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 16px 20px;
+    gap: 16px;
+    border-radius: 20px;
   }
 
   .banner_button {
@@ -2417,34 +2385,51 @@ p.nameLeg {
     display: none;
   }
 
+  /* Maintain sleek laptop-style horizontal layout on tablet & mobile */
   .home_grid_box {
-    display: block;
-    text-align: center;
-    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 14px 16px;
+    gap: 14px;
+    border-radius: 18px;
+  }
+
+  .home_grid_game_icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 14px;
+    flex-shrink: 0;
+  }
+
+  .home_grid_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home_grid_box_content {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
   }
 
   .home_grid_box h6 {
     font-size: 16px;
+    margin: 2px 0;
   }
 
-  .mobile_view_icons {
+  .grid-card-tag-row {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
+    gap: 6px;
   }
 
-  .desktopverion_img {
-    display: none;
-  }
-
-  .mobile_view_icons img {
-    width: 100%;
-    max-width: 62px;
-    padding: 0px;
-    position: relative;
-    right: 0px;
+  .grid-arrow-icon {
+    margin-left: auto;
+    font-size: 13px;
   }
 
   .seeall_link_ {
@@ -2461,12 +2446,6 @@ p.nameLeg {
 
   .Sport_game_title {
     font-size: 25px;
-  }
-
-  .home_grid_box img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
   }
 }
 
@@ -3285,9 +3264,11 @@ i.fas.fa-caret-left.active-row {
 }
 
 /* Native Banner Slider Transitions */
-.banner-native-slider .carousel-inner {
+.banner-native-slider .carousel-inner,
+.banner-native-slider .carousel-item {
   position: relative;
   width: 100%;
+  height: auto !important;
   overflow: hidden;
 }
 
@@ -3298,8 +3279,20 @@ i.fas.fa-caret-left.active-row {
 }
 
 .banner-native-slider .carousel-item.active {
-  display: block;
-  opacity: 1;
+  display: block !important;
+  opacity: 1 !important;
+  height: auto !important;
+}
+
+.banner-native-slider .banner-slide-wrapper {
+  width: 100%;
+  height: auto !important;
+}
+
+.banner-native-slider .banner-slide-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 /* Chevron Navigation Controls with SVG styling */
@@ -3851,7 +3844,7 @@ i.fas.fa-caret-left.active-row {
   .stake-feature-card {
     position: relative;
     overflow: hidden;
-    min-height: 128px;
+    min-height: 138px;
     padding: 14px 12px;
     border-radius: 14px;
     display: flex;
@@ -3867,38 +3860,42 @@ i.fas.fa-caret-left.active-row {
   }
 
   .stake-card-title {
-    font-size: 1.08rem;
+    font-size: 1.05rem;
     font-weight: 800;
     line-height: 1.15;
     margin: 0 0 3px 0;
   }
 
   .stake-card-subtitle {
-    font-size: 0.72rem;
-    margin: 0 0 8px 0;
+    font-size: 0.70rem;
+    margin: 0 0 10px 0;
     opacity: 0.8;
   }
 
   .stake-explore-btn {
-    font-size: 0.68rem;
-    padding: 3px 8px;
-    gap: 4px;
+    font-size: 0.62rem;
+    padding: 3px 7px;
+    gap: 3px;
     font-weight: 700;
+    max-width: calc(100% - 48px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .stake-card-graphic {
     position: absolute;
-    right: -4px;
-    bottom: -4px;
-    width: 68px;
-    height: 68px;
+    right: 2px;
+    bottom: 4px;
+    width: 52px;
+    height: 52px;
     z-index: 1;
     pointer-events: none;
   }
 
   .stake-graphic-img {
-    max-width: 65px;
-    max-height: 65px;
+    max-width: 50px;
+    max-height: 50px;
     filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
   }
 
@@ -3930,6 +3927,52 @@ i.fas.fa-caret-left.active-row {
     font-size: 12px;
   }
 
+  /* 6-Card Category Grid: Maintain exact laptop-style horizontal row layout */
+  .home_game_grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 12px;
+    margin-top: 16px;
+  }
+
+  .home_grid_box {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    padding: 12px 14px !important;
+    gap: 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .home_grid_game_icon {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    border-radius: 14px !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
+
+  .home_grid_box_content {
+    flex: 1 !important;
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+
+  .home_grid_box h6 {
+    font-size: 16px !important;
+    margin: 2px 0 !important;
+  }
+
+  .grid-card-tag-row {
+    font-size: 11px !important;
+  }
+
+  .home_grid_tag {
+    font-size: 11px !important;
+  }
+
   /* Responsive Promo Popup on Mobile */
   .promo-modal-backdrop {
     padding: 20px 12px;
@@ -3941,8 +3984,8 @@ i.fas.fa-caret-left.active-row {
   }
 
   .promo-floating-close-btn {
-    top: -12px;
-    right: -6px;
+    top: -10px;
+    right: -4px;
     width: 34px;
     height: 34px;
   }
