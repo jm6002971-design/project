@@ -1,0 +1,296 @@
+.content_wrapper {
+    /* background: url("../i/casino_bg.png") repeat-y; */
+    border: none;
+    margin: 0 36px 26px;
+}
+
+.content_wrapper:before {
+    /* background: url("../i/casino_tb_bg.png") no-repeat center top; */
+    content: '';
+    display: block;
+    /* width: 698px;
+    height: 73px;
+    margin: -18px -18px -63px; */
+
+}
+
+.content_wrapper:after {
+    /* background: url("../i/casino_tb_bg.png") no-repeat center bottom; */
+    content: '';
+    display: block;
+   /*  height: 77px; */
+    /* margin: -52px -18px -28px; */
+}
+
+.casino_content {
+    position: relative;
+	background:#1a2705;
+}
+
+.casinoWalletSelector {
+    position: absolute;
+    margin: 4px 16px 0 0;
+    right: 0;
+}
+
+.h_casino {
+    background: url(../i/casino_header.gif) no-repeat top;
+    width: 612px;
+    padding-top: 10px;
+}
+
+.h_casino h1 {
+    float: left;
+    margin: 0 0 15px 10px;
+    height: 17px;
+    width: 300px;
+    font-family: Tahoma, sans-serif;
+    font-size: 17px;
+    color: #a8a8a8;
+}
+
+/*CASINO GAMES*/
+
+.game_box img{
+    margin-top: 6px;
+}
+
+.casino-game-img {
+    display: block;
+    width: 150px;
+    height: 171px;
+    float: left;
+    margin: 10px 6px 0 6px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    background-position: right top;
+}
+
+.casino-game-img:hover {
+	background-position: right bottom;
+}
+
+.button_casino_game span {
+    display: none;
+}
+
+.button_casino_game {
+    display: block;
+    background-repeat: no-repeat;
+    height: 26px;
+    padding: 0;
+    position: absolute;
+    top: 106px;
+    width: 76px;
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 0;
+    font-style: normal;
+}
+
+.button_play_for_fun {
+    background: url("../i/button/button_play_fun.png") no-repeat top;
+    top: 75px;
+    left: -76px;
+}
+
+.button_play_for_real {
+    background: url("../i/button/button_play_real.png") no-repeat top;
+    height: 34px;
+    top: 44px;
+    left: 154px;
+}
+
+.button_play_for_real:hover, .button_play_for_fun:hover {
+	background-position: bottom;
+}
+
+.game_button_wrapper {
+    height: 173px;
+    background-position: top left;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 114px;
+    overflow: hidden;
+    z-index: 200;
+    float: left;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.game_button_wrapper.first {
+    margin-left: 0;
+}
+
+.game_button_wrapper:hover {
+    background-position: bottom left;
+}
+
+/*Table games:*/
+.game-CRAPS {
+    background-image: url("/source/table_games/craps.png");
+}
+
+.game-EUROPEANROULETTE {
+    background-image: url("/source/table_games/europeanroulette.png");
+}
+
+.game-FRENCHROULETTEPRO {
+    background-image: url("/source/table_games/frenchroulettepro.png");
+}
+
+.game-SICBO {
+    background-image: url("/source/table_games/sicbo.png");
+}
+
+/*Card games*/
+.game-BACCARAT {
+    background-image: url("/source/card_games/baccarat.png");
+}
+
+.game-OASISPOKER {
+    background-image: url("/source/card_games/oasispoker.png");
+}
+
+.game-CARIBBEANPOKER {
+    background-image: url("/source/card_games/caribbeanpoker.png");
+}
+
+.game-BLACKJACK {
+    background-image: url("/source/card_games/blackjack.png");
+}
+
+.game-PAIGOWPOKER {
+    background-image: url("/source/card_games/paigowpoker.png");
+}
+
+/*Video pokers*/
+
+.game-JOKERPOKER {
+    background-image: url("/source/video_games/jokerpoker.png");
+}
+
+.game-DEUCESWILD {
+    background-image: url("/source/video_games/deuceswild.png");
+}
+
+.game-JACKSORBETTER {
+    background-image: url("/source/video_games/jacksorbetter.png");
+}
+
+.game-BONUSSIXPOKER {
+    background-image: url("/source/video_games/bonussixpoker.png");
+}
+
+/*Slot machines*/
+
+.game-ENCHANTEDGARDEN {
+    background-image: url("/source/slot_games/enchantedgarden.png");
+}
+.game-HELLOWINNING {
+    background-image: url("/source/slot_games/hellowinning.png");
+}
+.game-NORTHERNLIGHTS {
+    background-image: url("/source/slot_games/northernlights.png");
+}
+.game-FIREBALLS {
+    background-image: url("/source/slot_games/fireballs.png");
+}
+.game-JUNGLEWILDJACKPOTADVENTURE {
+    background-image: url("/source/slot_games/jungleadventure.png");
+}
+.game-MONEYMATTERS {
+    background-image: url("/source/slot_games/moneymatters.png");
+}
+.game-GANGSTERSPARTY {
+    background-image: url("/source/slot_games/gangstersparty.png");
+}
+.game-DRAGONSGOLD {
+    background-image: url("/source/slot_games/dragonsgold.png");
+}
+.game-ROCKOMANIA {
+    background-image: url("/source/slot_games/rockomania.png");
+}
+.game-FRUITYFIESTA {
+    background-image: url("/source/slot_games/fruityfiesta.png");
+}
+.game-RETROTECH {
+    background-image: url("/source/slot_games/retrotech.png");
+}
+.game-CORSAIRSTREASURE {
+    background-image: url("/source/slot_games/corsairstreasure.png");
+}
+
+#casino_slot_machines, #casino_table_games, #casino_video_poker, #casino_card_games {
+	display: none;
+	position: relative;
+}
+
+#casino_slot_machines {
+	width: 820px;
+}
+
+.games_bg {
+	background: url(/c/i/games/games_bg.png) no-repeat;
+	width: 666px;
+	height: 393px;
+	overflow: hidden;
+	position: relative;
+}
+
+#gamesPaging {
+	position: absolute;
+	bottom: 10px;
+	left: 40px;
+	display: none;
+}
+
+#gamesPaging a {
+	color: #c8b20b;
+	font-size: 16px;
+}
+
+#gamesPaging a.active {
+	color: #fff;
+	text-decoration: none;
+}
+
+.inner-content .casino-game-img {
+	margin: 10px 7px 0;
+}
+
+.group_TABLE_GAMES a, .group_SLOT_MACHINES a, .group_VIDEO_POKERS a, .group_CARD_GAMES a {
+	width: 100%;
+	height: 36px;
+    font-family: "Segoe UI";
+	font-size: 22px;
+	color: #fff;
+    text-decoration: none;
+}
+
+.casino_game_title {
+    display: none;
+}
+
+.casino_content h2 {
+	padding: 0;
+}
+
+.games_list {
+	padding-bottom: 10px;
+}
+
+.casino_content_wrapper {
+    position: relative;
+    margin-left: 3px;
+}
+
+.main_games_list {
+	margin-top: 10px;
+    width: 667px;
+}
+
+#page_container {
+    padding: 7px;
+}

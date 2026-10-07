@@ -1,0 +1,856 @@
+{
+    "netEnt": [
+        {
+            "gameName": "Parthenon Quest For Immortality",
+            "provider": "NetEnt",
+            "openTable": 1100025,
+            "gameId": 302
+        },
+        {
+            "gameName": "Aloha! Christmas",
+            "provider": "NetEnt",
+            "openTable": 1100032,
+            "gameId": 174
+        },
+        {
+            "gameName": "Aloha! Cluster Pays",
+            "provider": "NetEnt",
+            "openTable": 1100033,
+            "gameId": 175
+        },
+        {
+            "gameName": "Wild Wild West The Great Train Heist",
+            "provider": "NetEnt",
+            "openTable": 1100038,
+            "gameId": 209
+        },
+        {
+            "gameName": "Twin Spin Megaways",
+            "provider": "NetEnt",
+            "openTable": 1100039,
+            "gameId": 208
+        },
+        {
+            "gameName": "Turn Your Fortune",
+            "provider": "NetEnt",
+            "openTable": 1100041,
+            "gameId": 206
+        },
+        {
+            "gameName": "Steam Tower",
+            "provider": "NetEnt",
+            "openTable": 1100043,
+            "gameId": 204
+        },
+        {
+            "gameName": "Rome The Golden Age",
+            "provider": "NetEnt",
+            "openTable": 1100075,
+            "gameId": 202
+        },
+        {
+            "gameName": "Reel Rush",
+            "provider": "NetEnt",
+            "openTable": 1100076,
+            "gameId": 201
+        },
+        {
+            "gameName": "Blood Suckers",
+            "provider": "NetEnt",
+            "openTable": 1100077,
+            "gameId": 176
+        },
+        {
+            "gameName": "Pyramid Quest For Immortality",
+            "provider": "NetEnt",
+            "openTable": 1100078,
+            "gameId": 200
+        },
+        {
+            "gameName": "Butterfly Staxx",
+            "provider": "NetEnt",
+            "openTable": 1100079,
+            "gameId": 177
+        },
+        {
+            "gameName": "Piggy Riches ",
+            "provider": "NetEnt",
+            "openTable": 1100080,
+            "gameId": 199
+        },
+        {
+            "gameName": "Dark King Forbidden Riches",
+            "provider": "NetEnt",
+            "openTable": 1100081,
+            "gameId": 178
+        },
+        {
+            "gameName": "Jingle Spin",
+            "provider": "NetEnt",
+            "openTable": 1100082,
+            "gameId": 194
+        },
+        {
+            "gameName": "Dazzle Me",
+            "provider": "NetEnt",
+            "openTable": 1100083,
+            "gameId": 179
+        },
+        {
+            "gameName": "Jack Hammer ",
+            "provider": "NetEnt",
+            "openTable": 1100084,
+            "gameId": 192
+        },
+        {
+            "gameName": "Dead Or Alive",
+            "provider": "NetEnt",
+            "openTable": 1100085,
+            "gameId": 180
+        },
+        {
+            "gameName": "Jack and the Beanstalk",
+            "provider": "NetEnt",
+            "openTable": 1100086,
+            "gameId": 191
+        },
+        {
+            "gameName": "Dead Or Alive 2",
+            "provider": "NetEnt",
+            "openTable": 1100087,
+            "gameId": 181
+        },
+        {
+            "gameName": "Gorilla Kingdom",
+            "provider": "NetEnt",
+            "openTable": 1100088,
+            "gameId": 189
+        },
+        {
+            "gameName": "Divine Fortune Megaways",
+            "provider": "NetEnt",
+            "openTable": 1100089,
+            "gameId": 182
+        },
+        {
+            "gameName": "Elements The Awakening",
+            "provider": "NetEnt",
+            "openTable": 1100091,
+            "gameId": 183
+        },
+        {
+            "gameName": "Gonzo's Quest",
+            "provider": "NetEnt",
+            "openTable": 1100092,
+            "gameId": 187
+        },
+        {
+            "gameName": "Finn and the Swirly Spin",
+            "provider": "NetEnt",
+            "openTable": 1100093,
+            "gameId": 184
+        },
+        {
+            "gameName": "Fruit Shop Megaways",
+            "provider": "NetEnt",
+            "openTable": 1100094,
+            "gameId": 186
+        },
+        {
+            "gameName": "Fruit Shop ",
+            "provider": "NetEnt",
+            "openTable": 1100095,
+            "gameId": 185
+        },
+        {
+            "gameName": "Blood Suckers 2",
+            "provider": "NetEnt",
+            "openTable": 1100097,
+            "gameId": 213
+        },
+        {
+            "gameName": "Butterfly Staxx 2",
+            "provider": "NetEnt",
+            "openTable": 1100098,
+            "gameId": 214
+        },
+        {
+            "gameName": "Cash Noire",
+            "provider": "NetEnt",
+            "openTable": 1100186,
+            "gameId": 305
+        },
+        {
+            "gameName": "Cash-o-Matic",
+            "provider": "NetEnt",
+            "openTable": 1100187,
+            "gameId": 306
+        },
+        {
+            "gameName": "Codex of Fortune",
+            "provider": "NetEnt",
+            "openTable": 1100188,
+            "gameId": 307
+        },
+        {
+            "gameName": "Creature from the Black Lagoon",
+            "provider": "NetEnt",
+            "openTable": 1100189,
+            "gameId": 308
+        },
+        {
+            "gameName": "Disco Danny",
+            "provider": "NetEnt",
+            "openTable": 1100190,
+            "gameId": 309
+        },
+        {
+            "gameName": "Dracula ",
+            "provider": "NetEnt",
+            "openTable": 1100192,
+            "gameId": 311
+        },
+        {
+            "gameName": "Druid's Dream",
+            "provider": "NetEnt",
+            "openTable": 1100193,
+            "gameId": 312
+        },
+        {
+            "gameName": "EggOMatic",
+            "provider": "NetEnt",
+            "openTable": 1100194,
+            "gameId": 313
+        },
+        {
+            "gameName": "Excalibur ",
+            "provider": "NetEnt",
+            "openTable": 1100195,
+            "gameId": 314
+        },
+        {
+            "gameName": "Fairytale Legends Hansel and Gretel",
+            "provider": "NetEnt",
+            "openTable": 1100196,
+            "gameId": 315
+        },
+        {
+            "gameName": "Fairytale Legends Mirror Mirror",
+            "provider": "NetEnt",
+            "openTable": 1100197,
+            "gameId": 316
+        },
+        {
+            "gameName": "Gods of Gold InfiniReels",
+            "provider": "NetEnt",
+            "openTable": 1100199,
+            "gameId": 318
+        },
+        {
+            "gameName": "Grand Spinn",
+            "provider": "NetEnt",
+            "openTable": 1100200,
+            "gameId": 319
+        },
+        {
+            "gameName": "Halloween Jack",
+            "provider": "NetEnt",
+            "openTable": 1100202,
+            "gameId": 321
+        },
+        {
+            "gameName": "Jackpot 6000",
+            "provider": "NetEnt",
+            "openTable": 1100203,
+            "gameId": 322
+        },
+        {
+            "gameName": "Joker Pro ",
+            "provider": "NetEnt",
+            "openTable": 1100204,
+            "gameId": 323
+        },
+        {
+            "gameName": "Lights ",
+            "provider": "NetEnt",
+            "openTable": 1100206,
+            "gameId": 325
+        },
+        {
+            "gameName": "Lost Relics",
+            "provider": "NetEnt",
+            "openTable": 1100207,
+            "gameId": 326
+        },
+        {
+            "gameName": "Magic Maid Cafe",
+            "provider": "NetEnt",
+            "openTable": 1100208,
+            "gameId": 327
+        },
+        {
+            "gameName": "Mythic Maiden ",
+            "provider": "NetEnt",
+            "openTable": 1100211,
+            "gameId": 330
+        },
+        {
+            "gameName": "Neon Staxx",
+            "provider": "NetEnt",
+            "openTable": 1100212,
+            "gameId": 331
+        },
+        {
+            "gameName": "Reef Raider",
+            "provider": "NetEnt",
+            "openTable": 1100214,
+            "gameId": 333
+        },
+        {
+            "gameName": "Scudamore's Super Stakes",
+            "provider": "NetEnt",
+            "openTable": 1100217,
+            "gameId": 336
+        },
+        {
+            "gameName": "Spinata Grande ",
+            "provider": "NetEnt",
+            "openTable": 1100218,
+            "gameId": 337
+        },
+        {
+            "gameName": "Starburst XXXTreme",
+            "provider": "NetEnt",
+            "openTable": 1100219,
+            "gameId": 338
+        },
+        {
+            "gameName": "Sweety Honey Fruity",
+            "provider": "NetEnt",
+            "openTable": 1100221,
+            "gameId": 340
+        },
+        {
+            "gameName": "The Legend of Shangri-La Cluster Pays",
+            "provider": "NetEnt",
+            "openTable": 1100222,
+            "gameId": 341
+        },
+        {
+            "gameName": "The Wolf's Bane",
+            "provider": "NetEnt",
+            "openTable": 1100223,
+            "gameId": 342
+        },
+        {
+            "gameName": "Trollpot 5000",
+            "provider": "NetEnt",
+            "openTable": 1100224,
+            "gameId": 343
+        },
+        {
+            "gameName": "Wild Bazaar",
+            "provider": "NetEnt",
+            "openTable": 1100226,
+            "gameId": 345
+        },
+        {
+            "gameName": "Wilderland",
+            "provider": "NetEnt",
+            "openTable": 1100227,
+            "gameId": 346
+        },
+        {
+            "gameName": "Wolf Cub",
+            "provider": "NetEnt",
+            "openTable": 1100229,
+            "gameId": 348
+        },
+        {
+            "gameName": "Fruit Blaze_F1_R3",
+            "provider": "NetEnt",
+            "openTable": 1100286,
+            "gameId": 415
+        },
+        {
+            "gameName": "Gonzo's Gold_R3",
+            "provider": "NetEnt",
+            "openTable": 1100287,
+            "gameId": 416
+        },
+        {
+            "gameName": "Temple of Nudges",
+            "provider": "NetEnt",
+            "openTable": 1100288,
+            "gameId": 417
+        },
+        {
+            "gameName": "Silverback Gold",
+            "provider": "NetEnt",
+            "openTable": 1100289,
+            "gameId": 418
+        },
+        {
+            "gameName": "Funk Master",
+            "provider": "NetEnt",
+            "openTable": 1100291,
+            "gameId": 420
+        },
+        {
+            "gameName": "Space Wars 2 Powerpoints",
+            "provider": "NetEnt",
+            "openTable": 1100292,
+            "gameId": 421
+        },
+        {
+            "gameName": "Reel Rush 2",
+            "provider": "NetEnt",
+            "openTable": 1100294,
+            "gameId": 423
+        },
+        {
+            "gameName": "Spinsane ",
+            "provider": "NetEnt",
+            "openTable": 1100295,
+            "gameId": 424
+        },
+        {
+            "gameName": "Bee Hive Bonanza",
+            "provider": "NetEnt",
+            "openTable": 1100296,
+            "gameId": 425
+        },
+        {
+            "gameName": "Cornelius_F1",
+            "provider": "NetEnt",
+            "openTable": 1100297,
+            "gameId": 426
+        },
+        {
+            "gameName": "Superstars_F1",
+            "provider": "NetEnt",
+            "openTable": 1100298,
+            "gameId": 427
+        },
+        {
+            "gameName": "Milkshake Xxxtreme_R96_F1",
+            "provider": "NetEnt",
+            "openTable": 1100299,
+            "gameId": 428
+        },
+        {
+            "gameName": "Cupcakes_F1",
+            "provider": "NetEnt",
+            "openTable": 1100301,
+            "gameId": 430
+        },
+        {
+            "gameName": "Berryburst ",
+            "provider": "NetEnt",
+            "openTable": 1100302,
+            "gameId": 431
+        },
+        {
+            "gameName": "The Wish Master",
+            "provider": "NetEnt",
+            "openTable": 1100304,
+            "gameId": 433
+        },
+        {
+            "gameName": "Ghost Pirates ",
+            "provider": "NetEnt",
+            "openTable": 1100305,
+            "gameId": 434
+        },
+        {
+            "gameName": "Coins of Egypt",
+            "provider": "NetEnt",
+            "openTable": 1100306,
+            "gameId": 435
+        },
+        {
+            "gameName": "Wild Turkey",
+            "provider": "NetEnt",
+            "openTable": 1100307,
+            "gameId": 436
+        },
+        {
+            "gameName": "Santa vs Rudolf",
+            "provider": "NetEnt",
+            "openTable": 1100308,
+            "gameId": 437
+        },
+        {
+            "gameName": "Fruit Case ",
+            "provider": "NetEnt",
+            "openTable": 1100309,
+            "gameId": 438
+        },
+        {
+            "gameName": "Long Pao",
+            "provider": "NetEnt",
+            "openTable": 1100310,
+            "gameId": 439
+        },
+        {
+            "gameName": "Twin Happiness",
+            "provider": "NetEnt",
+            "openTable": 1100311,
+            "gameId": 440
+        },
+        {
+            "gameName": "Stickers ",
+            "provider": "NetEnt",
+            "openTable": 1100312,
+            "gameId": 441
+        },
+        {
+            "gameName": "Archangels Salvation",
+            "provider": "NetEnt",
+            "openTable": 1100313,
+            "gameId": 442
+        },
+        {
+            "gameName": "Wil-O-Tron 3000",
+            "provider": "NetEnt",
+            "openTable": 1100314,
+            "gameId": 443
+        },
+        {
+            "gameName": "King of 3 Kingdoms",
+            "provider": "NetEnt",
+            "openTable": 1100315,
+            "gameId": 444
+        },
+        {
+            "gameName": "Robin Hood Shifting Riches",
+            "provider": "NetEnt",
+            "openTable": 1100316,
+            "gameId": 445
+        },
+        {
+            "gameName": "Arcane Reel Chaos",
+            "provider": "NetEnt",
+            "openTable": 1100318,
+            "gameId": 447
+        },
+        {
+            "gameName": "Happy Riches",
+            "provider": "NetEnt",
+            "openTable": 1100319,
+            "gameId": 448
+        },
+        {
+            "gameName": "Strolling Staxx Cubic Fruits",
+            "provider": "NetEnt",
+            "openTable": 1100320,
+            "gameId": 449
+        },
+        {
+            "gameName": "East Sea Dragon King",
+            "provider": "NetEnt",
+            "openTable": 1100321,
+            "gameId": 450
+        },
+        {
+            "gameName": "Twin Spin XXXTreme",
+            "provider": "NetEnt",
+            "openTable": 1100509,
+            "gameId": 661
+        },
+        {
+            "gameName": "Taco Fury XXXTreme",
+            "provider": "NetEnt",
+            "openTable": 1100511,
+            "gameId": 676
+        },
+        {
+            "gameName": "Buster's Bones",
+            "provider": "NetEnt",
+            "openTable": 1100512,
+            "gameId": 677
+        },
+        {
+            "gameName": "Let It Burn",
+            "provider": "NetEnt",
+            "openTable": 1100513,
+            "gameId": 678
+        },
+        {
+            "gameName": "Fortune Rangers",
+            "provider": "NetEnt",
+            "openTable": 1100514,
+            "gameId": 679
+        },
+        {
+            "gameName": "Jack And The Beanstalk Remastered",
+            "provider": "NetEnt",
+            "openTable": 1100515,
+            "gameId": 680
+        },
+        {
+            "gameName": "Crab Trap",
+            "provider": "NetEnt",
+            "openTable": 1100516,
+            "gameId": 681
+        },
+        {
+            "gameName": "Big Bang Boom",
+            "provider": "NetEnt",
+            "openTable": 1100517,
+            "gameId": 682
+        },
+        {
+            "gameName": "101 Candies",
+            "provider": "NetEnt",
+            "openTable": 1100518,
+            "gameId": 683
+        },
+        {
+            "gameName": "The Wish Master Megaways",
+            "provider": "NetEnt Extended",
+            "openTable": 1100524,
+            "gameId": 689
+        },
+        {
+            "gameName": "Wild Turkey Megaways",
+            "provider": "NetEnt Extended",
+            "openTable": 1100534,
+            "gameId": 699
+        },
+        {
+            "gameName": "Fruit Shop Frenzy ",
+            "provider": "NetEnt Extended",
+            "openTable": 1100539,
+            "gameId": 704
+        },
+        {
+            "gameName": "Lost Relics 2",
+            "provider": "NetEnt Extended",
+            "openTable": 1100543,
+            "gameId": 708
+        },
+        {
+            "gameName": "Beach Invaders",
+            "provider": "NetEnt Extended",
+            "openTable": 1100544,
+            "gameId": 709
+        },
+        {
+            "gameName": "Don't Eat the Candy",
+            "provider": "NetEnt Extended",
+            "openTable": 1100549,
+            "gameId": 714
+        },
+        {
+            "gameName": "Druid's Magic",
+            "provider": "NetEnt Extended",
+            "openTable": 1100551,
+            "gameId": 716
+        },
+        {
+            "gameName": "Lights Camera Cash",
+            "provider": "NetEnt Extended",
+            "openTable": 1100553,
+            "gameId": 718
+        },
+        {
+            "gameName": "Magic Portals ",
+            "provider": "NetEnt",
+            "openTable": 1100562,
+            "gameId": 451
+        },
+        {
+            "gameName": "Twin Spin Deluxe",
+            "provider": "NetEnt",
+            "openTable": 1100563,
+            "gameId": 452
+        },
+        {
+            "gameName": "Witchcraft Academy",
+            "provider": "NetEnt",
+            "openTable": 1100565,
+            "gameId": 455
+        },
+        {
+            "gameName": "Theme Park Tickets Of Fortune ",
+            "provider": "NetEnt",
+            "openTable": 1100566,
+            "gameId": 456
+        },
+        {
+            "gameName": "Flowers Christmas Edition",
+            "provider": "NetEnt",
+            "openTable": 1100568,
+            "gameId": 458
+        },
+        {
+            "gameName": "Go Bananas!",
+            "provider": "NetEnt",
+            "openTable": 1100569,
+            "gameId": 459
+        },
+        {
+            "gameName": "Berryburst MAX",
+            "provider": "NetEnt",
+            "openTable": 1100570,
+            "gameId": 460
+        },
+        {
+            "gameName": "Swipe and Roll",
+            "provider": "NetEnt",
+            "openTable": 1100571,
+            "gameId": 461
+        },
+        {
+            "gameName": "Hook's Heroes",
+            "provider": "NetEnt",
+            "openTable": 1100572,
+            "gameId": 462
+        },
+        {
+            "gameName": "Lucky Angler A Snowy Catch",
+            "provider": "NetEnt",
+            "openTable": 1100573,
+            "gameId": 463
+        },
+        {
+            "gameName": "Sparks ",
+            "provider": "NetEnt",
+            "openTable": 1100574,
+            "gameId": 464
+        },
+        {
+            "gameName": "Fire Siege Fortress",
+            "provider": "NetEnt",
+            "openTable": 1100575,
+            "gameId": 465
+        },
+        {
+            "gameName": "Moonshine Riches",
+            "provider": "NetEnt",
+            "openTable": 1100578,
+            "gameId": 468
+        },
+        {
+            "gameName": "Wonderland Protector",
+            "provider": "NetEnt",
+            "openTable": 1100580,
+            "gameId": 470
+        },
+        {
+            "gameName": "Rage",
+            "provider": "NetEnt",
+            "openTable": 1100589,
+            "gameId": 729
+        },
+        {
+            "gameName": "Pandora's Treasure",
+            "provider": "Netent Extended",
+            "openTable": 1100590,
+            "gameId": 736
+        },
+        {
+            "gameName": "Lock And Pop",
+            "provider": "Netent",
+            "openTable": 1100594,
+            "gameId": 740
+        },
+        {
+            "gameName": "Gladiator Clash",
+            "provider": "Netent Extended",
+            "openTable": 1100598,
+            "gameId": 744
+        },
+        {
+            "gameName": "Babylon Riches",
+            "provider": "Netent Extended",
+            "openTable": 1100603,
+            "gameId": 749
+        },
+        {
+            "gameName": "Casino Night™",
+            "provider": "Netent Extended",
+            "openTable": 1100605,
+            "gameId": 754
+        },
+        {
+            "gameName": "Cornelius Milk Hunter Megaways",
+            "provider": "Netent",
+            "openTable": 1100606,
+            "gameId": 755
+        },
+        {
+            "gameName": "Mine Blown",
+            "provider": "Netent Extended",
+            "openTable": 1100611,
+            "gameId": 760
+        },
+        {
+            "gameName": "Rabid Randy",
+            "provider": "NetEnt",
+            "openTable": 1100615,
+            "gameId": 764
+        },
+        {
+            "gameName": "Space Wars Megaways XXXTreme",
+            "provider": "Netent",
+            "openTable": 1100618,
+            "gameId": 767
+        },
+        {
+            "gameName": "Starburst Galaxy",
+            "provider": "NetEnt",
+            "openTable": 1100619,
+            "gameId": 768
+        },
+        {
+            "gameName": "Motorhead Video Slot",
+            "provider": "NetEnt",
+            "openTable": 1100028,
+            "gameId": 196
+        },
+        {
+            "gameName": "Starburst",
+            "provider": "NetEnt",
+            "openTable": 1100029,
+            "gameId": 203
+        },
+        {
+            "gameName": "Street Fighter II The World Warrior Slot",
+            "provider": "NetEnt",
+            "openTable": 1100021,
+            "gameId": 205
+        },
+        {
+            "gameName": "Narcos",
+            "provider": "NetEnt",
+            "openTable": 1100023,
+            "gameId": 197
+        },
+        {
+            "gameName": "Ozzy Osbourne Video Slots",
+            "provider": "NetEnt",
+            "openTable": 1100024,
+            "gameId": 198
+        },
+        {
+            "gameName": "Guns N' Roses Video Slots",
+            "provider": "NetEnt",
+            "openTable": 1100036,
+            "gameId": 190
+        },
+        {
+            "gameName": "Twin Spin",
+            "provider": "NetEnt",
+            "openTable": 1100040,
+            "gameId": 207
+        },
+        {
+            "gameName": "Jimi Hendrix Online Slot",
+            "provider": "NetEnt",
+            "openTable": 1100026,
+            "gameId": 193
+        }
+    ]
+}

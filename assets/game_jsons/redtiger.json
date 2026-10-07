@@ -1,0 +1,1103 @@
+{
+    "redtiger": [
+        {
+            "gameName": "Dragon's Luck Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100002,
+            "gameId": 129
+        },
+        {
+            "gameName": "Pirate's Plenty Battle For Gold",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100004,
+            "gameId": 134
+        },
+        {
+            "gameName": "Chinese Treasures",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100006,
+            "gameId": 140
+        },
+        {
+            "gameName": "Fortune House",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100007,
+            "gameId": 130
+        },
+        {
+            "gameName": "Dragon's Fire",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100008,
+            "gameId": 131
+        },
+        {
+            "gameName": "Magic Gate",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100009,
+            "gameId": 132
+        },
+        {
+            "gameName": "Lucky Fortune Cat",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100010,
+            "gameId": 133
+        },
+        {
+            "gameName": "Dragon's Luck Deluxe",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100011,
+            "gameId": 135
+        },
+        {
+            "gameName": "Epic Journey",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100012,
+            "gameId": 137
+        },
+        {
+            "gameName": "Golden Temple",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100013,
+            "gameId": 138
+        },
+        {
+            "gameName": "Phoenix Fire Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100014,
+            "gameId": 139
+        },
+        {
+            "gameName": "Golden Offer",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100016,
+            "gameId": 142
+        },
+        {
+            "gameName": "RA's Legend",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100017,
+            "gameId": 143
+        },
+        {
+            "gameName": "Rainbow Jackpots",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100019,
+            "gameId": 145
+        },
+        {
+            "gameName": "Mega Pyramid",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100020,
+            "gameId": 146
+        },
+        {
+            "gameName": "Ancients Blessing",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100034,
+            "gameId": 149
+        },
+        {
+            "gameName": "Aurum Codex",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100035,
+            "gameId": 150
+        },
+        {
+            "gameName": "Zeus Lightning Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100044,
+            "gameId": 173
+        },
+        {
+            "gameName": "Wings Of Ra",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100045,
+            "gameId": 172
+        },
+        {
+            "gameName": "Treasure Mine",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100048,
+            "gameId": 169
+        },
+        {
+            "gameName": "Regal Streak",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100050,
+            "gameId": 167
+        },
+        {
+            "gameName": "Reel King Mega",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100052,
+            "gameId": 165
+        },
+        {
+            "gameName": "Reel Keeper",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100053,
+            "gameId": 164
+        },
+        {
+            "gameName": "Rainbow Jackpots Power Lines",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100055,
+            "gameId": 163
+        },
+        {
+            "gameName": "Mystery Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100061,
+            "gameId": 161
+        },
+        {
+            "gameName": "Jingle Bells",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100065,
+            "gameId": 160
+        },
+        {
+            "gameName": "Jack in a Pot",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100066,
+            "gameId": 159
+        },
+        {
+            "gameName": "Five Star",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100068,
+            "gameId": 158
+        },
+        {
+            "gameName": "Bounty Raid",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100069,
+            "gameId": 152
+        },
+        {
+            "gameName": "Cash Ultimate",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100070,
+            "gameId": 153
+        },
+        {
+            "gameName": "Cash Volt",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100071,
+            "gameId": 154
+        },
+        {
+            "gameName": "Dynamite Riches",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100073,
+            "gameId": 157
+        },
+        {
+            "gameName": "Dragon's Fire Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100074,
+            "gameId": 156
+        },
+        {
+            "gameName": "5 Families",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100130,
+            "gameId": 246
+        },
+        {
+            "gameName": "Arcade Bomb",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100132,
+            "gameId": 248
+        },
+        {
+            "gameName": "Atlantis",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100133,
+            "gameId": 249
+        },
+        {
+            "gameName": "Aztec Spins",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100134,
+            "gameId": 250
+        },
+        {
+            "gameName": "Cinderella's Ball",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100135,
+            "gameId": 251
+        },
+        {
+            "gameName": "Crazy Genie",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100138,
+            "gameId": 254
+        },
+        {
+            "gameName": "Crystal Mirror",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100139,
+            "gameId": 255
+        },
+        {
+            "gameName": "Devil's Number",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100141,
+            "gameId": 257
+        },
+        {
+            "gameName": "Dice Dice Dice",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100142,
+            "gameId": 258
+        },
+        {
+            "gameName": "Dragon's Luck Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100143,
+            "gameId": 259
+        },
+        {
+            "gameName": "Dragon's Luck Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100143,
+            "gameId": 259
+        },
+        {
+            "gameName": "Gems Gone Wild",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100145,
+            "gameId": 261
+        },
+        {
+            "gameName": "Golden Cryptex",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100147,
+            "gameId": 263
+        },
+        {
+            "gameName": "Golden Leprechaun Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100148,
+            "gameId": 264
+        },
+        {
+            "gameName": "Golden Tsar",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100149,
+            "gameId": 265
+        },
+        {
+            "gameName": "Grand Wheel",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100150,
+            "gameId": 266
+        },
+        {
+            "gameName": "Jewel Scarabs",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100152,
+            "gameId": 268
+        },
+        {
+            "gameName": "Jingle Bells Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100153,
+            "gameId": 269
+        },
+        {
+            "gameName": "Lucky Halloween",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100155,
+            "gameId": 271
+        },
+        {
+            "gameName": "Lucky Little Devil",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100156,
+            "gameId": 272
+        },
+        {
+            "gameName": "Lucky Valentine",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100157,
+            "gameId": 273
+        },
+        {
+            "gameName": "Lucky Wizard",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100158,
+            "gameId": 274
+        },
+        {
+            "gameName": "Masquerade",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100159,
+            "gameId": 275
+        },
+        {
+            "gameName": "Mega Dragon",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100161,
+            "gameId": 277
+        },
+        {
+            "gameName": "Mega Jade",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100162,
+            "gameId": 278
+        },
+        {
+            "gameName": "Mega Rise",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100163,
+            "gameId": 279
+        },
+        {
+            "gameName": "Mystery Reels Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100165,
+            "gameId": 281
+        },
+        {
+            "gameName": "Persian Fortune",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100168,
+            "gameId": 284
+        },
+        {
+            "gameName": "Reel Heist",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100169,
+            "gameId": 285
+        },
+        {
+            "gameName": "Tiki Fruits",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100176,
+            "gameId": 292
+        },
+        {
+            "gameName": "Vault Cracker",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100178,
+            "gameId": 294
+        },
+        {
+            "gameName": "Wild Cats Multiline",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100181,
+            "gameId": 297
+        },
+        {
+            "gameName": "Wild Wild Chest",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100183,
+            "gameId": 299
+        },
+        {
+            "gameName": "Win Escalator",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100184,
+            "gameId": 300
+        },
+        {
+            "gameName": "Yucatan's Mystery",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100185,
+            "gameId": 301
+        },
+        {
+            "gameName": "Ancient Script",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100231,
+            "gameId": 350
+        },
+        {
+            "gameName": "Blue Diamond",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100232,
+            "gameId": 351
+        },
+        {
+            "gameName": "Esqueleto Mariachi",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100239,
+            "gameId": 358
+        },
+        {
+            "gameName": "Flaming Fox",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100240,
+            "gameId": 359
+        },
+        {
+            "gameName": "Lucky Oktoberfest",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100257,
+            "gameId": 376
+        },
+        {
+            "gameName": "Reactor",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100265,
+            "gameId": 384
+        },
+        {
+            "gameName": "Red Diamond",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100266,
+            "gameId": 385
+        },
+        {
+            "gameName": "Spin Town",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100271,
+            "gameId": 390
+        },
+        {
+            "gameName": "Wild Circus",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100280,
+            "gameId": 399
+        },
+        {
+            "gameName": "Winter Wonders",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100285,
+            "gameId": 404
+        },
+        {
+            "gameName": "1942 Sky Warrior",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100323,
+            "gameId": 473
+        },
+        {
+            "gameName": "Ancient Disco",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100330,
+            "gameId": 480
+        },
+        {
+            "gameName": "Apache Way",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100331,
+            "gameId": 481
+        },
+        {
+            "gameName": "Bass Boss",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100334,
+            "gameId": 484
+        },
+        {
+            "gameName": "Beriched",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100335,
+            "gameId": 485
+        },
+        {
+            "gameName": "Blobsters Clusterbuster",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100338,
+            "gameId": 488
+        },
+        {
+            "gameName": "Blood Suckers MegaWays",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100339,
+            "gameId": 489
+        },
+        {
+            "gameName": "Buffalo Mania Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100340,
+            "gameId": 490
+        },
+        {
+            "gameName": "Bulls Run Wild",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100341,
+            "gameId": 491
+        },
+        {
+            "gameName": "Cai Shen 168",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100342,
+            "gameId": 492
+        },
+        {
+            "gameName": "Diamond Royale",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100348,
+            "gameId": 498
+        },
+        {
+            "gameName": "Doggy Riches Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100349,
+            "gameId": 499
+        },
+        {
+            "gameName": "Dracula Awakening",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100350,
+            "gameId": 500
+        },
+        {
+            "gameName": "Dragons Clusterbuster",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100353,
+            "gameId": 503
+        },
+        {
+            "gameName": "Dynamite Riches Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Premium",
+            "openTable": 1100356,
+            "gameId": 505
+        },
+        {
+            "gameName": "Epic Treasure",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100358,
+            "gameId": 507
+        },
+        {
+            "gameName": "Fa Fa Babies",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100359,
+            "gameId": 508
+        },
+        {
+            "gameName": "Genie Nights",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100363,
+            "gameId": 512
+        },
+        {
+            "gameName": "Get The Gold InfiniReels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100364,
+            "gameId": 513
+        },
+        {
+            "gameName": "Gods Of Troy",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100365,
+            "gameId": 514
+        },
+        {
+            "gameName": "Gonzita's Quest",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100368,
+            "gameId": 517
+        },
+        {
+            "gameName": "Good Luck Clusterbuster",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100369,
+            "gameId": 518
+        },
+        {
+            "gameName": "Great Gold",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100370,
+            "gameId": 519
+        },
+        {
+            "gameName": "Happy Apples",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100372,
+            "gameId": 521
+        },
+        {
+            "gameName": "Hot Hot Chilli Pot",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100374,
+            "gameId": 523
+        },
+        {
+            "gameName": "Hustling",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100375,
+            "gameId": 524
+        },
+        {
+            "gameName": "In The Rabbit Hole",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100376,
+            "gameId": 525
+        },
+        {
+            "gameName": "Jingle Ways Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100377,
+            "gameId": 526
+        },
+        {
+            "gameName": "Last Chance Saloon",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100378,
+            "gameId": 527
+        },
+        {
+            "gameName": "Majestic Mysteries Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100385,
+            "gameId": 534
+        },
+        {
+            "gameName": "Mayhem",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100386,
+            "gameId": 535
+        },
+        {
+            "gameName": "Mystery Reels Deluxe",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100387,
+            "gameId": 536
+        },
+        {
+            "gameName": "Mystic Staxx",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100388,
+            "gameId": 537
+        },
+        {
+            "gameName": "Neon Links",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100390,
+            "gameId": 539
+        },
+        {
+            "gameName": "NFT Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100391,
+            "gameId": 540
+        },
+        {
+            "gameName": "Peggy Sweets",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100393,
+            "gameId": 542
+        },
+        {
+            "gameName": "Pinatas and Ponies",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100394,
+            "gameId": 543
+        },
+        {
+            "gameName": "Primate King",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100396,
+            "gameId": 545
+        },
+        {
+            "gameName": "Risque Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100399,
+            "gameId": 548
+        },
+        {
+            "gameName": "Rock'n'Lock",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100400,
+            "gameId": 549
+        },
+        {
+            "gameName": "Santa Spins",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100401,
+            "gameId": 550
+        },
+        {
+            "gameName": "Shah Mat",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100403,
+            "gameId": 552
+        },
+        {
+            "gameName": "Stolen Treasures",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100404,
+            "gameId": 553
+        },
+        {
+            "gameName": "The Wisecracker Lightning",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100406,
+            "gameId": 555
+        },
+        {
+            "gameName": "Tiki Fruits Totem Frenzy",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100408,
+            "gameId": 557
+        },
+        {
+            "gameName": "Treasure Mine Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100410,
+            "gameId": 559
+        },
+        {
+            "gameName": "Tricks and Treats",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100411,
+            "gameId": 560
+        },
+        {
+            "gameName": "Viral Spiral",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100412,
+            "gameId": 561
+        },
+        {
+            "gameName": "Wild Expedition",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100415,
+            "gameId": 564
+        },
+        {
+            "gameName": "Wild Hot Chilli Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100416,
+            "gameId": 565
+        },
+        {
+            "gameName": "Wild Tundra",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100417,
+            "gameId": 566
+        },
+        {
+            "gameName": "Zaidas Fortune",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100418,
+            "gameId": 567
+        },
+        {
+            "gameName": "Zillard King",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100419,
+            "gameId": 568
+        },
+        {
+            "gameName": "Astronaut",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100510,
+            "gameId": 673
+        },
+        {
+            "gameName": "Magic Powers Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100520,
+            "gameId": 685
+        },
+        {
+            "gameName": "Alexander The Great",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100522,
+            "gameId": 687
+        },
+        {
+            "gameName": "Egypt Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100523,
+            "gameId": 688
+        },
+        {
+            "gameName": "Monsters Unchained",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100525,
+            "gameId": 690
+        },
+        {
+            "gameName": "Cyber Attack",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100526,
+            "gameId": 691
+        },
+        {
+            "gameName": "Magic Tricks",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100527,
+            "gameId": 692
+        },
+        {
+            "gameName": "Gems Inferno Megaways",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100530,
+            "gameId": 695
+        },
+        {
+            "gameName": "London Tube",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100533,
+            "gameId": 698
+        },
+        {
+            "gameName": "Bounty Raid 2",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100536,
+            "gameId": 701
+        },
+        {
+            "gameName": "Here Kitty Kitty",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100537,
+            "gameId": 702
+        },
+        {
+            "gameName": "Sugar Monster",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100538,
+            "gameId": 703
+        },
+        {
+            "gameName": "Case Closed",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100540,
+            "gameId": 705
+        },
+        {
+            "gameName": "Year Round Riches Clusterbuster",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100542,
+            "gameId": 707
+        },
+        {
+            "gameName": "Spooky Carnival",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100545,
+            "gameId": 710
+        },
+        {
+            "gameName": "Easy Gold",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100546,
+            "gameId": 711
+        },
+        {
+            "gameName": "Siren's Riches",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100550,
+            "gameId": 715
+        },
+        {
+            "gameName": "Dragon's Mirror",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100554,
+            "gameId": 719
+        },
+        {
+            "gameName": "Sugarlicious EveryWay",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100557,
+            "gameId": 722
+        },
+        {
+            "gameName": "Christmas MULTIHOPS",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100558,
+            "gameId": 723
+        },
+        {
+            "gameName": "Reel Keeper Power Reels",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100581,
+            "gameId": 572
+        },
+        {
+            "gameName": "Bugsy's Bar",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100582,
+            "gameId": 569
+        },
+        {
+            "gameName": "Red Hot BBQ",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100584,
+            "gameId": 571
+        },
+        {
+            "gameName": "Wrigley's World",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100585,
+            "gameId": 575
+        },
+        {
+            "gameName": "Wolfkin",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100587,
+            "gameId": 574
+        },
+        {
+            "gameName": "777 Super Strike",
+            "Origin": "Red Tiger",
+            "TypeRed": "Regular",
+            "openTable": 1100588,
+            "gameId": 728
+        }
+    ]
+}

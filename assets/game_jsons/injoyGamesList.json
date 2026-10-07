@@ -1,0 +1,32 @@
+{
+    "injoyGames": [
+        {
+            "bg_cl": "#fdc304",
+            "provider": "INJOY",
+            "Gtype": 90,
+            "Mtype": 90096,
+            "gameName": "LUCKY ELEPHANT X-Huge"
+        },
+        {
+            "bg_cl": "#2500ff",
+            "provider": "INJOY",
+            "Gtype": 92,
+            "Mtype": 92022,
+            "gameName": "Cricket Burst"
+        },
+        {
+            "bg_cl": "#00fff5",
+            "provider": "INJOY",
+            "Gtype": 93,
+            "Mtype": 93030,
+            "gameName": "Teen Patti 20-20"
+        },
+        {
+            "bg_cl": "#6884e5",
+            "provider": "INJOY",
+            "Gtype": 93,
+            "Mtype": 93031,
+            "gameName": "Andar Bahar"
+        }
+    ]
+}

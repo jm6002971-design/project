@@ -1,0 +1,250 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    overflow: hidden;
+}
+
+#cboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#cboxMiddleLeft, #cboxBottomLeft {
+    clear: left;
+}
+
+#cboxContent {
+    overflow: hidden;
+}
+
+#cboxLoadedContent {
+    overflow: auto;
+}
+
+#cboxLoadedContent iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#cboxTitle {
+    margin: 0;
+}
+
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+    cursor: pointer;
+}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay {
+    background: #000;
+}
+
+#colorbox {
+}
+
+#cboxTopLeft {
+    width: 15px;
+    height: 43px;
+    background: url(i/colorbox/corner_bg.png) left top no-repeat;
+}
+
+#cboxTopRight {
+    width: 17px;
+    height: 43px;
+    background: url(i/colorbox/corner_bg.png) right top no-repeat;
+}
+
+#cboxBottomLeft {
+    width: 15px;
+    height: 17px;
+    background: url(i/colorbox/corner_bg.png) left bottom no-repeat;
+}
+
+#cboxBottomRight {
+    width: 17px;
+    height: 17px;
+    background: url(i/colorbox/corner_bg.png) right bottom no-repeat;
+}
+
+#cboxMiddleLeft {
+    width: 15px;
+    background: url(i/colorbox/side_y_bg.png) left top repeat-y;
+}
+
+#cboxMiddleLeftInner {
+    width: 15px;
+    background: url(i/colorbox/side_bg.png) left top no-repeat;
+    min-height: 202px;
+}
+
+#cboxMiddleRight {
+    width: 17px;
+    background: url(i/colorbox/side_y_bg.png) right top repeat-y;
+}
+
+#cboxMiddleRightInner {
+    width: 17px;
+    background: url(i/colorbox/side_bg.png) right top no-repeat;
+    min-height: 202px;
+}
+
+#cboxTopCenter {
+    height: 43px;
+    background: url(i/colorbox/side_x_bg.png) top repeat-x;
+}
+
+#cboxBottomCenter {
+    height: 17px;
+    background: url(i/colorbox/side_x_bg.png) bottom repeat-x;
+}
+
+#cboxContent {
+    background: #eeeeee;
+}
+
+#cboxLoadedContent {
+    margin-top: 7px;
+    margin-bottom: 25px;
+}
+
+#cboxTitle {
+    background: url(i/colorbox/h_title.gif) no-repeat;
+    height: 15px;
+    width: 108px;
+    position: absolute;
+    top: 12px;
+    left: 160px;
+    text-align: center;
+}
+
+#cboxCurrent {
+    position: absolute;
+    bottom: 4px;
+    left: 58px;
+    color: #949494;
+}
+
+#changePasswordAjaxContent .input_common{
+    width: 150px;
+}
+
+.colorbox_table_container {
+    margin: 0 10px;
+}
+
+.colorbox_table_container td {
+    height: 30px;
+    color: #2c435e;
+}
+
+/*#cboxSlideshow {*/
+    /*position: absolute;*/
+    /*bottom: 4px;*/
+    /*right: 30px;*/
+    /*color: #0092ef;*/
+/*}*/
+
+/*#cboxPrevious {*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 0px;*/
+    /*background: url(i/colorbox/controls.png) -75px 0px no-repeat;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*text-indent: -9999px;*/
+/*}*/
+
+/*#cboxPrevious.hover {*/
+    /*background-position: -75px -25px;*/
+/*}*/
+
+/*#cboxNext {*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
+    /*left: 27px;*/
+    /*background: url(i/colorbox/controls.png) -50px 0px no-repeat;*/
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*text-indent: -9999px;*/
+/*}*/
+
+/*#cboxNext.hover {*/
+    /*background-position: -50px -25px;*/
+/*}*/
+
+/*#cboxLoadingOverlay {*/
+    /*background: url(i/colorbox/loading_background.png) center center no-repeat;*/
+/*}*/
+
+/*#cboxLoadingGraphic {*/
+    /*background: url(i/colorbox/loading.gif) center center no-repeat;*/
+/*}*/
+
+#cboxClose {
+    position: absolute;
+    right: 14px;
+    top: 7px;
+    background: url(i/colorbox/b_close.gif) top no-repeat;
+    width: 54px;
+    height: 24px;
+    text-indent: -9999px;
+}
+
+#cboxClose.hover {
+    background-position: bottom;
+}
+
+.cp_generate{
+    display: block;
+    background: url(i/colorbox/b_generate.gif) top no-repeat;
+    width: 102px;
+    height: 24px;
+    text-indent: -9999px;
+}
+
+.cp_generate:hover{
+    background-position: bottom;
+}
+
+#changePasswordAjaxContent #passwdStrengthVisual {
+    height: 7px;
+    width: 154px;
+}
+
+#passwdStrengthHint{
+    color: #6584a8;
+    font-size: 12px;
+}
+
+#passwdStrengthTitle {
+    display: none;
+}
+
+#cboxContent #button_continue {
+    margin-top: 3px;
+}
+
+#changePasswordAjaxContent {
+    min-height: 185px;
+}

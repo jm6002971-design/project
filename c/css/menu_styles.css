@@ -1,0 +1,196 @@
+/************************************
+		SERVICE_MENU
+************************************/
+.service_menu {
+	margin-top: 8px;
+	height: 36px;
+}
+.service_menu_item {
+	font-size: 11px;
+	text-decoration: none;
+	line-height: 32px;
+}
+.service_menu_item .menu_title, .support_email_title {
+	/* font-family: Arial; */
+	font-size: 11px;
+	text-transform: capitalize;
+	text-decoration: underline;
+	color: #fff;
+	line-height: 32px;
+}
+.service_menu_item .menu_title:hover, .support_email_title:hover {
+	color: #e3b81e;
+	text-decoration: none;
+}
+.support_email_title:before {
+	background: url("../i/icon_247.png") no-repeat center transparent;
+	content: '';
+	display: block;
+	float: left;
+	width: 36px;
+	height: 36px;
+	padding-right: 7px;
+}
+.support_email_title {
+	float: right;
+	display: block;
+}
+/************************************
+		MAIN_MENU
+************************************/
+#main_menu_container {
+	width: 226px;
+	float: left;
+}
+#main_menu_container ul {
+	margin: 30px 0 25px;
+}
+#main_menu_container li {
+	height: 32px;
+}
+.main_menu_item {
+	font-family: "Segoe UI";
+	text-transform: capitalize;
+	font-size: 22px;
+	color: #fff;
+	text-decoration: none;
+}
+.main_menu_title {
+	padding-left: 30px;
+}
+.main_menu_title:before {
+	content: '';
+	background: url("../i/button/arrow.png") no-repeat top left;
+	display: block;
+	width: 7px;
+	height: 12px;
+	float: left;
+	margin-top: 6px;
+}
+.main_menu_item:hover, .main_menu_item:hover .main_menu_title:before, li.active .main_menu_item, li.active .main_menu_item .main_menu_title:before	{
+	background-position: bottom left;
+	text-decoration: none;
+	color: #e3b81e;
+}
+.green_line {
+	background: url("../i/line.png") repeat-x top;
+	display: block;
+	width: 100%;
+	height: 2px;
+}
+/************************************
+		SUBMENU
+************************************/
+/*LEVEL 1*/
+.submenu_bg {
+	/* background: url("../i/sidemenu_bg.png") repeat-x; */
+	background : rgba(0, 0, 0, 0) linear-gradient(#fdc819, #665120 70%) repeat scroll 0 0;
+	/* min-width: 694px; */
+	border-left: 1.5px solid #cfcfcf;
+	border-right: 1.5px solid #cfcfcf;
+	border-top: 1.5px solid #cfcfcf;
+	margin: 0 auto -1px;
+	position: relative;
+	z-index: 999;
+	height: 38px;
+}
+#mainmenu_table {
+	position: relative;
+	min-width:290px;
+	left: -2px;
+}
+.submenu_item_table {
+	margin-right: 3px;
+}
+.submenu_item_table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.submenu_c_bg {
+	text-align: center;
+}
+.submenu_c_bg a {
+	/* font-family: "Segoe UI"; */
+	color: #ffffff;
+	font-size: 13px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	min-height: 30px; 
+}
+/* .active .submenu_l_bg {
+	background: url("../i/sidemenu_lr_a_bg.png") no-repeat left top;
+	height: 39px;
+	width: 2px;
+} */
+/* .active .submenu_r_bg {
+	background: url("../i/sidemenu_lr_a_bg.png") no-repeat right top;
+	height: 39px;
+	width: 3px;
+} */
+/* .active .submenu_c_bg {
+	background: url("../i/sidemenu_a_bg.png") repeat-x;
+	height: 39px;
+} */
+.active .submenu_c_bg a {
+	color: #000;
+	background:#ffffff;
+	padding:0px 2px 0px 2px;
+	font-weight: bold;
+	text-decoration: none;
+}
+/*LEVEL 2*/
+.submenu_container {
+	background: url("../i/submenu_bg.png") no-repeat;
+	width: 698px;
+	display: block;
+	margin: 0 auto -2px;
+	min-height: 25px;
+	position: relative;
+	z-index: 50;
+}
+.subitems {
+	display: block;
+}
+.subitems ul {
+	margin-left: 1px;
+}
+.submenu_container ul li {
+	display: inline-block;
+	list-style: none outside none;
+}
+.submenu_container ul li a {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 11px;
+	font-family: "Segoe UI";
+	color: #000;
+	text-decoration: none;
+	margin: 1px;
+}
+.submenu_container ul li.active a, .submenu_container ul li:hover a {
+	background: url("../i/submenu_a_bg.png") repeat-x;
+	border: 1px solid #a6ff84;
+	text-decoration: none;
+	margin: 0;
+}
+/************************************
+		FOOTER_MENU
+************************************/
+.footer_menu_wrapper {
+	background: #3e3e3e;
+	height: 67px;
+	text-align: center;
+	line-height: 94px;
+}
+.footer_menu_wrapper a {
+	font-size: 11px; color: #e3b81e;
+}
+.footer_menu_wrapper a:hover {
+	font-size: 11px; color: #ffdb58;
+}
+.footer_menu_wrapper .separator {
+	display: inline-block;
+	width: 15px;
+}

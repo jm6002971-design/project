@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAVMENU>
+    <MENU>
+        <ITEM page="Onlinepoker"
+              link="/online-poker.html"
+              id="Online Poker"
+			  dropdown="dropdown"
+              caret="caret">
+			  
+			<SUBITEM page="Onlinepoker"
+                     link="/online-poker/create-account.html"
+                     id=" How to create account">
+            </SUBITEM>
+            <SUBITEM page="Onlinepoker"
+                     link="/online-poker/instant-play.html"
+                     id="Instant play"
+					 dropdown="sub_menu">  					 
+					 
+            </SUBITEM>
+			
+			
+			<SUBITEM page="Onlinepoker"
+                     link="/online-poker/play-money.html" 
+                     id="Play money">
+			</SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/online-poker/real-money.html"
+                     id=" Real money ">
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     sub_header="dividerli"> 
+                     
+			</SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="#"
+                     id=" Features "
+					 sub_disable="dropdown-header"  
+					 sub_class="li_aclass"
+					 >
+            </SUBITEM> 
+			<SUBITEM page="Onlinepoker"
+                     link="/features/avatars.html"
+                     id="Avatars ">
+					 
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/disconnection-protection.html"
+                     id=" Disconnection protection">
+					  
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/find-players.html"
+                     id=" Find players">
+					 
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/hand-history.html"
+                     id=" Hand history ">
+					  
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/my-buddies.html"
+                     id=" My Buddies ">
+					  
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/my-tables.html"
+                     id=" My tables ">
+					  
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/my-tournaments.html"
+                     id=" My tournaments">
+					 
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/poker-game-selection.html"
+                     id=" Online Poker Game selection ">
+					
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/poker-lobby.html"
+                     id=" Poker Lobby">
+					  
+            </SUBITEM>
+			<SUBITEM page="Onlinepoker"
+                     link="/features/private-tables.html"
+                     id=" Private tables ">					
+            </SUBITEM>
+			
+			
+        </ITEM> 
+		<ITEM page="Cashier"
+              link="/banking.html"
+              id="Cashier"
+              dropdown="dropdown"
+              caret="caret">
+            <SUBITEM page="Cashier"
+                     link="/cashier/info.html"
+                     id="My Profile">
+            </SUBITEM>
+            <SUBITEM page="Cashier"
+                     link="/client-redirect.html?to=deposit"
+                     id="Deposit">
+            </SUBITEM>
+            <SUBITEM page="Cashier"
+                     link="/client-redirect.html?to=cashout"
+                     id="Withdraw">
+            </SUBITEM>
+            <SUBITEM page="Cashier"
+                     link="/cashier/balance.html" 
+                     id="My Balance">
+            </SUBITEM>
+            <SUBITEM page="Cashier"
+                     link="/history/poker-games.html"
+                     id="History"> 
+            </SUBITEM>
+			<SUBITEM page="Cashier"
+                     link="/cashier/history.html"
+                     id="Cashier">  
+            </SUBITEM> 
+    </ITEM>
+				
+		<ITEM page="HowtoPlay"
+              link="/"
+              id=" How to Play"
+			  dropdown="dropdown"
+              caret="caret">			  
+			<SUBITEM page="HowtoPlay"
+                     link="/how-to-play/hand-rankings.html"
+                     id="Hands ranking">
+            </SUBITEM>
+            <SUBITEM page="HowtoPlay"
+                     link="/how-to-play/omaha.html"
+                     id="Omaha">
+            </SUBITEM>
+            <SUBITEM page="HowtoPlay"
+                     link="/how-to-play/poker-lingo.html"
+                     id="Poker lingo">
+            </SUBITEM>
+            <SUBITEM page="HowtoPlay"
+                     link="/how-to-play/poker-tips.html"
+                     id="Poker tips">
+            </SUBITEM>
+			<SUBITEM page="HowtoPlay"
+                     link="/how-to-play/texas-holdem.html"
+                     id="Texas Hold'em">
+            </SUBITEM>
+					
+        </ITEM> 
+
+        <ITEM page="Banking" 
+              link="/"
+              id="Banking"
+              dropdown="dropdown"
+              caret="caret">
+            <SUBITEM page="Banking"
+                     link="/banking/deposit.html"
+                     id="Deposit">
+            </SUBITEM>
+			<SUBITEM page="Banking"
+                     link="/banking/safe-and-secure.html"
+                     id="Safe &amp; Secure">
+            </SUBITEM>
+            <SUBITEM page="Banking"
+                     link="/banking/withdrawals.html"
+                     id="Withdrawal">
+            </SUBITEM>
+           
+        </ITEM>
+        
+        <ITEM page="Tournaments"
+              link="/tournaments.html"
+              id="Tournaments"
+			  dropdown="dropdown"
+              caret="caret">
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/deepstack.html"
+                     id="Deep stack">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/freerolls.html"
+                     id="Freerolls">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/freezeout.html"
+                     id="Freezeout">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/headsup.html"
+                     id="Heads up">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/privatetournaments.html"
+                     id="Private tournaments">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/rebuy.html"
+                     id="Rebuy">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/satellite.html"
+                     id="Satellites">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/Sit-n-Go.html"
+                     id="Sit n Go">
+            </SUBITEM>
+			<SUBITEM page="Tournaments"
+                     link="/tournaments/viptournaments.html"
+                     id="VIP tournaments"> 
+            </SUBITEM>      	
+        </ITEM>		
+		<ITEM page="Promotion"
+              link="/promotions/promotions.html"
+              id="Promotions"
+			  dropdown="dropdown"
+              caret="caret">
+			 
+			   <SUBITEM page="Promotion"
+                     link="/promotions/reload-bonus.html"
+                     id="50% reload bonus"> 
+			  </SUBITEM>
+			   <SUBITEM page="Promotion" 
+                     link="/promotions/deposit-bonus.html"
+                     id="100% FDB"> 
+			  </SUBITEM>
+			   <SUBITEM page="Promotion"
+                     link="/promotions/bad-beat-jackpot.html"
+                     id="Bad beat jackpot"> 
+			  </SUBITEM>
+			   <SUBITEM page="Promotion"
+                     link="/promotions/freerolls.html"
+                     id="Depositors freeroll"> 
+			  </SUBITEM>
+			  <SUBITEM page="Promotion"
+                     link="/promotions/top-hand-of-the-day.html"
+                     id="Top hand of the day"> 
+			  </SUBITEM>
+			  
+        </ITEM>
+		
+       
+		
+		<ITEM page="Support"
+              link="/support/contact-form.html"
+              id="Support"
+			  dropdown="dropdown"
+              caret="caret">
+		<SUBITEM page="Support"
+                 link="#"
+                 id="FAQs"> 
+		</SUBITEM>
+		<SUBITEM page="Support"
+                 link="#"
+                 id="Support"> 
+		</SUBITEM>
+        </ITEM> 
+		<ITEM page="vipclub"
+              link="/vip-club/vipclub.html"
+              id="VIP Club">
+        </ITEM>	
+		
+        <ITEM page="Legality"
+              link="#"
+              id="Legality">
+        </ITEM> 
+    </MENU>
+</NAVMENU>
+
+

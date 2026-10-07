@@ -1,0 +1,224 @@
+{
+    "livecasino": [
+        {
+            "gameName": "Blackjack",
+            "provider": "Evolution",
+            "media": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/4ecf5b0a0b02dcfa041c955987325074/2019_05_live_blackjack_male_dealer_gameplay_14817_08_2000_9-1-300x200.jpg",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+     
+        {
+            "gameName": "roulette",
+            "provider": "Evolution",
+            "media": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/ef64674b6253ab9fa4829e329cd7b42b/auto_roulette_thumbnail_1280x720_2021_09_18-1-300x169.png",
+            "gameId": "1000003",
+            "bg_cl": "#ff024f"
+        },
+        {
+            "gameId": "7",
+            "gameName": "Sic Bo",
+            "provider": "Ezugi",
+            "media": "Sic Bo",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameId": "4",
+            "gameName": "Speed Roulette",
+            "provider": "Ezugi",
+            "media": "Speed Roulette",
+            "bg_cl": "#c42700"
+        },
+        {
+            "gameName": "Game Shows",
+            "provider": "Evolution",
+            "media": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/e76c89dc050100264e56550c316cbf11/triple_card_poker_image_2020_10_05-300x200.jpg",
+            "gameId": "1000000",
+            "bg_cl": "#000e91"
+        },
+        {
+            "gameName": "Poker",
+            "provider": "Evolution",
+            "media": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/bb64518c69933fd243920659f5568bf2/2019_nov_speed_blackjack_female_dealer_brunette_gameplay_6287_1984_09_1-300x200.jpg",
+            "gameId": "1000005",
+            "bg_cl": "#de0003"
+        },
+        {
+            "gameId": "4",
+            "gameName": "Roulette",
+            "provider": "Ezugi",
+            "media": "roulette1",
+            "bg_cl": "#ff13cd"
+        },
+        {
+            "gameName": "baccarat",
+            "provider": "Evolution",
+            "media": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/829c1a18aa19ed634f1afb20e73a3974/baccarat_squeeze_client_area_thumbnail_300x200_2022_10.jpg",
+            "gameId": "1000002",
+            "bg_cl": "#adaba8"
+        },
+        {
+            "gameId": "8",
+            "gameName": "Baccarat",
+            "provider": "Ezugi",
+            "media": "baccarat1",
+            "bg_cl": "#050407"
+        },
+        {
+            "gameId": "3",
+            "gameName": "Andar Bahar",
+            "provider": "Ezugi",
+            "media": "Beton Numbers",
+            "bg_cl": "#ff474a"
+        }
+       
+    ],
+    "newlivecasino" : [
+        {
+            "gameName": "Andhar_Bhahar",
+            "gameId": "7",
+            "provider": "Ezugi",
+            "media": "Andhar_Bhahar",
+            "bg_cl": "rgb(0 209 205)"
+        }, 
+        {
+            "gameName": "Namaste_Roulette",
+            "gameId": "221005",
+            "provider": "Ezugi",
+            "media": "Namaste_Roulette",
+            "bg_cl": "rgb(0 209 205)"
+        },      
+      
+        {
+            "gameName": "Hindi_Roulette",
+            "gameId": "7",
+            "provider": "Ezugi",
+            "media": "Hindi_Roulette",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameName": "Roulette_Cricket",
+            "gameId": "7",
+            "provider": "Ezugi",
+            "media": "Roulette_Cricket",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameName": "Matka",
+            "gameId": "5700",
+            "provider": "Ezugi",
+            "media": "Matka",
+            "bg_cl": "rgb(0 209 205)"
+        },
+    
+        {
+            "gameName": "Dragon_tiger",
+            "gameId": "24_150",
+            "provider": "Ezugi",
+            "media": "Dragon_tiger",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameName": "Power_Blackjack",
+            "provider": "Evolution",
+            "media": "Power_Blackjack",
+            "gameId": "1000002",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Casino_Holdem",
+            "provider": "Evolution",
+            "media": "Casino_Holdem",
+            "gameId": "1000003",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Crazy_Time",
+            "provider": "Evolution",
+            "media": "Crazy_Time",
+            "gameId": "1000002",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Back_80 ",
+            "provider": "Evolution",
+            "media": "Back_80 ",
+            "gameId": "1000003",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Ice_fishing",
+            "provider": "Evolution",
+            "media": "Ice_fishing",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Vip_roulette",
+            "provider": "Evolution",
+            "media": "Vip_roulette",
+            "gameId": "1000002",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Always_Baccarat",
+            "provider": "Evolution",
+            "media": "Always_Baccarat",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Ballone_Race",
+            "provider": "Evolution",
+            "media": "Ballone_Race",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Mega_Ball",
+            "provider": "Evolution",
+            "media": "Mega_Ball",
+            "gameId": "1000003",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "Fire_Roulette",
+            "provider": "Evolution",
+            "media": "Fire_Roulette",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+
+  
+        {
+            "gameName": "Sic_bo",
+            "gameId": "14_224000",
+            "provider": "Ezugi",
+            "media": "Sic_bo",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameName": "Blackjack",
+            "gameId": "1_1",
+            "provider": "Ezugi",
+            "media": "Blackjack",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "gameName": "Baccarat",
+            "gameId": "2_100",
+            "provider": "Ezugi",
+            "media": "Baccarat",
+            "bg_cl": "rgb(0 209 205)"
+        },
+   
+        {
+            "gameName": "Marble_Race",
+            "gameId": "59",
+            "provider": "Ezugi",
+            "media": "Marble_Race",
+            "bg_cl": "rgb(0 209 205)"
+        }
+       
+    ]
+}

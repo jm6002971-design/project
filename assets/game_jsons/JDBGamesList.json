@@ -1,0 +1,808 @@
+{
+    "JDBgames": [
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14094,
+            "gameName": "Bull Treasure",
+            "bg_cl":"#90950b"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14091,
+            "gameName": "Piggy bank",
+            "bg_cl":"#e3b506"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14090,
+            "gameName": "Wealthway",
+            "bg_cl":"#c604b7"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14089,
+            "gameName": "Dragon SoarS",
+            "bg_cl":"#f1ed0b"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14087,
+            "gameName": "Poppop candy",
+            "bg_cl":"#1c9ed5"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14086,
+            "gameName": "Open sesame mega",
+            "bg_cl":"#e3c908"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14085,
+            "gameName": "Fruity Bonanza",
+            "bg_cl":"#540ecf"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14084,
+            "gameName": "Caishen Coming",
+            "bg_cl":"#e50908"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14083,
+            "gameName": "Coocoo Farm",
+            "bg_cl":"#af4805"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14081,
+            "gameName": "Birds Party Deluxe",
+            "bg_cl":"#db0722"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14079,
+            "gameName": "Moneybags Man",
+            "bg_cl":"#23137d"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14077,
+            "gameName": "Trump card",
+            "bg_cl":"#06328f"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14075,
+            "gameName": "Fortune neko",
+            "bg_cl":"#dedf06"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14095,
+            "gameName": "Fortiune jewel",
+            "bg_cl":"#e7e209"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14070,
+            "gameName": "BooK mystery",
+            "bg_cl":"#891e03"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14068,
+            "gameName": "Prospererity Tiger",
+            "bg_cl":"#e3b106"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14067,
+            "gameName": "Glamorous Girl",
+            "bg_cl":"#8b0148"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14065,
+            "gameName": "Blossom Wealth",
+            "bg_cl":"#3809b3"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14064,
+            "gameName": "Boom Fiesta",
+            "bg_cl":"#db0e03"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14063,
+            "gameName": "BIG THERE DRAGONS",
+            "bg_cl":"#027719"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14060,
+            "gameName": "Lantern Wealth",
+            "bg_cl":"#f1ee03"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14059,
+            "gameName": "Marvelous",
+            "bg_cl":"#ede20a"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14058,
+            "gameName": "Wonder Elephant",
+            "bg_cl":"#0457ad"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14054,
+            "gameName": "Lucky diamond",
+            "bg_cl":"#100589"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14050,
+            "gameName": "Spindrilft",
+            "bg_cl":"#ebb806"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14047,
+            "gameName": "MoneybagsMan",
+            "bg_cl":"#080249"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14046,
+            "gameName": "Miner Babe",
+            "bg_cl":"#3b0e03"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14045,
+            "gameName": "Super Niubi Deluxe",
+            "bg_cl":"#a705e1"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14044,
+            "gameName": "Funky King Kong",
+            "bg_cl":"#b32104"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14043,
+            "gameName": "Golden Disco",
+            "bg_cl":"#11048b"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14042,
+            "gameName": "Treasure Bowl"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14041,
+            "gameName": "Mjolnir"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14040,
+            "gameName": "Pirate Treasure"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14039,
+            "gameName": "Fortune Treasure"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14038,
+            "gameName": "Egypt Treasure"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14036,
+            "gameName": "Super Niubi"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14035,
+            "gameName": "Dragons World"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14034,
+            "gameName": "Go Lai Fu"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14033,
+            "gameName": "Birds Party"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14030,
+            "gameName": "Triple King Kong"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14029,
+            "gameName": "Orient Animals"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14027,
+            "gameName": "Lucky Seven"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14025,
+            "gameName": "Lucky Racing"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14022,
+            "gameName": "Mining Upstart"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14021,
+            "gameName": "Rolling In Money"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14018,
+            "gameName": "Daji"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14016,
+            "gameName": "Kingsman"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14012,
+            "gameName": "Street Fighter"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14010,
+            "gameName": "Dragon"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14008,
+            "gameName": "Dragon Warrior"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14007,
+            "gameName": "One Punch Man"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14006,
+            "gameName": "Billionaire"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14005,
+            "gameName": "Mr. Bao"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 14003,
+            "gameName": "Panda Panda"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 15012,
+            "gameName": "Legendary 5"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 15010,
+            "gameName": "Chef Panda"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 15005,
+            "gameName": "Lucky Fuwa"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 15002,
+            "gameName": "Monkey King"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 15001,
+            "gameName": "Rooster In Love"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8050,
+            "gameName": "Fortune Horse"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8049,
+            "gameName": "Flirting Scholar Tang Ii"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8048,
+            "gameName": "Open Sesameii"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8047,
+            "gameName": "Winning Mask II"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8046,
+            "gameName": "Guan Gong"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8044,
+            "gameName": "Beauty And The Kingdom"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8035,
+            "gameName": "Lucky Phoenix"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8028,
+            "gameName": "Lucky Miner"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8023,
+            "gameName": "Olympian Temple"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8022,
+            "gameName": "Mahjong"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8021,
+            "gameName": "Banana Saga"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8020,
+            "gameName": "Open Sesame"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8019,
+            "gameName": "Four Treasures"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8018,
+            "gameName": "Napoleon"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8017,
+            "gameName": "New Year"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8015,
+            "gameName": "Moonlight Treasure"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8014,
+            "gameName": "Lucky Lion"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8007,
+            "gameName": "Lucky Qilin"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8006,
+            "gameName": "Formosa Bear"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8005,
+            "gameName": "The Llama Adventure"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8004,
+            "gameName": "Wukong"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8003,
+            "gameName": "Winning Mask"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 0,
+            "Mtype": 8001,
+            "gameName": "Lucky Dragons"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7009,
+            "gameName": "Spirit Tide Legend"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7008,
+            "gameName": "Fighter Fire"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7007,
+            "gameName": "Fishing Disco"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7006,
+            "gameName": "Dragon Master"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7005,
+            "gameName": "Fishing Yilufa"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7004,
+            "gameName": "Shade Dragons Fishing"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7003,
+            "gameName": "Cai Shen Fishing"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7002,
+            "gameName": "Dragon Fishing II"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 7,
+            "Mtype": 7001,
+            "gameName": "Dragon Fishing"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9021,
+            "gameName": "Mines 2"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9020,
+            "gameName": "Mole Crash"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9019,
+            "gameName": "Dice"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9018,
+            "gameName": "Plinko"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9017,
+            "gameName": "Hilo"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9016,
+            "gameName": "Goal"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9015,
+            "gameName": "Firework Burst"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9014,
+            "gameName": "Mines"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9013,
+            "gameName": "Galaxy Burst"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9012,
+            "gameName": "Jogo Do Bicho"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9011,
+            "gameName": "Caishen Party"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9010,
+            "gameName": "Lucky Color Game"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9009,
+            "gameName": "King Of Football"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9008,
+            "gameName": "Crazy King Kon"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9007,
+            "gameName": "Super Super Fruit"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9006,
+            "gameName": "Huaguoshan Legends"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9004,
+            "gameName": "Beer Tycoon"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9003,
+            "gameName": "Birds And Animals"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9002,
+            "gameName": "Happy New Year"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 9,
+            "Mtype": 9001,
+            "gameName": "Classic Mario"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18029,
+            "gameName": "Tongits Rush"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18028,
+            "gameName": "Tongits Fight"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18027,
+            "gameName": "Pusoy Rush"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18026,
+            "gameName": "Dragon Tiger - nJoker Bonus"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18025,
+            "gameName": "Tongits"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18024,
+            "gameName": "Pusoy"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18023,
+            "gameName": "San Gong"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18022,
+            "gameName": "Poker Racing"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18021,
+            "gameName": "Scale"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18020,
+            "gameName": "Minesweepe"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18013,
+            "gameName": "Tongbi Liu Niu"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18005,
+            "gameName": "Qiang Zhuang Liu Niu"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18004,
+            "gameName": "Ya Zhuang Acey Deucey"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18002,
+            "gameName": "Qz Nui Nui"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 18,
+            "Mtype": 18001,
+            "gameName": "Tongbi Niu Niu"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 12,
+            "Mtype": 12003,
+            "gameName": "Happy Lottery"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 12,
+            "Mtype": 12002,
+            "gameName": "Gold Rooster Lottery"
+        },
+        {
+            "provider": "JDB",
+            "Gtype": 12,
+            "Mtype": 12001,
+            "gameName": "Cai Shen Bingo"
+        }
+    ]
+}

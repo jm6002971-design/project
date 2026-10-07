@@ -1,0 +1,74 @@
+{
+    "GTFgames": [
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66009,
+            "gameName": "Golden Ace",
+            "bg_cl":"#f00"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66008,
+            "gameName": "Sweet Fortune",
+            "bg_cl":"#ff0024"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66007,
+            "gameName": "The Third Prince",
+            "bg_cl":"#cbe60d"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66006,
+            "gameName": "Gummy Fever",
+            "bg_cl":"#b32878"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66005,
+            "gameName": "Adventure Island",
+            "bg_cl":"#08b138"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66004,
+            "gameName": "Fireworks Festival",
+            "bg_cl":"#8f10c5"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66003,
+            "gameName": "Happy Songkran",
+            "bg_cl":"#c71719"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66002,
+            "gameName": "Legend Of Lion",
+            "bg_cl":"#e4ef33"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 66,
+            "Mtype": 66001,
+            "gameName": "Roma",
+            "bg_cl":"#b1080d"
+        },
+        {
+            "provider": "GTF",
+            "Gtype": 67,
+            "Mtype": 67001,
+            "gameName": "Fighting! Fishing!",
+            "bg_cl":"#2112d4"
+        }
+    ]
+}
