@@ -3343,113 +3343,79 @@ i.fas.fa-caret-left.active-row {
 .banner-nav-chevron.prev { left: 0; }
 .banner-nav-chevron.next { right: 0; }
 
-/* Luxury Quick Download / Action Bar (Windows | Instant Play | Android | iOS) */
+/* ===== SLATE NAVY QUICK ACTION BUTTONS (MATCHING USER SCREENSHOT) ===== */
 .quick-download-strip {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 16px;
   width: 100%;
   max-width: 1440px;
   margin: 14px auto 0;
   padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .quick-dock-btn {
   flex: 1;
-  max-width: 320px;
-  height: 52px;
-  background: linear-gradient(180deg, #182030 0%, #0d121c 100%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  color: #ffffff;
+  max-width: 290px;
+  height: 48px;
+  background: linear-gradient(180deg, #183354 0%, #11243d 50%, #0d1e34 100%);
+  border: 2px solid #82a8cf;
+  border-radius: 8px;
+  color: #ffffff !important;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 15.5px;
   font-weight: 700;
+  letter-spacing: 0.3px;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.22s ease-in-out;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
+  user-select: none;
 }
 
-.dock-btn-icon-wrap {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  display: flex;
+.dock-btn-icon {
+  font-size: 19px;
+  color: #ffffff;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  transition: all 0.25s ease;
-  flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
-
-.quick-dock-win .dock-btn-icon-wrap { color: #00a4ef; background: rgba(0, 164, 239, 0.14); }
-.quick-dock-play .dock-btn-icon-wrap { color: #10b981; background: rgba(16, 185, 129, 0.16); }
-.quick-dock-android .dock-btn-icon-wrap { color: #3ddc84; background: rgba(61, 220, 132, 0.14); }
-.quick-dock-ios .dock-btn-icon-wrap { color: #f8fafc; background: rgba(255, 255, 255, 0.12); }
 
 .dock-btn-text {
-  flex: 1;
-  text-align: left;
-  margin-left: 10px;
+  font-size: 15.5px;
+  color: #ffffff;
+  font-weight: 700;
   letter-spacing: 0.3px;
-  font-size: 14.5px;
-  color: #f1f5f9;
-  font-weight: 600;
-}
-
-.dock-btn-badge {
-  font-size: 10px;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  padding: 3px 7px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #94a3b8;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-transform: uppercase;
-  flex-shrink: 0;
-}
-
-.play-badge {
-  background: rgba(16, 185, 129, 0.15);
-  color: #34d399;
-  border-color: rgba(16, 185, 129, 0.35);
-}
-
-.apk-badge {
-  background: rgba(61, 220, 132, 0.15);
-  color: #4ade80;
-  border-color: rgba(61, 220, 132, 0.35);
-}
-
-.ios-badge {
-  background: rgba(255, 255, 255, 0.12);
-  color: #e2e8f0;
+  white-space: nowrap;
 }
 
 .quick-dock-btn:hover {
-  transform: translateY(-3px);
-  border-color: rgba(251, 191, 36, 0.6);
-  background: linear-gradient(180deg, #1f2a3f 0%, #101622 100%);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 16px rgba(251, 191, 36, 0.25);
-  color: #ffffff;
+  background: linear-gradient(180deg, #1f426c 0%, #152d4c 50%, #10243d 100%);
+  border-color: #a4c9f1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(130, 168, 207, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  color: #ffffff !important;
 }
 
-.quick-dock-btn:hover .dock-btn-icon-wrap {
-  transform: scale(1.12);
+.quick-dock-btn:hover .dock-btn-icon {
+  transform: scale(1.1);
 }
 
-.quick-dock-btn:hover .dock-btn-text {
-  color: #ffffff;
+.quick-dock-btn:active {
+  transform: translateY(0) scale(0.98);
+  background: linear-gradient(180deg, #10233b 0%, #0c1a2d 100%);
+  border-color: #7296bc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* ===== STAKE-STYLE FEATURE SHOWCASE CARDS (IMAGE 1) ===== */
@@ -3742,20 +3708,18 @@ i.fas.fa-caret-left.active-row {
   }
 
   .quick-dock-btn {
-    height: 48px;
+    height: 46px;
     font-size: 14px;
     padding: 0 12px;
+    gap: 8px;
   }
 
-  .dock-btn-icon-wrap {
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+  .dock-btn-icon {
+    font-size: 17px;
   }
 
   .dock-btn-text {
     font-size: 13.5px;
-    margin-left: 8px;
   }
 
   .stake-feature-grid {
@@ -3840,33 +3804,33 @@ i.fas.fa-caret-left.active-row {
 
   /* 2x2 Quick Action Dock */
   .quick-download-strip {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 0 12px;
-    margin-top: 10px;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    padding: 0 12px !important;
+    margin-top: 10px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .quick-dock-btn {
-    height: 46px;
-    font-size: 13.5px;
-    padding: 0 10px;
+    height: 44px !important;
+    font-size: 13.5px !important;
+    padding: 0 12px !important;
+    border-radius: 8px !important;
+    border: 1.8px solid #82a8cf !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
-  .dock-btn-icon-wrap {
-    width: 28px;
-    height: 28px;
-    font-size: 15px;
+  .dock-btn-icon {
+    font-size: 16px !important;
   }
 
   .dock-btn-text {
-    font-size: 13px;
-    margin-left: 6px;
-  }
-
-  .dock-btn-badge {
-    font-size: 9px;
-    padding: 2px 5px;
+    font-size: 13px !important;
   }
 
   /* 2x2 Feature Showcase Cards (Casino, Sports, Slots, Poker) */
@@ -4104,30 +4068,26 @@ i.fas.fa-caret-left.active-row {
 /* Extra Small Phones (<= 380px) */
 @media (max-width: 380px) {
   .quick-download-strip {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-    padding: 0 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    padding: 0 8px !important;
   }
 
   .quick-dock-btn {
-    height: 44px;
-    font-size: 12.5px;
-    padding: 0 8px;
+    height: 42px !important;
+    font-size: 12.5px !important;
+    padding: 0 8px !important;
+    gap: 6px !important;
+    border: 1.5px solid #82a8cf !important;
+    border-radius: 7px !important;
   }
 
-  .dock-btn-icon-wrap {
-    width: 24px;
-    height: 24px;
-    font-size: 13px;
+  .dock-btn-icon {
+    font-size: 14px !important;
   }
 
   .dock-btn-text {
-    font-size: 12px;
-    margin-left: 4px;
-  }
-
-  .dock-btn-badge {
-    display: none;
+    font-size: 12px !important;
   }
 
   .stake-feature-section {
