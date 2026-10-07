@@ -3343,7 +3343,7 @@ i.fas.fa-caret-left.active-row {
 .banner-nav-chevron.prev { left: 0; }
 .banner-nav-chevron.next { right: 0; }
 
-/* ===== SLATE NAVY QUICK ACTION BUTTONS (MATCHING USER SCREENSHOT) ===== */
+/* ===== RADIANT 24K GOLD QUICK ACTION BUTTONS ===== */
 .quick-download-strip {
   display: flex;
   align-items: center;
@@ -3360,13 +3360,13 @@ i.fas.fa-caret-left.active-row {
   flex: 1;
   max-width: 290px;
   height: 48px;
-  background: linear-gradient(180deg, #183354 0%, #11243d 50%, #0d1e34 100%);
-  border: 2px solid #82a8cf;
+  background: linear-gradient(180deg, #ffe082 0%, #ffc107 40%, #e59400 75%, #ca7800 100%) !important;
+  border: 2px solid #fff2a8 !important;
   border-radius: 8px;
-  color: #ffffff !important;
+  color: #0b0f19 !important;
   font-family: inherit;
   font-size: 15.5px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.3px;
   display: inline-flex;
   align-items: center;
@@ -3376,7 +3376,7 @@ i.fas.fa-caret-left.active-row {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.22s ease-in-out;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 16px rgba(229, 148, 0, 0.5), 0 0 14px rgba(255, 214, 79, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
   position: relative;
   overflow: hidden;
   user-select: none;
@@ -3384,7 +3384,7 @@ i.fas.fa-caret-left.active-row {
 
 .dock-btn-icon {
   font-size: 19px;
-  color: #ffffff;
+  color: #0b0f19 !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3393,29 +3393,34 @@ i.fas.fa-caret-left.active-row {
 
 .dock-btn-text {
   font-size: 15.5px;
-  color: #ffffff;
-  font-weight: 700;
+  color: #0b0f19 !important;
+  font-weight: 800;
   letter-spacing: 0.3px;
   white-space: nowrap;
 }
 
 .quick-dock-btn:hover {
-  background: linear-gradient(180deg, #1f426c 0%, #152d4c 50%, #10243d 100%);
-  border-color: #a4c9f1;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(130, 168, 207, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  color: #ffffff !important;
+  background: linear-gradient(180deg, #ffffff 0%, #ffe082 35%, #ffc107 70%, #d88900 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 24px rgba(245, 158, 11, 0.8), 0 0 22px rgba(255, 215, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+  transform: translateY(-2px) scale(1.02);
+  color: #000000 !important;
+}
+
+.quick-dock-btn:hover .dock-btn-icon,
+.quick-dock-btn:hover .dock-btn-text {
+  color: #000000 !important;
 }
 
 .quick-dock-btn:hover .dock-btn-icon {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 .quick-dock-btn:active {
   transform: translateY(0) scale(0.98);
-  background: linear-gradient(180deg, #10233b 0%, #0c1a2d 100%);
-  border-color: #7296bc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #e59400 0%, #ca7800 100%) !important;
+  border-color: #ffd54f !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* ===== STAKE-STYLE FEATURE SHOWCASE CARDS (IMAGE 1) ===== */
@@ -3832,19 +3837,25 @@ i.fas.fa-caret-left.active-row {
     font-size: 13.5px !important;
     padding: 0 12px !important;
     border-radius: 8px !important;
-    border: 1.8px solid #82a8cf !important;
+    background: linear-gradient(180deg, #ffe082 0%, #ffc107 40%, #e59400 75%, #ca7800 100%) !important;
+    border: 1.8px solid #fff2a8 !important;
+    color: #0b0f19 !important;
     gap: 8px !important;
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    box-shadow: 0 3px 12px rgba(229, 148, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
   }
 
   .dock-btn-icon {
     font-size: 16px !important;
+    color: #0b0f19 !important;
   }
 
   .dock-btn-text {
     font-size: 13px !important;
+    color: #0b0f19 !important;
+    font-weight: 800 !important;
   }
 
   /* 2x2 Feature Showcase Cards (Casino, Sports, Slots, Poker) */
@@ -4106,16 +4117,21 @@ i.fas.fa-caret-left.active-row {
     font-size: 12.5px !important;
     padding: 0 8px !important;
     gap: 6px !important;
-    border: 1.5px solid #82a8cf !important;
+    background: linear-gradient(180deg, #ffe082 0%, #ffc107 40%, #e59400 75%, #ca7800 100%) !important;
+    border: 1.5px solid #fff2a8 !important;
+    color: #0b0f19 !important;
     border-radius: 7px !important;
   }
 
   .dock-btn-icon {
     font-size: 14px !important;
+    color: #0b0f19 !important;
   }
 
   .dock-btn-text {
     font-size: 12px !important;
+    color: #0b0f19 !important;
+    font-weight: 800 !important;
   }
 
   .stake-feature-section {
