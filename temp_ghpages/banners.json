@@ -1,0 +1,79 @@
+[
+
+{
+    "image":"bannerD1.jpg",
+    "desktop":true
+},
+{
+    "image":"bannerD3.jpg",
+    "desktop":true
+},
+{
+    "image":"bannerD6.jpg",
+    "desktop":true
+},
+{
+    "image":"bannerD5.jpg",
+    "desktop":true
+},
+{
+    "image":"bannerD2.jpg",
+    "desktop":true
+},
+{
+    "image":"bannerD4.jpg",
+    "desktop":true
+},
+
+
+{
+    "image":"bannerT1.jpg",
+    "tab":true
+},
+{
+    "image":"bannerT3.jpg",
+    "tab":true
+},
+{
+    "image":"bannerT6.jpg",
+    "tab":true
+},
+{
+    "image":"bannerT5.jpg",
+    "tab":true
+},
+{
+    "image":"bannerT2.jpg",
+    "tab":true
+},
+{
+    "image":"bannerT4.jpg",
+    "tab":true
+},
+
+
+{
+    "image":"bannerM1.jpg",
+    "mobile":true
+},
+{
+    "image":"bannerM3.jpg",
+    "mobile":true
+},
+{
+    "image":"bannerM6.jpg",
+    "mobile":true
+},
+{
+    "image":"bannerM5.jpg",
+    "mobile":true
+},
+{
+    "image":"bannerM2.jpg",
+    "mobile":true
+},
+{
+    "image":"bannerM4.jpg",
+    "mobile":true
+}
+]

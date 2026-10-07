@@ -1,0 +1,391 @@
+{
+    "Games": [
+        {
+            "gameId": 25,
+            "gameName": "bingo",
+            "gameType": "CASINO",
+            "className": "Bingo",
+            "displayName": "Bingo"
+        },
+        {
+            "gameId": 26,
+            "gameName": "keno",
+            "gameType": "CASINO",
+            "className": "Keno",
+            "displayName": "Keno"
+        },
+        {
+            "gameId": 6,
+            "gameName": "americanRoulettenon",
+            "gameType": "CASINO",
+            "className": "american_roulette_1",
+            "displayName": "American Roulette"
+        },
+        {
+            "gameId": 13,
+            "gameName": "europeanRoulette",
+            "gameType": "CASINO",
+            "className": "europeanRoulette_1",
+            "displayName": "European Roulette"
+        },
+        {
+            "gameId": 14,
+            "gameName": "matkaNonTimer",
+            "gameType": "CASINO",
+            "className": "matkaNon",
+            "displayName": "Matka"
+        },
+         
+        {
+            "gameId": 5,
+            "gameName": "targetNonTimer",
+            "gameType": "CASINO",
+            "className": "target",
+            "displayName": "Target "
+        },
+        {
+            "tags": "New",
+            "gameId": 28,
+            "gameName": "russianPoker",
+            "gameType": "CASINO",
+            "className": "russianPoker",
+            "displayName": "Russian Poker"
+        },
+        {
+            "tags": "New",
+            "gameId": 30,
+            "gameName": "jacksrbetter",
+            "gameType": "CASINO",
+            "className": "jacksorbetter",
+            "displayName": "jacksorbetter"
+        },
+        {
+            "tags": "New",
+            "gameId": 33,
+            "gameName": "Caribbeanpoker",
+            "gameType": "CASINO",
+            "className": "Caribbeanpoker",
+            "displayName": "Caribbeanpoker"
+        },
+        {
+            "tags": "New",
+            "gameId": 39,
+            "gameName": "tropicalStudPoker",
+            "gameType": "CASINO",
+            "className": "tropicalStudPoker",
+            "displayName": "Tropical Stud Poker"
+        },
+        {
+            "tags": "New",
+            "gameId": 40,
+            "gameName": "tenorbetter",
+            "gameType": "CASINO",
+            "className": "tenorbetter",
+            "displayName": "Tens Or Better"
+        },
+        {
+            "tags": "New",
+            "gameId": 35,
+            "gameName": "deucesWild",
+            "gameType": "CASINO",
+            "className": "deucesWild",
+            "displayName": "Deuces Wild"
+        },
+        {
+            "tags": "New",
+            "gameId": 36,
+            "gameName": "jokerpoker",
+            "gameType": "CASINO",
+            "className": "jokerpoker",
+            "displayName": "Joker Poker"
+        },
+        {
+            "tags": "New",
+            "gameId": 37,
+            "gameName": "oasisPoker",
+            "gameType": "CASINO",
+            "className": "oasisPoker",
+            "displayName": "Oasis Poker"
+        },
+        {
+            "tags": "New",
+            "gameId": 29,
+            "gameName": "Baccarat",
+            "gameType": "CASINO",
+            "className": "Baccarat",
+            "displayName": "Baccarat"
+        },
+        {
+            "tags": "New",
+            "gameId": 31,
+            "gameName": "PaiGow",
+            "gameType": "CASINO",
+            "className": "PaiGow",
+            "displayName": "PaiGow"
+        }
+    ],
+    "arrorsEdge": [
+        {
+            "gameName": "Bunny Bucks",
+            "gameIdArrors": 1469,
+            "bg_cl": "rgb(40 212 240)"
+        },
+        {
+            "gameName": "April's Treasure",
+            "gameIdArrors": 1463,
+            "bg_cl": "rgb(190 16 48)"
+        },
+        {
+            "gameName": "Battle of Rome",
+            "gameIdArrors": 1413,
+            "bg_cl": "rgb(184 150 80)"
+        },
+        {
+            "gameName": "Thankswinning",
+            "gameIdArrors": 1441,
+            "bg_cl": "rgb(237 94 19)"
+        },
+        {
+            "gameName": "Jackpot Jam",
+            "gameIdArrors": 1405,
+            "bg_cl": "rgb(145 64 255)"
+        },
+        {
+            "gameName": "Bigfoot Mountain",
+            "gameIdArrors": 1357,
+            "bg_cl": "#33e9ff"
+        },
+        {
+            "gameName": "Explosive Wins",
+            "gameIdArrors": 1373,
+            "bg_cl": "rgb(91 132 193)"
+        },
+        {
+            "gameName": "Sizzling Summer",
+            "gameIdArrors": 1365,
+            "bg_cl": "#fea01e"
+        },
+        {
+            "gameName": "Western Call",
+            "gameIdArrors": 1228,
+            "bg_cl": "#e13e00"
+        },
+        {
+            "gameName": "Cupids Jackpot",
+            "gameIdArrors": 1347,
+            "bg_cl": "#fdd200"
+        },
+        {
+            "gameName": "Secret Life of Cats",
+            "gameIdArrors": 1240,
+            "bg_cl": "#e57a4a"
+        },
+        {
+            "gameName": "Pot of Gold",
+            "gameIdArrors": 1124,
+            "bg_cl": "#00e524"
+        },
+        {
+            "gameName": "Lucky Orbit",
+            "gameIdArrors": 1120,
+            "bg_cl": "#063988"
+        },
+        {
+            "gameName": "Godzilla versus King Kong",
+            "gameIdArrors": 1060,
+            "bg_cl": "#d3cc91"
+        },
+        {
+            "gameName": "Animal Arcade",
+            "gameIdArrors": 1052,
+            "bg_cl": "rgb(235 119 62)"
+        },
+        {
+            "gameName": "Kate's Waddle",
+            "gameIdArrors": 910,
+            "bg_cl": "#5696ff"
+        },
+        {
+            "gameName": "Panda Planet",
+            "gameIdArrors": 888,
+            "bg_cl": "#5590ff"
+        },
+        {
+            "gameName": "Robin in the Woods",
+            "gameIdArrors": 876,
+            "bg_cl": "#5067ff"
+        },
+        {
+            "gameName": "Jane's Farm",
+            "gameIdArrors": 870,
+            "bg_cl": "rgb(111 182 0)"
+        },
+        {
+            "gameName": "Pixiu",
+            "gameIdArrors": 832,
+            "bg_cl": "#fa2200"
+        },
+        {
+            "gameName": "Time Bender",
+            "gameIdArrors": 826,
+            "bg_cl": "#033de1"
+        },
+        {
+            "gameName": "Zimba and Friends",
+            "gameIdArrors": 806,
+            "bg_cl": "#332323"
+        },
+        {
+            "gameName": "License to Spin",
+            "gameIdArrors": 800,
+            "bg_cl": "#be0820"
+        },
+        {
+            "gameName": "Chocolate Slots",
+            "gameIdArrors": 786,
+            "bg_cl": "#f1db3e"
+        },
+        {
+            "gameName": "Dodge City Slots",
+            "gameIdArrors": 776,
+            "bg_cl": "#670702"
+        },
+        {
+            "gameName": "World Leaders",
+            "gameIdArrors": 772,
+            "bg_cl": "#251919"
+        },
+        {
+            "gameName": "Dragons Cave",
+            "gameIdArrors": 765,
+            "bg_cl": "#c9240d"
+        },
+        {
+            "gameName": "Lilly's Pad",
+            "gameIdArrors": 754,
+            "bg_cl": "#59d403"
+        },
+        {
+            "gameName": "Shopping in the Hills",
+            "gameIdArrors": 676,
+            "bg_cl": "#d31da5"
+        },
+        {
+            "gameName": "4th and Goal",
+            "gameIdArrors": 668,
+            "bg_cl": "#180daf"
+        },
+        {
+            "gameName": "Aruban Nights",
+            "gameIdArrors": 649,
+            "bg_cl": "#ec1e41"
+        },
+        {
+            "gameName": "Fast Lane Freddie",
+            "gameIdArrors": 637,
+            "bg_cl": "#ec8d1e"
+        },
+        {
+            "gameName": "Showcase",
+            "gameIdArrors": 634,
+            "bg_cl": "#09b3fc"
+        },
+        {
+            "gameName": "Cleopatra",
+            "gameIdArrors": 618,
+            "bg_cl": "#0505eb"
+        },
+        {
+            "gameName": "Winning Dead",
+            "gameIdArrors": 601,
+            "bg_cl": "#00850c"
+        },
+        {
+            "gameName": "Days of Our Slots",
+            "gameIdArrors": 594,
+            "bg_cl": "#6800f6"
+        },
+        {
+            "gameName": "Game of Kings",
+            "gameIdArrors": 655,
+            "bg_cl": "#1e0047"
+        },
+        {
+            "gameName": "Chef Wars",
+            "gameIdArrors": 527,
+            "bg_cl": "#2c56b7"
+        }
+    ],
+    "livecasino": [
+        {
+            "gameName": "Blackjack",
+            "provider": "Evolution",
+            "image": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/4ecf5b0a0b02dcfa041c955987325074/2019_05_live_blackjack_male_dealer_gameplay_14817_08_2000_9-1-300x200.jpg",
+            "gameId": "1000001",
+            "bg_cl": "#ffbe00"
+        },
+        {
+            "gameName": "roulette",
+            "provider": "Evolution",
+            "image": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/ef64674b6253ab9fa4829e329cd7b42b/auto_roulette_thumbnail_1280x720_2021_09_18-1-300x169.png",
+            "gameId": "1000003",
+            "bg_cl": "#ff024f"
+        },
+        {
+            "id": "7",
+            "name": "Sic Bo",
+            "provider": "Ezugi",
+            "media": "Sic Bo",
+            "bg_cl": "rgb(0 209 205)"
+        },
+        {
+            "id": "4",
+            "name": "Speed Roulette",
+            "provider": "Ezugi",
+            "media": "Speed Roulette",
+            "bg_cl": "#c42700"
+        },
+        {
+            "gameName": "Game Shows",
+            "provider": "Evolution",
+            "image": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/e76c89dc050100264e56550c316cbf11/triple_card_poker_image_2020_10_05-300x200.jpg",
+            "gameId": "1000000",
+            "bg_cl": "#000e91"
+        },
+        {
+            "gameName": "Poker",
+            "provider": "Evolution",
+            "image": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/bb64518c69933fd243920659f5568bf2/2019_nov_speed_blackjack_female_dealer_brunette_gameplay_6287_1984_09_1-300x200.jpg",
+            "gameId": "1000005",
+            "bg_cl": "#de0003"
+        },
+        {
+            "id": "4",
+            "name": "Roulette",
+            "provider": "Ezugi",
+            "media": "roulette1",
+            "bg_cl": "#ff13cd"
+        },
+        {
+            "gameName": "baccarat",
+            "provider": "Evolution",
+            "image": "https://clientarea.evolution.com/evolution/wp-content/nfs-uploads/uploads/cdn/829c1a18aa19ed634f1afb20e73a3974/baccarat_squeeze_client_area_thumbnail_300x200_2022_10.jpg",
+            "gameId": "1000002",
+            "bg_cl": "#adaba8"
+        },
+        {
+            "id": "8",
+            "name": "Baccarat",
+            "provider": "Ezugi",
+            "media": "baccarat1",
+            "bg_cl": "#050407"
+        },
+        {
+            "id": "3",
+            "name": "Andar Bahar",
+            "provider": "Ezugi",
+            "media": "Beton Numbers",
+            "bg_cl": "#ff474a"
+        }
+    ]
+}

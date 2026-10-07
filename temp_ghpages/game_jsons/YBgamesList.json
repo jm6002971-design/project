@@ -1,0 +1,221 @@
+{
+    "YBgames": [
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58029,
+            "gameName": "ZHAO CAI PAO",
+            "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58028,
+            "gameName": "ROYAL HUNTER", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58027,
+            "gameName": "Lucky Meow", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58026,
+            "gameName": "Crazy Money", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58025,
+            "gameName": "Sugar Crush", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58024,
+            "gameName": "Golden Aztec Mega", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58023,
+            "gameName": "Super Egypt", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58022,
+            "gameName": "Royal Ace", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58021,
+            "gameName": "Mermaid Slingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58020,
+            "gameName": "Rolling Fortune", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58019,
+            "gameName": "Golden Aztec", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58018,
+            "gameName": "King Arthur Gold", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58017,
+            "gameName": "Boom Boom Marmot", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58016,
+            "gameName": "Fortune Cat", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58015,
+            "gameName": "Golden Bunny", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58014,
+            "gameName": "Fancy Egypt", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58013,
+            "gameName": "Thor Fortune", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58012,
+            "gameName": "Lucky Star", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58011,
+            "gameName": "Rolling 7", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58010,
+            "gameName": "Fa Fa Dragon", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58008,
+            "gameName": "Magic Lamp", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58005,
+            "gameName": "Casino Fantasy", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58004,
+            "gameName": "Money Horse", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 58,
+            "Mtype": 58003,
+            "gameName": "Fortune Treasure", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 59,
+            "Mtype": 59001,
+            "gameName": "Ocean Phoenix", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60011,
+            "gameName": "EZ Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60010,
+            "gameName": "Joy Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60009,
+            "gameName": "Lightning Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60008,
+            "gameName": "Heat Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60007,
+            "gameName": "Money Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60006,
+            "gameName": "Beasty Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60005,
+            "gameName": "Bingo Bonanza", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60004,
+            "gameName": "Atlantis", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60003,
+            "gameName": "Bingo Bingo", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60002,
+            "gameName": "Open Sesame", "bg_cl": "#12ff00"
+        },
+        {
+            "provider": "YB",
+            "Gtype": 60,
+            "Mtype": 60001,
+            "gameName": "Win Cai Shen", "bg_cl": "#12ff00"
+        }
+    ]
+}

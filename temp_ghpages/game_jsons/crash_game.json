@@ -1,0 +1,18 @@
+[
+
+    {
+        "gameName": "Aviator",
+        "Gtype": 22,
+        "Mtype": 22001,
+        "provider": "Spribe",
+        "imgUrl": "aviator",
+        "bg_cl": "#fa002e"
+    },
+    {
+        "bg_cl": "#fa002e",
+        "gameId": "nft-aviatrix",
+        "gameName": "Aviatrix",
+        "language": "EN",
+        "provider": "Aviatrix"
+    }
+]
