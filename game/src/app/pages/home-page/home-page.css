@@ -3504,20 +3504,28 @@ i.fas.fa-caret-left.active-row {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 6px 14px;
+  background: linear-gradient(135deg, #ffe082 0%, #ffc107 35%, #e59400 70%, #b87503 100%) !important;
+  border: 1.5px solid #fff3b0 !important;
+  padding: 7px 16px;
   border-radius: 9999px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0b0f19 !important;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  transition: all 0.25s ease;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(229, 148, 0, 0.5), 0 0 12px rgba(255, 214, 79, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+}
+
+.stake-explore-btn span {
+  color: #0b0f19 !important;
+  font-weight: 800;
 }
 
 .stake-explore-btn i {
-  color: #fbbf24;
+  color: #0b0f19 !important;
+  font-size: 11px;
   transition: transform 0.25s ease;
 }
 
@@ -3527,9 +3535,15 @@ i.fas.fa-caret-left.active-row {
 }
 
 .stake-feature-card:hover .stake-explore-btn {
-  background: rgba(212, 175, 55, 0.2);
-  border-color: rgba(212, 175, 55, 0.6);
-  color: #fbbf24;
+  background: linear-gradient(135deg, #ffffff 0%, #ffe082 30%, #ffc107 65%, #d88900 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 22px rgba(245, 158, 11, 0.75), 0 0 20px rgba(255, 215, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+  transform: scale(1.05);
+}
+
+.stake-feature-card:hover .stake-explore-btn span,
+.stake-feature-card:hover .stake-explore-btn i {
+  color: #000000 !important;
 }
 
 .stake-feature-card:hover .stake-explore-btn i {
@@ -3893,14 +3907,28 @@ i.fas.fa-caret-left.active-row {
   }
 
   .stake-explore-btn {
-    font-size: 0.62rem;
-    padding: 3px 7px;
-    gap: 3px;
-    font-weight: 700;
+    font-size: 0.65rem !important;
+    padding: 4px 10px !important;
+    gap: 4px !important;
+    font-weight: 800 !important;
     max-width: calc(100% - 48px);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    background: linear-gradient(135deg, #ffe082 0%, #ffc107 35%, #e59400 70%, #b87503 100%) !important;
+    border: 1.2px solid #fff3b0 !important;
+    color: #0b0f19 !important;
+    box-shadow: 0 3px 10px rgba(229, 148, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.75) !important;
+  }
+
+  .stake-explore-btn span {
+    color: #0b0f19 !important;
+    font-weight: 800 !important;
+  }
+
+  .stake-explore-btn i {
+    color: #0b0f19 !important;
+    font-size: 9px !important;
   }
 
   .stake-card-graphic {
