@@ -1,0 +1,1 @@
+import{a}from"./chunk-V443762N.js";import"./chunk-5NZJ4Z7U.js";import"./chunk-FOJGJ4V7.js";import"./chunk-QQ2V4QEJ.js";import"./chunk-AL55FTVU.js";import"./chunk-ICPCAZUT.js";import"./chunk-J3S4UFG7.js";export{a as DashboardRoutingModule};
