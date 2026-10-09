@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "start": "npm --prefix game start",
-    "build": "npm --prefix game run build"
+    "build": "npm --prefix game run build",
+    "dev:rummy": "npm --prefix rummy-hero run dev",
+    "build:rummy": "npm --prefix rummy-hero run build"
   }
 }
