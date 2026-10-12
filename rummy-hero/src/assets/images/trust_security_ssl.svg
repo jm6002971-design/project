@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="24" fill="#081726" stroke="url(#cyanGrad)" stroke-width="2"/>
+  <!-- Shield and Lock -->
+  <path d="M80 32 L106 44 C106 72 96 92 80 102 C64 92 54 72 54 44 Z" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  <rect x="72" y="60" width="16" height="14" rx="3" fill="#38BDF8"/>
+  <path d="M75 60 V53 A5 5 0 0 1 85 53 V60" fill="none" stroke="#38BDF8" stroke-width="2.5"/>
+  <text x="80" y="122" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1">256-BIT SSL</text>
+  <text x="80" y="138" font-family="Inter, sans-serif" font-size="9" font-weight="500" fill="#BAE6FD" text-anchor="middle">BANK GRADE ENCRYPTION</text>
+</svg>

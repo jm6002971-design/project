@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE599"/>
+      <stop offset="40%" stop-color="#F5B838"/>
+      <stop offset="70%" stop-color="#D99B26"/>
+      <stop offset="100%" stop-color="#996515"/>
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#0C1322" stroke="url(#goldGrad)" stroke-width="3" filter="url(#goldGlow)"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="rgba(245, 184, 56, 0.25)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <!-- Crown Top -->
+  <path d="M72 70 L80 84 L100 66 L120 84 L128 70 L124 92 L76 92 Z" fill="url(#goldGrad)"/>
+  <!-- Royal Spade Center -->
+  <path d="M100 86 C86 112 68 126 68 140 C68 153 79 160 91 160 C97 160 100 157 100 157 C100 157 103 160 109 160 C121 160 132 153 132 140 C132 126 114 112 100 86 Z" fill="url(#goldGrad)"/>
+  <!-- Spade Stem -->
+  <path d="M96 154 L92 174 L108 174 L104 154 Z" fill="url(#goldGrad)"/>
+</svg>

@@ -1,37 +1,34 @@
 import React from "react";
 import { Star, ShieldCheck } from "lucide-react";
-import avatarAlex from "../assets/images/avatar_alex.jpg";
-import avatarSophia from "../assets/images/avatar_sophia.jpg";
-import avatarMarcus from "../assets/images/avatar_marcus.jpg";
-import avatarElena from "../assets/images/avatar_elena.jpg";
+import { IMAGES, handleImageFallback } from "../assets/images";
 
 export const TestimonialsSection: React.FC = () => {
   const reviews = [
     {
       name: "Alex Mercer",
-      role: "All-India Rummy Masters finalist",
-      avatar: avatarAlex,
+      role: "All-India Rummy Masters Finalist",
+      avatar: IMAGES.avatarAlex,
       rating: 5,
       review: "The card dragging and discard physics feel identical to high-end casino felt. Zero lag during multi-table finals was the deciding factor for my victory."
     },
     {
       name: "Sophia Chen",
       role: "Pro Series Champion",
-      avatar: avatarSophia,
+      avatar: IMAGES.avatarSophia,
       rating: 5,
       review: "Velorah stripped away all the gaudy carnival flashing lights and focused on what real players want: instant math, verified RNG, and flawless tactile response."
     },
     {
       name: "Marcus Vance",
       role: "High-Stakes VIP Member",
-      avatar: avatarMarcus,
+      avatar: IMAGES.avatarMarcus,
       rating: 5,
       review: "The Salon Privé tables are exceptional. Smooth payouts, instantaneous chip balancing, and an atmosphere of quiet luxury that respects your focus."
     },
     {
       name: "Elena Rostova",
       role: "International Tournament Strategist",
-      avatar: avatarElena,
+      avatar: IMAGES.avatarElena,
       rating: 5,
       review: "Cleanest digital felt in the industry. The sequence formation detection is lightning-quick, letting you execute complex melds without friction."
     }
@@ -61,30 +58,33 @@ export const TestimonialsSection: React.FC = () => {
             className="liquid-glass rounded-3xl p-6 border border-white/10 hover:border-amber-400/30 transition-all duration-300 flex flex-col justify-between"
           >
             <div>
-              {/* Stars */}
+              {/* Rating Stars */}
               <div className="flex items-center gap-1 text-amber-400 mb-4">
                 {[...Array(rev.rating)].map((_, i) => (
-                  <Star key={i} size={15} fill="currentColor" />
+                  <Star key={i} size={14} fill="currentColor" />
                 ))}
               </div>
-              <p className="text-slate-300 text-sm leading-relaxed mb-6 italic">
+
+              {/* Review Text */}
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
                 "{rev.review}"
               </p>
             </div>
 
-            {/* Author */}
-            <div className="flex items-center gap-3.5 pt-4 border-t border-white/10">
+            {/* Author Profile */}
+            <div className="flex items-center gap-3 mt-6 pt-4 border-t border-white/10">
               <img
-                src={rev.avatar}
+                src={rev.avatar.src}
                 alt={rev.name}
-                className="w-11 h-11 rounded-full object-cover border-2 border-amber-400/40"
+                onError={(e) => handleImageFallback(e, rev.avatar.file)}
+                className="w-10 h-10 rounded-full object-cover border border-amber-400/30 shrink-0"
               />
-              <div className="overflow-hidden">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-sm font-semibold text-white truncate">{rev.name}</span>
-                  <ShieldCheck size={14} className="text-emerald-400 shrink-0" />
+              <div className="min-w-0">
+                <div className="flex items-center gap-1 text-xs font-semibold text-foreground">
+                  <span className="truncate">{rev.name}</span>
+                  <ShieldCheck size={12} className="text-emerald-400 shrink-0" />
                 </div>
-                <p className="text-xs text-muted-foreground truncate">{rev.role}</p>
+                <div className="text-[11px] text-muted-foreground truncate">{rev.role}</div>
               </div>
             </div>
           </div>

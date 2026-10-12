@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="24" fill="#061A14" stroke="url(#emeraldGrad)" stroke-width="2"/>
+  <circle cx="80" cy="62" r="32" fill="none" stroke="#34D399" stroke-width="3"/>
+  <path d="M68 62 L76 70 L92 52" fill="none" stroke="#34D399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="112" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#34D399" text-anchor="middle" letter-spacing="1.5">iTech Labs</text>
+  <text x="80" y="130" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="#A7F3D0" text-anchor="middle" letter-spacing="1">100% RNG CERTIFIED</text>
+</svg>
