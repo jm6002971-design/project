@@ -1,4 +1,8 @@
 import React from "react";
+import { Sparkles, Trophy, Users, ShieldCheck, ArrowRight } from "lucide-react";
+import rummyThumb from "../assets/images/studio_rummy_table.jpg";
+import pokerThumb from "../assets/images/studio_poker_arena.jpg";
+import tourneyThumb from "../assets/images/studio_tournament.jpg";
 
 interface HeroProps {
   onOpenJourney: () => void;
@@ -6,10 +10,16 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenJourney }) => {
   return (
-    <main className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-40 py-[90px] my-auto">
+    <main id="home" className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-32 pb-24 my-auto">
+      {/* Top Pill */}
+      <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-amber-400/10 text-amber-300 border border-amber-400/25 mb-8 animate-fade-rise">
+        <Sparkles size={13} className="text-amber-400" />
+        <span>Velorah® Elite Rummy & Cardwork</span>
+      </div>
+
       {/* H1 Heading with Instrument Serif and contrasting em tags */}
       <h1
-        className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-7xl font-normal text-foreground animate-fade-rise"
+        className="text-5xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-2.46px] max-w-6xl font-normal text-foreground animate-fade-rise"
         style={{ fontFamily: "'Instrument Serif', serif" }}
       >
         Where <em className="not-italic text-muted-foreground">dreams</em> rise{" "}
@@ -18,18 +28,87 @@ export const Hero: React.FC<HeroProps> = ({ onOpenJourney }) => {
 
       {/* Subtext */}
       <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mt-8 leading-relaxed animate-fade-rise-delay">
-        We're designing tools for deep thinkers, bold creators, and quiet rebels. Amid the chaos,
-        we build digital spaces for sharp focus and inspired work.
+        The definitive digital arena for tactile 13-card rummy, high-velocity tournaments, and mathematically verified fair felt play.
       </p>
 
-      {/* Hero CTA Button */}
-      <button
-        type="button"
-        onClick={onOpenJourney}
-        className="liquid-glass rounded-full px-14 py-5 text-base text-foreground mt-12 hover:scale-[1.03] cursor-pointer animate-fade-rise-delay-2 select-none"
-      >
-        Begin Journey
-      </button>
+      {/* Hero CTA Buttons */}
+      <div className="flex flex-col sm:flex-row items-center gap-4 mt-10 animate-fade-rise-delay-2">
+        <button
+          type="button"
+          onClick={onOpenJourney}
+          className="liquid-glass rounded-full px-12 py-4 text-base text-foreground font-semibold hover:scale-[1.03] cursor-pointer select-none flex items-center gap-2.5 shadow-xl shadow-black/40"
+        >
+          <span>Enter Rummy Arena</span>
+          <ArrowRight size={17} className="text-amber-400" />
+        </button>
+
+        <a
+          href="#studio"
+          className="px-8 py-4 rounded-full text-sm font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+        >
+          View Live Tables
+        </a>
+      </div>
+
+      {/* Live Felt Highlights Bar with Images */}
+      <div className="mt-16 w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-4 text-left animate-fade-rise-delay-2">
+        <a
+          href="#studio"
+          className="liquid-glass p-4 rounded-2xl border border-white/10 hover:border-amber-400/30 transition-all flex items-center gap-3.5 group"
+        >
+          <img
+            src={rummyThumb}
+            alt="13-Card Rummy"
+            className="w-12 h-12 rounded-xl object-cover border border-white/20 group-hover:scale-105 transition-transform shrink-0"
+          />
+          <div>
+            <div className="flex items-center gap-1.5 text-xs text-amber-300 font-semibold">
+              <Trophy size={11} />
+              <span>Classic Points & Pool</span>
+            </div>
+            <div className="text-sm font-medium text-white">Obsidian 13-Card</div>
+            <div className="text-[11px] text-muted-foreground">Instant Settlements</div>
+          </div>
+        </a>
+
+        <a
+          href="#studio"
+          className="liquid-glass p-4 rounded-2xl border border-white/10 hover:border-cyan-400/30 transition-all flex items-center gap-3.5 group"
+        >
+          <img
+            src={pokerThumb}
+            alt="VIP Poker"
+            className="w-12 h-12 rounded-xl object-cover border border-white/20 group-hover:scale-105 transition-transform shrink-0"
+          />
+          <div>
+            <div className="flex items-center gap-1.5 text-xs text-cyan-300 font-semibold">
+              <Users size={11} />
+              <span>Salon Privé</span>
+            </div>
+            <div className="text-sm font-medium text-white">Emerald VIP Suite</div>
+            <div className="text-[11px] text-muted-foreground">High Roller Tables</div>
+          </div>
+        </a>
+
+        <a
+          href="#studio"
+          className="liquid-glass p-4 rounded-2xl border border-white/10 hover:border-emerald-400/30 transition-all flex items-center gap-3.5 group"
+        >
+          <img
+            src={tourneyThumb}
+            alt="Tournaments"
+            className="w-12 h-12 rounded-xl object-cover border border-white/20 group-hover:scale-105 transition-transform shrink-0"
+          />
+          <div>
+            <div className="flex items-center gap-1.5 text-xs text-emerald-300 font-semibold">
+              <ShieldCheck size={11} />
+              <span>Championships</span>
+            </div>
+            <div className="text-sm font-medium text-white">₹2.5 Cr Tournament</div>
+            <div className="text-[11px] text-muted-foreground">Daily Knockouts</div>
+          </div>
+        </a>
+      </div>
     </main>
   );
 };
